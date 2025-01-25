@@ -1,18 +1,487 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pyramids</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="/CSS/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        
 
-    </head>
-    <body>
-        <h1>Welcome to pyramids website</h1>
-        <h2>this is live</h2>
-        <h4>the owner name is helmy and mohamed</h4>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/CSS/styles.css" rel="stylesheet">
+  <title>Pyrmaids</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    </body>
+</head>
+
+<body>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <a href="mailto:info@pyrmaids.com">info@pyrmaids.com</a>
+    <a href="#">Address of factory or company</a>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+    </div>
+  </div>
+  <!-- END TOP BAR -->
+  <!-- HEADER SECTION -->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="/images/logo.png" alt="Pyrmaids Logo" class="logo-image" id="pyramids-logo">
+    </a>
+    <!-- HEADER NAV MENU -->
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#" class="dropdown">PRODUCTS</a></li>
+        <li><a href="#" class="dropdown">INNOVATION</a></li>
+        <li><a href="#" class="dropdown">SUPPORT</a></li>
+        <li><a href="#" class="dropdown">COMPANY</a></li>
+      </ul>
+    </nav>
+
+    <a href="tel:(555) 123-4567" class="contact-button">
+      <span class="phone-icon">📞</span>
+      <div>
+        <div>Contact Us Today</div>
+        <div>(555) 123-4567</div>
+      </div>
+    </a>
+  </header>
+  <!-- END HEADER SECTION -->
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <div class="hero-slider">
+      <div class="slide active">
+        <h2>Welcome to Pyrmaids</h2>
+      </div>
+      <div class="slide">
+        <h2>Innovative Solutions</h2>
+      </div>
+      <div class="slide">
+        <h2>Global Reach</h2>
+      </div>
+
+      <button class="slider-btn prev">❮</button>
+      <button class="slider-btn next">❯</button>
+
+      <div class="dots-container">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END HERO SECTION -->
+  <!-- About Section: Discover Pyramids -->
+  <section class="discover-section">
+    <div class="discover-container">
+      <div class="discover-grid">
+        <div class="discover-image-wrapper">
+          <img src="/images/hero/hero-1.JPG" alt="Manufacturing Facility" class="discover-image">
+          <div class="experience-badge">
+            <p class="experience-number">20+</p>
+            <p class="experience-text">Years of Expertise</p>
+          </div>
+        </div>
+        <div class="discover-content">
+          <div class="discover-tag">DISCOVER PYRMAIDS</div>
+          <h2 class="discover-title">Premium Adhesive Solutions for Diverse Industries</h2>
+          <p class="discover-description">
+            Pyrmaids specializes in manufacturing superior adhesive products tailored to meet the demands of various
+            industries.
+            Our state-of-the-art production techniques ensure that every adhesive solution we offer enhances operational
+            efficiency
+            and reliability, empowering your business to excel.
+          </p>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <div class="icon-background">
+                  <img src="/images/icons/bullseye.png" alt="Bullseye Icon" class="img-card-icon">
+                </div>
+              </div>
+              <h3 class="feature-title">Our Commitment</h3>
+              <p class="feature-description">
+                Delivering high-performance adhesive solutions for optimal manufacturing processes.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <div class="icon-background">
+                  <img src="/images/icons/eye.png" alt="Eye Icon" class="img-card-icon">
+                </div>
+              </div>
+              <h3 class="feature-title">Our Vision</h3>
+              <p class="feature-description">
+                To innovate adhesive technology that meets the ever-evolving needs of multiple industries.
+              </p>
+            </div>
+          </div>
+          <a href="#contact" class="contact-btn">Contact us for tailored adhesive solutions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+  <!-- Expertise Section -->
+  <section class="expertise-section">
+    <div class="expertise-container">
+      <div class="expertise-tag">EXPLORE PYRMAIDS EXPERTISE</div>
+      <h2 class="expertise-title">Innovative Adhesive Solutions Tailored for Industry Leaders</h2>
+      <p class="expertise-description">
+        Pyrmaids stands at the forefront of adhesive manufacturing, offering specialized products that enhance
+        operational efficiency and product quality. Our commitment to innovation ensures that businesses can rely on our
+        adhesives for superior performance in their projects.
+      </p>
+
+      <div class="expertise-grid">
+        <!-- Card 1 -->
+        <div class="expertise-card">
+          <div class="card-icon">
+            <img src="/images/icons/formula.png" alt="Formula Icon" class="img-card-icon">
+          </div>
+          <h3 class="card-title black">Customized Adhesive Formulations</h3>
+          <p class="card-description">
+            Our team works closely with clients to develop tailored adhesive solutions that meet specific industry
+            requirements, ensuring optimal results for every application.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="expertise-card blue-card card-up">
+          <div class="card-icon">
+            <img src="/images/icons/quality.png" alt="Quality Icon" class="img-card-icon">
+          </div>
+          <h3 class="card-title">Quality Assurance Standards</h3>
+          <p class="card-description">
+            Our rigorous quality control protocols ensure that every product meets or exceeds industry standards,
+            providing you with peace of mind in your manufacturing processes.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="expertise-card">
+          <div class="card-icon">
+            <img src="/images/icons/recycle.png" alt="Recycle Icon" class="img-card-icon">
+          </div>
+          <h3 class="card-title black">Sustainable Manufacturing Practices</h3>
+          <p class="card-description ">
+            We prioritize eco-friendly processes in our production methods, minimizing waste and ensuring our products
+            are safe for both users and the environment.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="expertise-card">
+          <div class="card-icon">
+            <img src="/images/icons/customer-support.png" alt="Support Icon" class="img-card-icon">
+          </div>
+          <h3 class="card-title black">Technical Support and Training</h3>
+          <p class="card-description">
+            Our experts provide comprehensive support and training, helping your team maximize the potential and
+            application of our adhesive solutions.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="expertise-card blue-card card-up">
+          <div class="card-icon">
+            <img src="/images/icons/team.png" alt="Team Icon" class="img-card-icon">
+          </div>
+          <h3 class="card-title">Collaboration with Clients</h3>
+          <p class="card-description">
+            We believe in building strong partnerships with our clients, ensuring open communication and collaboration
+            to achieve the best outcomes.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="expertise-card">
+          <div class="card-icon">
+            <img src="/images/icons/best-price-2.png" alt="Price Icon" class="img-card-icon">
+          </div>
+          <h3 class="card-title black">Competitive Pricing</h3>
+          <p class="card-description">
+            Pyrmaids offers high-quality adhesive products at competitive prices, ensuring you receive the best value
+            without compromising on quality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Expertise Section -->
+  <!-- Products Section -->
+  <section class="products-section">
+    <div class="products-container">
+      <div class="products-title">Our Products</div>
+      <div class="products-description">
+        Explore our range of adhesive solutions designed to meet the diverse needs of various industries. From
+        high-performance formulations to eco-friendly options, Pyrmaids offers a wide selection of products to enhance
+        your manufacturing processes.
+      </div>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="automotive">Automotive</button>
+        <button class="filter-btn" data-filter="construction">Construction</button>
+        <button class="filter-btn" data-filter="packaging">Packaging</button>
+        <button class="filter-btn" data-filter="electronics">Electronics</button>
+      </div>
+      <!-- CARD 1 -->
+      <div class="products-grid">
+        <div class="products-item">
+          <img src="https://placehold.co/400x300" alt="App 1" class="products-image">
+          <div class="products-content">
+            <h3>App 1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <!-- CARD 2 -->
+        <div class="products-item">
+          <img src="https://placehold.co/400x300" alt="Product 1" class="products-image">
+          <div class="products-content">
+            <h3>Product 1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <!-- CARD 3 -->
+        <div class="products-item">
+          <img src="https://placehold.co/400x300" alt="Branding 1" class="products-image">
+          <div class="products-content">
+            <h3>Branding 1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <!-- CARD 4 -->
+        <div class="products-item">
+          <img src="https://placehold.co/400x300" alt="App 2" class="products-image">
+          <div class="products-content">
+            <h3>App 2</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <!-- CARD 5 -->
+        <div class="products-item">
+          <img src="https://placehold.co/400x300" alt="Product 2" class="products-image">
+          <div class="products-content">
+            <h3>Product 2</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <!-- CARD 6 -->
+        <div class="products-item">
+          <img src="https://placehold.co/400x300" alt="Branding 2" class="products-image">
+          <div class="products-content">
+            <h3>Branding 2</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <!-- CARD 7 -->
+        <div class="products-item">
+          <img src="https://placehold.co/400x300" alt="App 3" class="products-image">
+          <div class="products-content">
+            <h3>App 3</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- End Products Section -->
+  <!-- FREQUENTLY ASKED QUESTIONS -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <!-- LEFT SECTION -->
+      <div class="left-section">
+        <span class="faq-tag">FAQ'S</span>
+        <h1 class="faq-section-title">Let's Make Something Awesome Together</h1>
+        <p class="description">We're not just another agency – we're your digital growth partners. With years of
+          industry experience and a passion for innovation, our team is dedicated to delivering measurable results
+          propel your business forward.</p>
+        <div class="features">
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" />
+            </svg>
+            Top quality service
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" />
+            </svg>
+            Intermodal Shipping
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT SECTION -->
+      <div class="right-section">
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-title">Where are your manufacturing facilities located?</h3>
+              <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M19 9l-7 7-7-7" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="faq-content">
+              Our manufacturing facilities are located in the Fayoum and Qalyoub industrial areas, with warehouses in
+              both locations to ensure efficient storage and distribution.
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="faq-item active">
+            <div class="faq-header">
+              <h3 class="faq-title">How Do I Choose The Best SEO Agency?</h3>
+              <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M19 9l-7 7-7-7" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="faq-content">
+              Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio.Mauris et mollis
+              quam. Nullam fringilla erat id ante commodo maximus
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-title">Better Security And Faster Server?</h3>
+              <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M19 9l-7 7-7-7" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-title">Deployment Within Few Minutes</h3>
+              <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M19 9l-7 7-7-7" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-title">How To Install WordPress Theme On CPanel?</h3>
+              <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M19 9l-7 7-7-7" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-title">Better Security And Faster Server?</h3>
+              <svg class="chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M19 9l-7 7-7-7" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END FREQUENTLY ASKED QUESTIONS -->
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+  <script>
+    document.querySelectorAll('.faq-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const content = item.querySelector('.faq-content');
+        const isActive = item.classList.contains('active');
+
+        // Remove active class from all items and hide their content
+        document.querySelectorAll('.faq-item').forEach(faq => {
+          faq.classList.remove('active');
+          faq.querySelector('.faq-content').style.maxHeight = null; // Collapse the content
+        });
+
+        // Toggle the clicked item
+        if (!isActive) {
+          item.classList.add('active');
+          content.style.maxHeight = content.scrollHeight + "px"; // Expand the content
+        }
+      });
+  });
+  </script>
+  <script>
+    document.querySelectorAll('.filter-button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    }); 
+  </script>
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Event listeners
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+      });
+    });
+
+    // Auto-advance slides every 5 seconds
+    setInterval(nextSlide, 5000);
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const productItems = document.querySelectorAll('.product-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+
+          // Add active class to clicked button
+          this.classList.add('active');
+
+          const filterValue = this.getAttribute('data-filter');
+
+          productItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+  <!-- Font Awesome Script -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
