@@ -706,11 +706,11 @@ body {
   margin-right: auto;
 }
 
-.filter-buttons {
+.products-filter-buttons {
   margin-bottom: 40px;
 }
 
-.filter-btn {
+.p-filter-btn {
   border: none;
   background: none;
   color: #666;
@@ -721,11 +721,11 @@ body {
   position: relative;
 }
 
-.filter-btn.active {
+.p-filter-btn.active {
   color: var(--navy-blue);
 }
 
-.filter-btn.active::after {
+.p-filter-btn.active::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -799,10 +799,10 @@ body {
   background-color: #d1e4f7;
 }
 .faq-container {
-  display: flex;
-  padding: 40px;
-  font-family: 'Inter', sans-serif;
-  gap: 60px;
+  display: flex !important;
+  padding: 40px !important;
+  font-family: 'Inter', sans-serif !important;
+  gap: 60px !important;
 }
 
 .left-section {
@@ -867,6 +867,7 @@ body {
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin: 10px 0px !important;
 }
 
 .faq-header {
@@ -876,10 +877,15 @@ body {
   cursor: pointer;
 }
 
-.faq-title {
-  color: #1e1b4b;
-  font-weight: 600;
-  font-size: 18px;
+.faq-title{
+  color: #1e1b4b !important;
+  font-weight: 600 !important;
+  font-size: 18px !important; 
+}
+.accordion-button{
+  color: #1e1b4b !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
 }
 
 .faq-content {
@@ -887,13 +893,6 @@ body {
   margin-top: 16px;
   line-height: 1.6;
   font-size: 14px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.faq-item.active .faq-content {
-  overflow: visible; /* Optional for smoother animations */
 }
 
 .chevron {
@@ -903,6 +902,279 @@ body {
 .active .chevron {
   transform: rotate(180deg);
 }
+@media screen and (max-width: 768px) {
+  .faq-container {
+      flex-direction: column;
+  }
+  
+
+}
 /* ______________________________________________________________________*/
+/* __________________________CONTACT SECTION____________________________________________*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+.contact-section {
+  font-family: 'Inter', sans-serif;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
 
+.contact-header {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.connect-text {
+  color: #3498db;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 15px 0;
+  font-weight: 700;
+}
+
+.contact-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 40px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://placehold.co/600x400') center/cover;
+  color: white;
+}
+
+.contact-info h2 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.contact-info h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.info-items {
+  margin-top: 40px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.info-item svg {
+  margin-right: 15px;
+}
+
+.info-item span {
+  font-size: 15px;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 40px;
+  background: white;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  background: #f8f9fa;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #006699;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #005580;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+  }
+  
+  .contact-info,
+  .contact-form {
+      padding: 30px;
+  }
+}
+/* ______________________________________________________________________*/
+/* __________________________FOOTER SECTION____________________________________________*/
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 50px 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.footer-section h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 2px;
+  background-color: #0066cc;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #0066cc;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #0066cc;
+}
+
+.footer-contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-contact-info svg {
+  flex-shrink: 0;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 20px;
+  border-top: 1px solid #333;
+  text-align: left;
+  color: #888;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+      grid-template-columns: 1fr;
+  }
+  
+  .footer-section {
+      text-align: center;
+  }
+  
+  .footer-section h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  
+  .social-icons {
+      justify-content: center;
+  }
+  
+  .contact-info p {
+      justify-content: center;
+  }
+  
+  .footer-bottom {
+      text-align: center;
+  }
+}
+/* ______________________________________________________________________*/
