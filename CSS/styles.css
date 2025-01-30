@@ -30,6 +30,7 @@ body {
   --navy-blue: #005891;
   --white: #fff;
   --black: #000;
+  --light-blue: #d1e4f7;
 }
 /* ______________________GENERAL STYLES______________________ */
 
@@ -411,9 +412,9 @@ body {
 .discover-title::after {
   content: '';
   display: block;
-  width: 200px;
+  width: 300px;
   margin: 0 auto;
-  height: 3px;
+  height: 5px;
   background-color: #005891;
   margin-top: 1rem;
 }
@@ -796,7 +797,7 @@ body {
 /* ______________________________________________________________________*/
 /* __________________________FAQ SECTION____________________________________________*/
 .faq-section{
-  background-color: #d1e4f7;
+  background-color: var(--light-blue);
 }
 .faq-container {
   display: flex !important;
@@ -916,14 +917,52 @@ body {
 .contact-section {
   font-family: 'Inter', sans-serif;
   padding: 40px 20px;
-  background: rgba(0, 0, 0, 0.5);
   color: white;
+  background-color: var(--light-blue);
+  position: relative;
+}
+
+.contact-section::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Only half of the section */
+  background-image: url('/images/image-3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  z-index: 0;
+}
+
+.contact-section::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  z-index: 1;
 }
 
 .contact-header {
   text-align: center;
   max-width: 1000px;
   margin: 0 auto 40px;
+  z-index: 9;
+  position: relative;
+}
+
+.contact-header h1::after{
+  content: '';
+  display: block;
+  width: 61%;
+  margin: 0 auto;
+  height: 5px;
+  background-color: var(--navy-blue);
+  margin-top: 5px;
 }
 
 .connect-text {
@@ -931,6 +970,7 @@ body {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
+  z-index: 9;
 }
 
 h1 {
@@ -943,6 +983,7 @@ h1 {
   font-size: 16px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
+  z-index: 9;
 }
 
 .contact-container {
@@ -952,13 +993,18 @@ h1 {
   background: white;
   border-radius: 8px;
   overflow: hidden;
+  z-index: 9;
 }
 
 .contact-info {
   flex: 1;
   padding: 40px;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://placehold.co/600x400') center/cover;
+  border: white 35px solid;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+   url('/images/image-4.png') center/cover;
   color: white;
+  z-index: 9;
+
 }
 
 .contact-info h2 {
@@ -966,21 +1012,35 @@ h1 {
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 15px;
+  z-index: 9;
 }
+
+
 
 .contact-info h3 {
   font-size: 28px;
   margin-bottom: 30px;
+  z-index: 9;
+}
+
+.contact-info h3::after{
+  content: '';
+  display: block;
+  width: 300px;
+  height: 5px;
+  background-color: var(--navy-blue);
+  margin-top: 5px;
 }
 
 .info-items {
   margin-top: 40px;
+  z-index: 9;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .info-item svg {
@@ -995,6 +1055,7 @@ h1 {
   flex: 1;
   padding: 40px;
   background: white;
+  z-index: 9;
 }
 
 .form-group {
