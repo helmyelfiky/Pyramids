@@ -7,6 +7,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: var(--light-white) !important;
 }
 .justify-center{
   justify-content: center;
@@ -31,23 +32,31 @@ body {
   --white: #fff;
   --black: #000;
   --light-blue: #d1e4f7;
+  --light-white: #f7f3f7;
+  --secondary-blue: #00a0e4;
 }
 /* ______________________GENERAL STYLES______________________ */
 
 /* ______________________TOP BAR STYLES______________________ */
 .top-bar {
-    background: #333;
-    color: white;
-    padding: 8px 5%;
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    position: relative;
-    z-index: 2;
+  background: #333;
+  color: white;
+  padding: 8px 5%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
 }
 .top-bar a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+.address-location{
+  margin-top: 3px;
+}
+.top-bar-mail{
+  margin-top: 2px;
 }
 /* ____________________________________________________________ */
 /* ______________________HEADER______________________ */
@@ -575,7 +584,7 @@ body {
 }
 
 .expertise-tag {
-  color: #00a0e4;
+  color: var(--secondary-blue);
   text-align: center;
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -684,19 +693,23 @@ body {
       font-size: 1rem;
   }
 }
-/* ______________________________________________________________________*/
+/* _________________________________________________________________________________________*/
 /* ______________________________PRODUCTS SECTION ________________________________________ */
 .products-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
+  background-color: var(--light-white) !important;
 }
 
 .products-title {
-  font-size: 36px;
-  color: #333;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--navy-blue);
   margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .products-description {
@@ -710,6 +723,7 @@ body {
 
 .products-filter-buttons {
   margin-bottom: 40px;
+  display: flex;
 }
 
 .p-filter-btn {
@@ -1027,7 +1041,7 @@ h1 {
 .contact-info h3::after{
   content: '';
   display: block;
-  width: 300px;
+  width: 55%;
   height: 5px;
   background-color: var(--navy-blue);
   margin-top: 5px;
@@ -1110,6 +1124,10 @@ button:hover {
   .contact-info,
   .contact-form {
       padding: 30px;
+  }
+
+  .contact-info h3::after{
+    width: 80%;
   }
 }
 /* ______________________________________________________________________*/
