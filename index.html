@@ -38,22 +38,23 @@
       <!-- SOCIAL ICON -->
       <div class="social-icons">
         <div class="Language">
-          <select name="Language" id="Language">
+          <select name="Language" id="languageSwitcher">
             <option value="English">English</option>
-            <option value="Arabic">Arabic</option>
+            <option value="Arabic">العربية</option>
           </select>
         </div>
         <!-- FACEBOOK -->
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <img src="/images/icons/facebook-2.png" alt="Facebook" width="20">
         </a>
+        <!-- WhatsApp -->
+        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer">
+          <img src="/images/icons/whatsapp.png" class="social-whatsapp" alt="WhatsApp" width="20">
         <!-- LINKEDIN -->
         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
           <img src="/images/icons/linkedin-2.png" alt="LinkedIn" width="20">
         </a>
-        <!-- WhatsApp -->
-        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer">
-          <img src="/images/icons/whatsapp.png" alt="WhatsApp" width="20">
+        
       </div>
     </div>
     <!-- END TOP BAR -->
@@ -75,7 +76,7 @@
       <a href="tel:(555) 123-4567" class="contact-button">
         <span class="phone-icon">📞</span>
         <div>
-          <div>Contact Us Today</div>
+          <div data-i18n="contact_us_today">Contact Us Today</div>
           <div>(555) 123-4567</div>
         </div>
       </a>
@@ -85,10 +86,10 @@
     <div class="hero">
       <div class="hero-slider">
         <div class="slide active">
-          <h2>Welcome to Pyrmaids</h2>
+          <h2 data-i18n="welcome_to_pyramids">Welcome to Pyrmaids</h2>
         </div>
         <div class="slide">
-          <h2>Innovative Solutions</h2>
+          <h2 data-i18n="innovative_solutions">Innovative Solutions</h2>
         </div>
         <div class="slide">
           <h2>Global Reach</h2>
@@ -530,7 +531,7 @@
     </div>
     <!-- END CONTACT SECTION -->
     <!-- FOOTER SECTION -->
-    <div class="footer" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-delay="200">
+    <div class="footer" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-delay="200">
       <div class="footer-content">
         <div class="footer-section">
           <h2>Pyrmaids</h2>
@@ -637,9 +638,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
       </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- ANIMATIONS JS -->
     <script>
       AOS.init();
     </script>
+    <!-- FILTER BUTTONS - OUR PRODUCTS SECTION JS -->
     <script>
       document.querySelectorAll('.filter-button').forEach(button => {
         button.addEventListener('click', () => {
@@ -648,6 +651,7 @@
         });
       });
     </script>
+    <!-- SLIDER JS - HERO SECTION -->
     <script>
       const slides = document.querySelectorAll('.slide');
       const dots = document.querySelectorAll('.dot');
@@ -713,6 +717,41 @@
         });
       });
     </script>
+    <!-- LANGUAGE SWITCHER -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const languageSwitcher = document.getElementById("languageSwitcher");
+    
+        // Function to load and apply language
+        function loadLanguage(lang) {
+            fetch(`/JS/${lang}.json`) // Load the selected language JSON
+                .then(response => response.json())
+                .then(translations => {
+                    document.querySelectorAll("[data-i18n]").forEach(el => {
+                        const key = el.getAttribute("data-i18n");
+                        if (translations[key]) {
+                            el.textContent = translations[key]; // Update text
+                        }
+                    });
+    
+                    // If Arabic, switch page direction to RTL
+                    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+                })
+                .catch(error => console.error("Error loading language:", error));
+        }
+    
+        // Detect language change
+        languageSwitcher.addEventListener("change", function () {
+            localStorage.setItem("selectedLang", this.value); // Save selection
+            loadLanguage(this.value);
+        });
+    
+        // Load saved language on page load
+        const savedLang = localStorage.getItem("selectedLang") || "en";
+        languageSwitcher.value = savedLang;
+        loadLanguage(savedLang);
+    });
+    </script>  
     <!-- Font Awesome Script -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   </main>
