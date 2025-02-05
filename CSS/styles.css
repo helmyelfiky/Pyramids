@@ -44,50 +44,8 @@ body {
   --fourth-blue: #0066cc;
   --dark-background: #212121;
 }
-/* ______________________GENERAL STYLES______________________ */
+/* ______________________GENERAL STYLES_________________________ */
 
-/* ______________________TOP BAR STYLES______________________ */
-.top-bar {
-  background: var(--dark-background);
-  /* background: linear-gradient(to left, var(--third-blue) 30%, var(--dark-background) 30%); */
-  color: white;
-  padding: 8px 5%;
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-  position: relative;
-  z-index: 2;
-}
-.top-bar::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 25%; /* Adjust for the diagonal part */
-  height: 100%;
-  background-color: var(--navy-blue); /* Second color */
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
-}
-.top-bar a {
-  color: white;
-  text-decoration: none;
-}
-.address-location{
-  margin-top: 2px;
-}
-.top-bar-mail{
-  margin-top: 2px;
-}
-.separator {
-  margin: 0;
-}
-.social-icons{
-  z-index: 1;
-  /* margin-right: 1rem; */
-  margin: 0;
-}
-
-/* ____________________________________________________________ */
 /* ______________________HEADER_________________________________*/
 .header {
   padding: 10px 4%;
@@ -95,10 +53,12 @@ body {
   justify-content: space-around;
   align-items: center;
   gap: 10rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  background: white;
-  position: relative;
-  z-index: 2;
+  box-shadow: none;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
   width: 100%;
 }
 
@@ -115,7 +75,6 @@ body {
 #pyramids-logo{
  width: 100%;
  height: 100px;
- 
 }
 
 .nav-menu {
@@ -126,6 +85,7 @@ body {
   width: 100%;
   justify-content: space-between;
   margin: 0;
+  color: var(--white);
 }
 
 .nav-menu a {
@@ -136,6 +96,12 @@ body {
   font-size: 14px;
   padding: 10px 0;
   display: block;
+  position: relative;
+
+}
+
+.nav-item{
+  position: relative;
 }
 
 .nav-menu a:hover {
@@ -147,11 +113,66 @@ body {
   display: inline-block;
 }
 
+.dropdown-menu{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  min-width: 180px;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+/* Style for dropdown items */
+.dropdown-menu .dropdown-item {
+  display: block;
+  padding: 10px 15px;
+  color: var(--dark-background);
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background: var(--third-blue);
+  color: white;
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ensure dropdown stays visible when hovered */
+.nav-item:hover .nav-link {
+  color: var(--third-blue);
+}
+
 .dropdown::after {
   content: "▼";
   font-size: 8px;
   margin-left: 5px;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  color: var(--dark-background);
+
+}
+
+#productsDropdown{
+  justify-content: center;
+  display: flex;
+}
+
+.mobile-menu-toggle {
+  display: none;
 }
 
 .contact-button {
@@ -209,10 +230,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .top-bar {
-  display: none;
-  }
-  
   .header {
   padding: 15px 20px;
   }
@@ -222,7 +239,7 @@ body {
   }
 
   /* Add hamburger menu for mobile */
-  .mobile-menu-button {
+  .mobile-menu-toggle {
   display: block;
   font-size: 24px;
   cursor: pointer;
@@ -238,6 +255,23 @@ body {
   position: relative;
   overflow: hidden;
   height: 500px;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100vh; /* Make it full-screen height */
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the container without distortion */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the video */
 }
 
 .hero-carousel {
@@ -366,8 +400,6 @@ body {
 
 /* ____________________________________________________________________ */
 /* ______________________DISCOVER - ABOUT SECTION______________________ */
-
-
 .discover-section {
   padding: 5rem 0;
   background-color: #f8f9fa;
@@ -390,7 +422,6 @@ body {
 .discover-image-wrapper {
   position: relative;
   margin-left: -3rem; /* Creates an overlapping effect */
-  
 }
 
 .discover-image {
@@ -561,6 +592,8 @@ body {
   .discover-content {
       padding-right: 0;
   }
+
+  
 }
 
 @media (max-width: 768px) {
@@ -580,6 +613,9 @@ body {
 
   .discover-title {
       font-size: 2rem;
+  }
+  .discover-container {
+      padding: 0 1rem;
   }
 }
 /* ______________________________________________________________________ */
@@ -605,7 +641,6 @@ body {
   right: 0;
   bottom: 0;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
-  
 }
 
 .expertise-container {
@@ -977,7 +1012,7 @@ body {
   left: 0;
   width: 100%;
   height: 50%; /* Only half of the section */
-  background-image: url('/images/image-5.png');
+  background-image: url('/images/image-6.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -1049,7 +1084,7 @@ h1 {
   padding: 40px;
   border: white 35px solid;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-   url('/images/image-4.png') center/cover;
+   url('/images/image-5.png') center/cover;
   color: white;
   z-index: 9;
 }
@@ -1163,6 +1198,13 @@ button:hover {
   }
 }
 /* ______________________________________________________________________*/
+.email-hyperlink{
+  color: var(--white);
+  text-decoration: none;
+}
+#footer-emai{
+  color: #cccccc;
+}
 /* __________________________FOOTER SECTION____________________________________________*/
 .footer {
   background-color: var(--dark-background);
@@ -1175,8 +1217,9 @@ button:hover {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5%;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 3%;
   padding: 0 20px;
 }
 
@@ -1201,6 +1244,17 @@ button:hover {
   width: 100% !important;
 }
 
+#useful-links{
+  padding: 0 10%;
+}
+
+.footer-logo{
+  display: block;
+  width: 70%;
+  margin: 10px auto;
+
+}
+
 .footer-section p {
   line-height: 1.6;
   color: #cccccc;
@@ -1208,7 +1262,8 @@ button:hover {
 
 .footer-social-icons {
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  gap: 5%;
   margin-top: 20px;
 }
 
@@ -1275,28 +1330,76 @@ button:hover {
 
 @media (max-width: 768px) {
   .footer-content {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   
   .footer-section {
-      text-align: center;
+    text-align: left;
   }
   
   .footer-section h2::after {
-      left: 50%;
-      transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .social-icons {
-      justify-content: center;
+    justify-content: center;
   }
   
   .contact-info p {
-      justify-content: center;
+    justify-content: center;
   }
   
   .footer-bottom {
-      text-align: center;
+    text-align: center;
   }
+
+  #useful-links{
+    padding: 0;
+  }
+
+}
+/* ______________________________________________________________________*/
+/* __________________________TO THE TOP BUTTON_________________________ */
+#top-button {
+  display: inline-block;
+  background-color: var(--navy-blue);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 25px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  text-decoration: none !important;
+}
+#top-button::after {
+  content: "\2191";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#top-button:hover {
+  cursor: pointer;
+  background-color: var(--fourth-blue);
+}
+#top-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+@media screen and (max-width: 768px) {
+  #top-button {
+    right: 10px;
+    bottom: 10px;
+  }
+  
 }
 /* ______________________________________________________________________*/

@@ -1,759 +1,756 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="/CSS/styles.css" rel="stylesheet">
+    <link href="/CSS/animations.css" rel="stylesheet">
+    <title>Pyrmaids</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <link href="/CSS/styles.css" rel="stylesheet">
-  <link href="/CSS/animations.css" rel="stylesheet">
-  <title>Pyrmaids</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
 
-
-</head>
-
-<body>
-  <main>
-    <!-- TOP BAR -->
-    <div class="top-bar">
-      <!-- EMAIL -->
-      <svg class="top-bar-mail" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-        fill="#005891">
-        <path
-          d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-      </svg>
-      <a href="mailto:info@pyrmaids.com">info@pyrmaids.com</a>
-      <!-- SEPARATOR -->
-      <p class="separator">|</p>
-      <!-- ADDRESS -->
-      <svg class="address-location" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-        fill="#005891">
-        <path
-          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-      </svg>
-      <a href="#">Address of factory or company</a>
-      <!-- SOCIAL ICON -->
-      <div class="social-icons">
-        <div class="Language">
-          <select name="Language" id="languageSwitcher">
-            <option value="English">English</option>
-            <option value="Arabic">العربية</option>
-          </select>
-        </div>
-        <!-- FACEBOOK -->
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <img src="/images/icons/facebook-2.png" alt="Facebook" width="20">
+  <body>
+    <main>
+      <!-- Back to top button -->
+      <a id="top-button"></a>
+      <!-- HEADER SECTION -->
+      <header class="header">
+        <a href="#" class="logo">
+          <img src="/images/logo.png" alt="Pyrmaids Logo" class="logo-image" id="pyramids-logo">
         </a>
-        <!-- WhatsApp -->
-        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer">
-          <img src="/images/icons/whatsapp.png" class="social-whatsapp" alt="WhatsApp" width="20">
-        <!-- LINKEDIN -->
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <img src="/images/icons/linkedin-2.png" alt="LinkedIn" width="20">
-        </a>
-        
-      </div>
-    </div>
-    <!-- END TOP BAR -->
-    <!-- HEADER SECTION -->
-    <header class="header">
-      <a href="#" class="logo">
-        <img src="/images/logo.png" alt="Pyrmaids Logo" class="logo-image" id="pyramids-logo">
-      </a>
-      <!-- HEADER NAV MENU -->
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#about">ABOUT US</a></li>
-          <li><a href="#expertise">EXPERTISE</a></li>
-          <li><a href="#products" class="dropdown">PRODUCTS</a></li>
-          <li><a href="#contact" class="dropdown">Contact Us</a></li>
-        </ul>
-      </nav>
-
-      <a href="tel:(555) 123-4567" class="contact-button">
-        <span class="phone-icon">📞</span>
-        <div>
-          <div data-i18n="contact_us_today">Contact Us Today</div>
-          <div>(555) 123-4567</div>
-        </div>
-      </a>
-    </header>
-    <!-- END HEADER SECTION -->
-    <!-- HERO SECTION -->
-    <div class="hero">
-      <div class="hero-slider">
-        <div class="slide active">
-          <h2 data-i18n="welcome_to_pyramids">Welcome to Pyrmaids</h2>
-        </div>
-        <div class="slide">
-          <h2 data-i18n="innovative_solutions">Innovative Solutions</h2>
-        </div>
-        <div class="slide">
-          <h2>Global Reach</h2>
-        </div>
-
-        <button class="slider-btn prev">❮</button>
-        <button class="slider-btn next">❯</button>
-
-        <div class="dots-container">
-          <div class="dot active"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-      </div>
-    </div>
-    <!-- END HERO SECTION -->
-    <!-- About Section: Discover Pyramids -->
-    <section class="discover-section" id="about" data-aos="fade-up" data-aos-duration="800"
-      data-aos-easing="ease-in-out" data-aos-delay="200">
-      <div class="discover-container">
-        <div class="discover-grid">
-          <div class="discover-image-wrapper">
-            <img src="/images/hero/hero-1.JPG" alt="Manufacturing Facility" class="discover-image">
-            <div class="experience-badge">
-              <p class="experience-number">20+</p>
-              <p class="experience-text" data-i18n="years_of_expertise">Years of Expertise</p>
-            </div>
-          </div>
-          <div class="discover-content">
-            <div class="discover-tag" data-i18n="discover_pyrmaids">DISCOVER PYRMAIDS</div>
-            <h2 class="discover-title" data-i18n="premium_adhesive_solutions_for_diverse_industries">Premium Adhesive Solutions for Diverse Industries</h2>
-            <p class="discover-description" data-i18n="data-description">
-              Pyrmaids specializes in manufacturing superior adhesive products tailored to meet the demands of various
-              industries.
-              Our state-of-the-art production techniques ensure that every adhesive solution we offer enhances
-              operational
-              efficiency
-              and reliability, empowering your business to excel.
-            </p>
-            <div class="features-grid">
-              <!-- CARD 1 -->
-              <div class="feature-card-wrapper" data-aos="fade-left" data-aos-duration="900"
-                data-aos-easing="ease-in-out" data-os-delay="200">
-                <div class="feature-card">
-                  <div class="feature-icon">
-                    <div class="icon-background">
-                      <img src="/images/icons/bullseye.png" alt="Bullseye Icon" class="img-card-icon">
-                    </div>
-                  </div>
-                  <h3 class="feature-title">Our Commitment</h3>
-                  <p class="feature-description">
-                    Delivering high-performance adhesive solutions for optimal manufacturing processes.
-                  </p>
-                </div>
-              </div>
-              <!-- CARD 2 -->
-              <div class="feature-card-wrapper" data-aos="fade-left" data-aos-duration="900"
-                data-aos-easing="ease-in-out" data-os-delay="400">
-                <div class="feature-card">
-                  <div class="feature-icon">
-                    <div class="icon-background">
-                      <img src="/images/icons/eye.png" alt="Eye Icon" class="img-card-icon">
-                    </div>
-                  </div>
-                  <h3 class="feature-title">Our Vision</h3>
-                  <p class="feature-description">
-                    To innovate adhesive technology that meets the ever-evolving needs of multiple industries.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <a href="#contact" class="contact-btn" data-aos="fade-left" data-aos-duration="900"
-              data-aos-easing="ease-in-out" data-os-delay="600">Contact us for tailored adhesive solutions</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End About Section -->
-    <!-- Expertise Section -->
-    <section class="expertise-section" id="expertise" data-aos="fade-up" data-aos-duration="800"
-      data-aos-easing="ease-in-out" data-aos-delay="200">
-      <div class="expertise-container">
-        <div class="expertise-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out"
-          data-aos-delay="400">
-          <div class="expertise-tag">EXPLORE PYRMAIDS EXPERTISE</div>
-          <h2 class="expertise-title">Innovative Adhesive Solutions Tailored for Industry Leaders</h2>
-          <p class="expertise-description">
-            Pyrmaids stands at the forefront of adhesive manufacturing, offering specialized products that enhance
-            operational efficiency and product quality. Our commitment to innovation ensures that businesses can rely on
-            our
-            adhesives for superior performance in their projects.
-          </p>
-        </div>
-        <div class="expertise-grid">
-          <!-- Card 1 -->
-          <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
-            data-aos-delay="600">
-            <div class="expertise-card">
-              <div class="card-icon">
-                <img src="/images/icons/formula.png" alt="Formula Icon" class="img-card-icon">
-              </div>
-              <h3 class="card-title black">Customized Adhesive Formulations</h3>
-              <p class="card-description">
-                Our team works closely with clients to develop tailored adhesive solutions that meet specific industry
-                requirements, ensuring optimal results for every application.
-              </p>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
-            data-aos-delay="600">
-            <div class="expertise-card blue-card card-up">
-              <div class="card-icon">
-                <img src="/images/icons/quality.png" alt="Quality Icon" class="img-card-icon">
-              </div>
-              <h3 class="card-title">Quality Assurance Standards</h3>
-              <p class="card-description">
-                Our rigorous quality control protocols ensure that every product meets or exceeds industry standards,
-                providing you with peace of mind in your manufacturing processes.
-              </p>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
-            data-aos-delay="600">
-            <div class="expertise-card">
-              <div class="card-icon">
-                <img src="/images/icons/recycle.png" alt="Recycle Icon" class="img-card-icon">
-              </div>
-              <h3 class="card-title black">Sustainable Manufacturing Practices</h3>
-              <p class="card-description ">
-                We prioritize eco-friendly processes in our production methods, minimizing waste and ensuring our
-                products
-                are safe for both users and the environment.
-              </p>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
-            data-aos-delay="600">
-            <div class="expertise-card">
-              <div class="card-icon">
-                <img src="/images/icons/customer-support.png" alt="Support Icon" class="img-card-icon">
-              </div>
-              <h3 class="card-title black">Technical Support and Training</h3>
-              <p class="card-description">
-                Our experts provide comprehensive support and training, helping your team maximize the potential and
-                application of our adhesive solutions.
-              </p>
-            </div>
-          </div>
-          <!-- Card 5 -->
-          <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
-            data-aos-delay="600">
-            <div class="expertise-card blue-card card-up">
-              <div class="card-icon">
-                <img src="/images/icons/team.png" alt="Team Icon" class="img-card-icon">
-              </div>
-              <h3 class="card-title">Collaboration with Clients</h3>
-              <p class="card-description">
-                We believe in building strong partnerships with our clients, ensuring open communication and
-                collaboration
-                to achieve the best outcomes.
-              </p>
-            </div>
-          </div>
-          <!-- Card 6 -->
-          <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
-            data-aos-delay="600">
-            <div class="expertise-card">
-              <div class="card-icon">
-                <img src="/images/icons/best-price-2.png" alt="Price Icon" class="img-card-icon">
-              </div>
-              <h3 class="card-title black">Competitive Pricing</h3>
-              <p class="card-description">
-                Pyrmaids offers high-quality adhesive products at competitive prices, ensuring you receive the best
-                value
-                without compromising on quality.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Expertise Section -->
-    <!-- Products Section -->
-    <section class="products-section" id="products" data-aos="fade-up" data-aos-duration="800"
-      data-aos-easing="ease-in-out" data-aos-delay="100">
-      <div class="products-container">
-        <div class="products-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out"
-          data-aos-delay="400">
-          <div class="products-title">Our Products</div>
-          <div class="products-description">
-            Explore our range of adhesive solutions designed to meet the diverse needs of various industries. From
-            high-performance formulations to eco-friendly options, Pyrmaids offers a wide selection of products to
-            enhance
-            your manufacturing processes.
-          </div>
-        </div>
-        <div class="products-filter-buttons" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-          data-aos-delay="200">
-          <button class="p-filter-btn active" data-filter="all">All Products</button>
-          <button class="p-filter-btn" data-filter="small">Small</button>
-          <button class="p-filter-btn" data-filter="medium">Medium</button>
-          <button class="p-filter-btn" data-filter="large">Large</button>
-
-        </div>
-        <div class="products-grid">
-          <!-- CARD 1 -->
-          <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-            data-aos-delay="200">
-            <div class="products-item">
-              <img src="/images/400x300.jpg" alt="App 1" class="products-image">
-              <div class="products-content">
-                <h3>App 1</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div>
-          <!-- CARD 2 -->
-          <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-            data-aos-delay="200">
-            <div class="products-item">
-              <img src="/images/400x300.jpg" alt="Product 1" class="products-image">
-              <div class="products-content">
-                <h3>Product 1</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div>
-          <!-- CARD 3 -->
-          <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-            data-aos-delay="200">
-            <div class="products-item">
-              <img src="/images/400x300.jpg" alt="Branding 1" class="products-image">
-              <div class="products-content">
-                <h3>Branding 1</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div>
-          <!-- CARD 4 -->
-          <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-            data-aos-delay="400">
-            <div class="products-item">
-              <img src="/images/400x300.jpg" alt="App 2" class="products-image">
-              <div class="products-content">
-                <h3>App 2</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div>
-          <!-- CARD 5 -->
-          <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-            data-aos-delay="400">
-            <div class="products-item">
-              <img src="/images/400x300.jpg" alt="Product 2" class="products-image">
-              <div class="products-content">
-                <h3>Product 2</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div>
-          <!-- CARD 6 -->
-          <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-            data-aos-delay="400">
-            <div class="products-item">
-              <img src="/images/400x300.jpg" alt="Branding 2" class="products-image">
-              <div class="products-content">
-                <h3>Branding 2</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div>
-          <!-- CARD 7 -->
-          <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-            data-aos-delay="600">
-            <div class="products-item">
-              <img src="/images/400x300.jpg" alt="App 3" class="products-image">
-              <div class="products-content">
-                <h3>App 3</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-    <!-- End Products Section -->
-    <!-- FREQUENTLY ASKED QUESTIONS -->
-    <section class="faq-section" id="faq">
-      <div class="faq-container">
-        <!-- LEFT SECTION -->
-        <div class="left-section">
-          <span class="faq-tag">FAQ'S</span>
-          <h1 class="faq-section-title">Let's Make Something Awesome Together</h1>
-          <p class="description">We're not just another agency – we're your digital growth partners. With years of
-            industry experience and a passion for innovation, our team is dedicated to delivering measurable results
-            propel your business forward.</p>
-          <div class="features">
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" />
-              </svg>
-              Top quality service
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" />
-              </svg>
-              Intermodal Shipping
-            </div>
-          </div>
-        </div>
-        <!-- RIGHT SECTION -->
-        <div class="right-section">
-          <div class="faq-list">
-            <!-- FAQ 1 -->
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item faq-item">
-                <h3 class="accordion-header faq-title" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    Where are your manufacturing facilities located?
-                  </button>
-                </h3>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body faq-content">
-                    Our manufacturing facilities are located in the Fayoum and Qalyoub industrial areas, with warehouses
-                    in
-                    both locations to ensure efficient storage and distribution.
-                  </div>
-                </div>
-              </div>
-              <!-- FAQ 2 -->
-              <div class="accordion-item faq-item">
-                <h3 class="accordion-header faq-title" id="headingTwo">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    Are your products available for export?
-                  </button>
-                </h3>
-                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body faq-content">
-                    Yes, we export our adhesive products to the Middle East and Africa, with plans to expand into
-                    other international markets.
-                  </div>
-                </div>
-              </div>
-              <!-- FAQ 3 -->
-              <div class="accordion-item faq-item">
-                <h3 class="accordion-header faq-title" id="headingThree">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                    Do you provide after-sales services?
-                  </button>
-                </h3>
-                <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body faq-content">
-                    Yes, we offer comprehensive after-sales services to ensure customer satisfaction, including technical support and assistance tailored to your needs.
-                  </div>
-                </div>
-            </div>
-          </div>
-    </section>
-    <!-- END FREQUENTLY ASKED QUESTIONS -->
-    <!-- CONTACT SECTION -->
-    <div class="contact-section" id="contact" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
-      data-aos-delay="200">
-      <div class="contact-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out" data-aos-delay="400">
-        <span class="connect-text">CONNECT WITH PYRMAIDS</span>
-        <h1>Your Partner in Adhesive Solutions</h1>
-        <p class="contact-subtitle">For tailored adhesive products that elevate your production capabilities, reach out
-          to our dedicated team. We're here to provide solutions that meet your specific industrial needs.</p>
-      </div>
-
-      <div class="contact-container">
-        <div class="contact-info">
-          <h2>CONTACT INFORMATION</h2>
-          <h3>Get in Touch with Us</h3>
-
-          <div class="info-items">
-            <div class="info-item">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                  stroke="white" stroke-width="2" />
-              </svg>
-              <span>(555) 123 - 4567</span>
-            </div>
-            <div class="info-item">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="white"
-                  stroke-width="2" />
-                <path d="M22 6l-10 7L2 6" stroke="white" stroke-width="2" />
-              </svg>
-              <span>info@pyrmaids.com</span>
-            </div>
-            <div class="info-item">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="white" stroke-width="2" />
-                <circle cx="12" cy="10" r="3" stroke="white" stroke-width="2" />
-              </svg>
-              <span>789 Industrial Way, New York, </span>
-            </div>
-            <div class="info-item">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" />
-                <path d="M12 6v6l4 2" stroke="white" stroke-width="2" />
-              </svg>
-              <span>Mon - Fri: 8:00am - 6:00pm</span>
-            </div>
-          </div>
-        </div>
-
-        <form class="contact-form" action="">
-          <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" placeholder="Ex. John Doe" required>
-          </div>
-          <div class="form-group">
-            <label>Your Email</label>
-            <input type="email" placeholder="example@email.com" required>
-          </div>
-          <div class="form-group">
-            <label>Contact Number</label>
-            <input type="tel" placeholder="(123) 456-7890" required>
-          </div>
-          <div class="form-group">
-            <label>Your Message</label>
-            <textarea rows="4" placeholder="Leave a message" required></textarea>
-          </div>
-          <button type="submit">SUBMIT INQUIRY</button>
-        </form>
-      </div>
-    </div>
-    <!-- END CONTACT SECTION -->
-    <!-- FOOTER SECTION -->
-    <div class="footer" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-delay="200">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h2>Pyrmaids</h2>
-          <p class="text-justify">At Pyrmaids, we produce innovative adhesive products that support various industries.
-            Discover excellence in manufacturing and our commitment to quality.</p>
-          <div class="footer-social-icons">
-            <a href="#" class="footer-social-icon">
-              <img src="/images/icons/facebook-2.png" alt="Facebook" width="30">
-            </a>
-            <a href="#" class="footer-social-icon">
-              <img src="/images/icons/linkedin-2.png" alt="LinkedIn" width="30">
-            </a>
-            <a href="#" class="footer-social-icon">
-              <img src="/images/icons/whatsapp.png" alt="WhatsApp" width="30">
-            </a>
-          </div>
-        </div>
-        <!-- USEFUL LINKS -->
-        <div class="footer-section">
-          <h2>Useful Links</h2>
-          <ul class="footer-links">
-            <!-- HOME -->
-            <li><a href="index.html"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16"
-                  height="16" fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                </svg>Home</a></li>
-            <!-- OUR PRODUCTS -->
-            <li><a href="#products"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                </svg>Our Products</a></li>
-            <!-- ABOUT US -->
-            <li><a href="#About"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                </svg>About Us</a></li>
-            <!-- FAQ -->
-            <li><a href="#faq"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                </svg>FAQ</a></li>
-            <!-- PRIVACY POLICY -->
-            <li><a href="#"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                </svg>Privacy Policy</a></li>
-            <!-- CONTACT US -->
-            <li><a href="#contact"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                </svg>Contact Us</a></li>
-            <!-- TERMS AND CONDITIONS -->
-            <li><a href="#"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                </svg>Terms and Conditions</a></li>
+        <!-- HEADER NAV MENU -->
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#expertise">EXPERTISE</a></li>
+            <li><a href="#services">Services</a></li>
+            <li class="nav-item dropdown" id="productsDropdown">
+              <a href="" class="nav-link" id="productsDropdown" role="button">PRODUCTS</a>
+              <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                <li><a class="dropdown-item" href="#">All Products</a></li>
+                <li><a class="dropdown-item" href="#">Hot Melt</a></li>
+                <li><a class="dropdown-item" href="#">Upholstery Adhesive</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
+        </nav>
+        <!-- MOBILE MENU TOGGLE -->
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <!-- CONTACT US -->
-        <div class="footer-section">
-          <h2 id="contact-us">Contact Us</h2>
-          <div class="footer-contact-info">
-            <p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
-                <path
-                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-              </svg> <a href="mailto@info@pyramids.com">info@pyrmaids.com</a>
-            </p>
-            <p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
-                <path
-                  d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-              </svg> (555) 123 - 4567
-            </p>
-            <p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
-                <path
-                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-              </svg> 456 Oak Ave. Denver, CO
-            </p>
-            <p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
-                <path
-                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
-              </svg> Monday - Friday: 9:00 AM - 5:00 PM
-            </p>
+
+        <a href="tel:(555) 123-4567" class="contact-button">
+          <span class="phone-icon">📞</span>
+          <div>
+            <div data-i18n="contact_us_today">Contact Us Today</div>
+            <div>(555) 123-4567</div>
+          </div>
+        </a>
+      </header>
+      <!-- END HEADER SECTION -->
+      <!-- HERO SECTION -->
+      <div class="hero">
+        <div class="hero-video">
+          <video autoplay muted loop>
+            <source src="/images/hero/hero-4.mp4" type="video/mp4">
+          </video>
+        <!-- <div class="hero-slider">
+          <div class="slide active">
+            <h2 data-i18n="welcome_to_pyramids">Welcome to Pyrmaids</h2>
+          </div>
+          <div class="slide">
+            <h2 data-i18n="innovative_solutions">Innovative Solutions</h2>
+          </div>
+          <div class="slide">
+            <h2>Global Reach</h2>
+          </div>
+
+          <button class="slider-btn prev">❮</button>
+          <button class="slider-btn next">❯</button>
+
+          <div class="dots-container">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div> -->
+      </div>
+      <!-- END HERO SECTION -->
+      <!-- About Section: Discover Pyramids -->
+      <section class="discover-section" id="about" data-aos="fade-up" data-aos-duration="800" 
+        data-aos-easing="ease-in-out" data-aos-delay="200">
+        <div class="discover-container">
+          <div class="discover-grid">
+            <div class="discover-image-wrapper">
+              <img src="/images/hero/hero-1.JPG" alt="Manufacturing Facility" class="discover-image">
+              <div class="experience-badge">
+                <p class="experience-number">20+</p>
+                <p class="experience-text" data-i18n="years_of_expertise">Years of Expertise</p>
+              </div>
+            </div>
+            <div class="discover-content">
+              <div class="discover-tag" data-i18n="discover_pyrmaids">DISCOVER PYRAMIDS</div>
+              <h2 class="discover-title" data-i18n="premium_adhesive_solutions_for_diverse_industries">Premium Adhesive Solutions for Diverse Industries</h2>
+              <p class="discover-description" data-i18n="data-description">
+                Pyramids specializes in manufacturing superior adhesive products tailored to meet the demands of various
+                industries.
+                Our state-of-the-art production techniques ensure that every adhesive solution we offer enhances
+                operational
+                efficiency
+                and reliability, empowering your business to excel.
+              </p>
+              <div class="features-grid">
+                <!-- CARD 1 -->
+                <div class="feature-card-wrapper" data-aos="fade-left" data-aos-duration="900"
+                  data-aos-easing="ease-in-out" data-os-delay="200">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <div class="icon-background">
+                        <img src="/images/icons/bullseye.png" alt="Bullseye Icon" class="img-card-icon">
+                      </div>
+                    </div>
+                    <h3 class="feature-title">Our Commitment</h3>
+                    <p class="feature-description">
+                      Delivering high-performance adhesive solutions for optimal manufacturing processes.
+                    </p>
+                  </div>
+                </div>
+                <!-- CARD 2 -->
+                <div class="feature-card-wrapper" data-aos="fade-left" data-aos-duration="900"
+                  data-aos-easing="ease-in-out" data-os-delay="400">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <div class="icon-background">
+                        <img src="/images/icons/eye.png" alt="Eye Icon" class="img-card-icon">
+                      </div>
+                    </div>
+                    <h3 class="feature-title">Our Vision</h3>
+                    <p class="feature-description">
+                      To innovate adhesive technology that meets the ever-evolving needs of multiple industries.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a href="/about.html" class="contact-btn" data-aos="fade-left" data-aos-duration="900"
+                data-aos-easing="ease-in-out" data-os-delay="600">
+                Discover More About Us
+              </a>
+            </div>
           </div>
         </div>
+      </section>
+      <!-- End About Section -->
+      <!-- Expertise Section -->
+      <section class="expertise-section" id="expertise" data-aos="fade-up" data-aos-duration="800"
+        data-aos-easing="ease-in-out" data-aos-delay="200">
+        <div class="expertise-container">
+          <div class="expertise-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out"
+            data-aos-delay="400">
+            <div class="expertise-tag">EXPLORE PYRMAIDS EXPERTISE</div>
+            <h2 class="expertise-title">Innovative Adhesive Solutions Tailored for Industry Leaders</h2>
+            <p class="expertise-description">
+              Pyrmaids stands at the forefront of adhesive manufacturing, offering specialized products that enhance
+              operational efficiency and product quality. Our commitment to innovation ensures that businesses can rely on
+              our
+              adhesives for superior performance in their projects.
+            </p>
+          </div>
+          <div class="expertise-grid">
+            <!-- Card 1 -->
+            <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
+              data-aos-delay="600">
+              <div class="expertise-card">
+                <div class="card-icon">
+                  <img src="/images/icons/formula.png" alt="Formula Icon" class="img-card-icon">
+                </div>
+                <h3 class="card-title black">Customized Adhesive Formulations</h3>
+                <p class="card-description">
+                  Our team works closely with clients to develop tailored adhesive solutions that meet specific industry
+                  requirements, ensuring optimal results for every application.
+                </p>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
+              data-aos-delay="600">
+              <div class="expertise-card blue-card card-up">
+                <div class="card-icon">
+                  <img src="/images/icons/quality.png" alt="Quality Icon" class="img-card-icon">
+                </div>
+                <h3 class="card-title">Quality Assurance Standards</h3>
+                <p class="card-description">
+                  Our rigorous quality control protocols ensure that every product meets or exceeds industry standards,
+                  providing you with peace of mind in your manufacturing processes.
+                </p>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
+              data-aos-delay="600">
+              <div class="expertise-card">
+                <div class="card-icon">
+                  <img src="/images/icons/recycle.png" alt="Recycle Icon" class="img-card-icon">
+                </div>
+                <h3 class="card-title black">Sustainable Manufacturing Practices</h3>
+                <p class="card-description ">
+                  We prioritize eco-friendly processes in our production methods, minimizing waste and ensuring our
+                  products
+                  are safe for both users and the environment.
+                </p>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
+              data-aos-delay="600">
+              <div class="expertise-card">
+                <div class="card-icon">
+                  <img src="/images/icons/customer-support.png" alt="Support Icon" class="img-card-icon">
+                </div>
+                <h3 class="card-title black">Technical Support and Training</h3>
+                <p class="card-description">
+                  Our experts provide comprehensive support and training, helping your team maximize the potential and
+                  application of our adhesive solutions.
+                </p>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
+              data-aos-delay="600">
+              <div class="expertise-card blue-card card-up">
+                <div class="card-icon">
+                  <img src="/images/icons/team.png" alt="Team Icon" class="img-card-icon">
+                </div>
+                <h3 class="card-title">Collaboration with Clients</h3>
+                <p class="card-description">
+                  We believe in building strong partnerships with our clients, ensuring open communication and
+                  collaboration
+                  to achieve the best outcomes.
+                </p>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
+              data-aos-delay="600">
+              <div class="expertise-card">
+                <div class="card-icon">
+                  <img src="/images/icons/best-price-2.png" alt="Price Icon" class="img-card-icon">
+                </div>
+                <h3 class="card-title black">Competitive Pricing</h3>
+                <p class="card-description">
+                  Pyrmaids offers high-quality adhesive products at competitive prices, ensuring you receive the best
+                  value
+                  without compromising on quality.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Expertise Section -->
+      <!-- Products Section -->
+      <section class="products-section" id="products" data-aos="fade-up" data-aos-duration="800"
+        data-aos-easing="ease-in-out" data-aos-delay="100">
+        <div class="products-container">
+          <div class="products-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out"
+            data-aos-delay="400">
+            <div class="products-title">Our Products</div>
+            <div class="products-description">
+              Explore our range of adhesive solutions designed to meet the diverse needs of various industries. From
+              high-performance formulations to eco-friendly options, Pyrmaids offers a wide selection of products to
+              enhance
+              your manufacturing processes.
+            </div>
+          </div>
+          <div class="products-filter-buttons" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+            data-aos-delay="200">
+            <button class="p-filter-btn active" data-filter="all">All Products</button>
+            <button class="p-filter-btn" data-filter="small">Small</button>
+            <button class="p-filter-btn" data-filter="medium">Medium</button>
+            <button class="p-filter-btn" data-filter="large">Large</button>
+          </div>
+          <div class="products-grid">
+            <!-- CARD 1 -->
+            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="200">
+              <div class="products-item">
+                <img src="/images/400x300.jpg" alt="App 1" class="products-image">
+                <div class="products-content">
+                  <h3>App 1</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 2 -->
+            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="200">
+              <div class="products-item">
+                <img src="/images/400x300.jpg" alt="Product 1" class="products-image">
+                <div class="products-content">
+                  <h3>Product 1</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 3 -->
+            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="200">
+              <div class="products-item">
+                <img src="/images/400x300.jpg" alt="Branding 1" class="products-image">
+                <div class="products-content">
+                  <h3>Branding 1</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 4 -->
+            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="400">
+              <div class="products-item">
+                <img src="/images/400x300.jpg" alt="App 2" class="products-image">
+                <div class="products-content">
+                  <h3>App 2</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 5 -->
+            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="400">
+              <div class="products-item">
+                <img src="/images/400x300.jpg" alt="Product 2" class="products-image">
+                <div class="products-content">
+                  <h3>Product 2</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 6 -->
+            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="400">
+              <div class="products-item">
+                <img src="/images/400x300.jpg" alt="Branding 2" class="products-image">
+                <div class="products-content">
+                  <h3>Branding 2</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div>
+            <!-- CARD 7 -->
+            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="600">
+              <div class="products-item">
+                <img src="/images/400x300.jpg" alt="App 3" class="products-image">
+                <div class="products-content">
+                  <h3>App 3</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!-- End Products Section -->
+      <!-- FREQUENTLY ASKED QUESTIONS -->
+      <section class="faq-section" id="faq">
+        <div class="faq-container">
+          <!-- LEFT SECTION -->
+          <div class="left-section">
+            <span class="faq-tag">FAQ'S</span>
+            <h1 class="faq-section-title">Let's Make Something Awesome Together</h1>
+            <p class="description">We're not just another agency – we're your digital growth partners. With years of
+              industry experience and a passion for innovation, our team is dedicated to delivering measurable results
+              propel your business forward.</p>
+            <div class="features">
+              <div class="feature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" />
+                </svg>
+                Top quality service
+              </div>
+              <div class="feature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" />
+                </svg>
+                Intermodal Shipping
+              </div>
+            </div>
+          </div>
+          <!-- RIGHT SECTION -->
+          <div class="right-section">
+            <div class="faq-list">
+              <!-- FAQ 1 -->
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item faq-item">
+                  <h3 class="accordion-header faq-title" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Where are your manufacturing facilities located?
+                    </button>
+                  </h3>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body faq-content">
+                      Our manufacturing facilities are located in the Fayoum and Qalyoub industrial areas, with warehouses
+                      in
+                      both locations to ensure efficient storage and distribution.
+                    </div>
+                  </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="accordion-item faq-item">
+                  <h3 class="accordion-header faq-title" id="headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                      Are your products available for export?
+                    </button>
+                  </h3>
+                  <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body faq-content">
+                      Yes, we export our adhesive products to the Middle East and Africa, with plans to expand into
+                      other international markets.
+                    </div>
+                  </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="accordion-item faq-item">
+                  <h3 class="accordion-header faq-title" id="headingThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      Do you provide after-sales services?
+                    </button>
+                  </h3>
+                  <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body faq-content">
+                      Yes, we offer comprehensive after-sales services to ensure customer satisfaction, including technical support and assistance tailored to your needs.
+                    </div>
+                  </div>
+              </div>
+            </div>
+      </section>
+      <!-- END FREQUENTLY ASKED QUESTIONS -->
+      <!-- CONTACT SECTION -->
+      <div class="contact-section" id="contact" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
+        data-aos-delay="200">
+        <div class="contact-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out" data-aos-delay="400">
+          <span class="connect-text">CONNECT WITH PYRMAIDS</span>
+          <h1>Your Partner in Adhesive Solutions</h1>
+          <p class="contact-subtitle">For tailored adhesive products that elevate your production capabilities, reach out
+            to our dedicated team. We're here to provide solutions that meet your specific industrial needs.</p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h2>CONTACT INFORMATION</h2>
+            <h3>Get in Touch with Us</h3>
+
+            <div class="info-items">
+              <div class="info-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    stroke="white" stroke-width="2" />
+                </svg>
+                <span>(555) 123 - 4567</span>
+              </div>
+              <div class="info-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="white"
+                    stroke-width="2" />
+                  <path d="M22 6l-10 7L2 6" stroke="white" stroke-width="2" />
+                </svg>
+                <span><a href="mailto:info@pyramidsadhesives.com" class="email-hyperlink">info@pyrmaidsadhesives.com</a></span>
+              </div>
+              <div class="info-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="white" stroke-width="2" />
+                  <circle cx="12" cy="10" r="3" stroke="white" stroke-width="2" />
+                </svg>
+                <span>Fayoum , Egypt</span>
+              </div>
+              <div class="info-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" />
+                  <path d="M12 6v6l4 2" stroke="white" stroke-width="2" />
+                </svg>
+                <span>Sat - Thu: 8:00am - 5:00pm</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" action="">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Ex. John Doe" required>
+            </div>
+            <div class="form-group">
+              <label>Your Email</label>
+              <input type="email" placeholder="example@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>Contact Number</label>
+              <input type="tel" placeholder="(123) 456-7890" required>
+            </div>
+            <div class="form-group">
+              <label>Your Message</label>
+              <textarea rows="4" placeholder="Leave a message" required></textarea>
+            </div>
+            <button type="submit">SUBMIT INQUIRY</button>
+          </form>
+        </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2025 Pyrmaids, all rights reserved.</p>
+      <!-- END CONTACT SECTION -->
+      <!-- FOOTER SECTION -->
+      <div class="footer" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-delay="200">
+        <div class="footer-content">
+          <div class="footer-section" id="footer-logo-section">
+            <img src="/images/logo.png" alt="Pyrmaids Logo" class="footer-logo">
+            <div class="footer-social-icons">
+              <a href="#" class="footer-social-icon">
+                <img src="/images/icons/facebook-2.png" alt="Facebook" width="30">
+              </a>
+              <a href="#" class="footer-social-icon">
+                <img src="/images/icons/linkedin-2.png" alt="LinkedIn" width="30">
+              </a>
+              <a href="#" class="footer-social-icon">
+                <img src="/images/icons/whatsapp.png" alt="WhatsApp" width="30">
+              </a>
+            </div>
+          </div>
+          <!-- USEFUL LINKS -->
+          <div class="footer-section" id="useful-links">
+            <h2>Useful Links</h2>
+            <ul class="footer-links">
+              <!-- HOME -->
+              <li><a href="index.html"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                  </svg>Home</a></li>
+              <!-- OUR PRODUCTS -->
+              <li><a href="#products"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                  </svg>Our Products</a></li>
+              <!-- ABOUT US -->
+              <li><a href="#About"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                  </svg>About Us</a></li>
+              <!-- FAQ -->
+              <li><a href="#faq"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                  </svg>FAQ</a></li>
+              <!-- PRIVACY POLICY -->
+              <li><a href="#"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                  </svg>Privacy Policy</a></li>
+              <!-- CONTACT US -->
+              <li><a href="#contact"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                  </svg>Contact Us</a></li>
+              <!-- TERMS AND CONDITIONS -->
+              <li><a href="#"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="#0066cc" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                  </svg>Terms and Conditions</a></li>
+            </ul>
+          </div>
+          <!-- CONTACT US -->
+          <div class="footer-section">
+            <h2 id="contact-us">Contact Us</h2>
+            <div class="footer-contact-info">
+              <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg> <a href="mailto@info@pyramids.com" class="email-hyperlink" id="footer-email">info@pyrmaids.com</a>
+              </p>
+              <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                </svg> (555) 123 - 4567
+              </p>
+              <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg> 456 Oak Ave. Denver, CO
+              </p>
+              <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path
+                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                </svg> Saturday - Thursday: 9 AM - 5 PM
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Pyrmaids, all rights reserved.</p>
+        </div>
       </div>
-    </div>
-    <!-- END FOOTER SECTION -->
-    <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+      <!-- END FOOTER SECTION -->
+      <!-- SCRIPTS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <!-- ANIMATIONS JS -->
+      <script>
+        AOS.init();
       </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- ANIMATIONS JS -->
-    <script>
-      AOS.init();
-    </script>
-    <!-- FILTER BUTTONS - OUR PRODUCTS SECTION JS -->
-    <script>
-      document.querySelectorAll('.filter-button').forEach(button => {
-        button.addEventListener('click', () => {
-          document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
+      <!-- FILTER BUTTONS - OUR PRODUCTS SECTION JS -->
+      <script>
+        document.querySelectorAll('.filter-button').forEach(button => {
+          button.addEventListener('click', () => {
+            document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+          });
         });
-      });
-    </script>
-    <!-- SLIDER JS - HERO SECTION -->
-    <script>
-      const slides = document.querySelectorAll('.slide');
-      const dots = document.querySelectorAll('.dot');
-      const prevBtn = document.querySelector('.prev');
-      const nextBtn = document.querySelector('.next');
-      let currentSlide = 0;
+      </script>
+      <!-- SLIDER JS - HERO SECTION -->
+      <script>
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let currentSlide = 0;
 
-      function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
+        function showSlide(index) {
+          slides.forEach(slide => slide.classList.remove('active'));
+          dots.forEach(dot => dot.classList.remove('active'));
 
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
-      }
+          slides[index].classList.add('active');
+          dots[index].classList.add('active');
+        }
 
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      // Event listeners
-      prevBtn.addEventListener('click', prevSlide);
-      nextBtn.addEventListener('click', nextSlide);
-
-      dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          currentSlide = index;
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
           showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+          });
         });
-      });
 
-      // Auto-advance slides every 5 seconds
-      setInterval(nextSlide, 5000);
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const productItems = document.querySelectorAll('.product-item');
+        // Auto-advance slides every 5 seconds
+        setInterval(nextSlide, 5000);
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const filterButtons = document.querySelectorAll('.filter-btn');
+          const productItems = document.querySelectorAll('.product-item');
 
-        filterButtons.forEach(button => {
-          button.addEventListener('click', function () {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+          filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+              // Remove active class from all buttons
+              filterButtons.forEach(btn => btn.classList.remove('active'));
 
-            // Add active class to clicked button
-            this.classList.add('active');
+              // Add active class to clicked button
+              this.classList.add('active');
 
-            const filterValue = this.getAttribute('data-filter');
+              const filterValue = this.getAttribute('data-filter');
 
-            productItems.forEach(item => {
-              if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                item.classList.remove('hidden');
-              } else {
-                item.classList.add('hidden');
-              }
+              productItems.forEach(item => {
+                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                  item.classList.remove('hidden');
+                } else {
+                  item.classList.add('hidden');
+                }
+              });
             });
           });
         });
+      </script>
+      <!-- LANGUAGE SWITCHER -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const languageSwitcher = document.getElementById("languageSwitcher");
+      
+          // Function to load and apply language
+          function loadLanguage(lang) {
+              fetch(`/JS/${lang}.json`) // Load the selected language JSON
+                  .then(response => response.json())
+                  .then(translations => {
+                      document.querySelectorAll("[data-i18n]").forEach(el => {
+                          const key = el.getAttribute("data-i18n");
+                          if (translations[key]) {
+                              el.textContent = translations[key]; // Update text
+                          }
+                      });
+      
+                      // If Arabic, switch page direction to RTL
+                      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+                  })
+                  .catch(error => console.error("Error loading language:", error));
+          }
+      
+          // Detect language change
+          languageSwitcher.addEventListener("change", function () {
+              localStorage.setItem("selectedLang", this.value); // Save selection
+              loadLanguage(this.value);
+          });
+      
+          // Load saved language on page load
+          const savedLang = localStorage.getItem("selectedLang") || "en";
+          languageSwitcher.value = savedLang;
+          loadLanguage(savedLang);
       });
-    </script>
-    <!-- LANGUAGE SWITCHER -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const languageSwitcher = document.getElementById("languageSwitcher");
-    
-        // Function to load and apply language
-        function loadLanguage(lang) {
-            fetch(`/JS/${lang}.json`) // Load the selected language JSON
-                .then(response => response.json())
-                .then(translations => {
-                    document.querySelectorAll("[data-i18n]").forEach(el => {
-                        const key = el.getAttribute("data-i18n");
-                        if (translations[key]) {
-                            el.textContent = translations[key]; // Update text
-                        }
-                    });
-    
-                    // If Arabic, switch page direction to RTL
-                    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-                })
-                .catch(error => console.error("Error loading language:", error));
-        }
-    
-        // Detect language change
-        languageSwitcher.addEventListener("change", function () {
-            localStorage.setItem("selectedLang", this.value); // Save selection
-            loadLanguage(this.value);
+      </script> 
+      <!-- END LANGUAGE SWITCHER -->
+      <!-- TO THE TOP BUTTON -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        var btn = $('#top-button');
+
+        $(window).scroll(function() {
+          if ($(window).scrollTop() > 100) {
+            btn.addClass('show');
+          } else {
+            btn.removeClass('show');
+          }
         });
-    
-        // Load saved language on page load
-        const savedLang = localStorage.getItem("selectedLang") || "en";
-        languageSwitcher.value = savedLang;
-        loadLanguage(savedLang);
-    });
-    </script>  
-    <!-- Font Awesome Script -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  </main>
-</body>
+
+        btn.on('click', function(e) {
+          e.preventDefault();
+          $('html, body').animate({scrollTop:0}, '100');
+        });
+      </script>
+      <!-- Bootstrap JS (only required for dropdown functionality on mobile) -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Font Awesome Script -->
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </main>
+  </body>
 
 </html>
