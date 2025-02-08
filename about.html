@@ -68,42 +68,23 @@
         <!-- END HERO SECTION -->
         <!-- ABOUT SECTION -->
          
-        <section class="about-section" id="about">
-            <div class="about-wrapper">
-                <!-- FITLER BUTTONS -->
-                <div class="about-filter-buttons" data-aos="" data-aos-duration="600" data-aos-easing="ease-in-out" data-aos-delay="100">
-                    <button class="about-filter-btn active" data-filter="all">Mission</button>
-                    <button class="about-filter-btn" data-filter="small">Saftey Measures</button>
-                    <button class="about-filter-btn" data-filter="medium">Quality Assurance</button>
-                    <button class="about-filter-btn" data-filter="large">Packaging</button>
-                </div>
-                <!-- ABOUT CONTENT -->
-                <div class="container about-container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="about-content">
-                                <h2 class="discover-title" id="about-title">Who We Are</h2>
-                                <p class="discover-description" id="about-description">
-                                    Pyramids Adhesives is a leading manufacturer of hot melt and Upholstery adhesives. 
-                                    We are dedicated to providing our customers with the highest quality products and services. 
-                                    Our team of experts is committed to helping you find the right adhesive solution for your specific needs. 
-                                    Whether you are looking for a standard adhesive or a custom formulation, we have the knowledge and experience to meet your requirements. 
-                                    Contact us today to learn more about our products and services.
-                                </p>
-                                <!-- <div class="about-button">
-                                    <a href="#contact" class="contact-btn">Contact Us</a>
-                                </div> -->
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="about-img">
-                                <img src="/images/image-6.jpg" class="about-image" alt="About Us Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="nav-buttons">
+            <div class="nav-button active" data-section="mission">Mission</div>
+            <div class="nav-button" data-section="safety">Safety Measures</div>
+            <div class="nav-button" data-section="quality">Quality Assurance</div>
+            <div class="nav-button" data-section="packaging">Packaging</div>
+        </div>
+    
+        <div id="section-container" class="section-content">
+            <div class="section-text">
+                <h2 id="section-title">Who We Are</h2>
+                <p id="section-description">Pyramids Adhesives is a leading manufacturer of hot melt and Upholstery adhesives. We are dedicated to providing our customers with the highest quality products and services. Our team of experts is committed to helping you find the right adhesive solution for your specific needs. Whether you are looking for a standard adhesive or a custom formulation, we have the knowledge and experience to meet your requirements. Contact us today to learn more about our products and services.</p>
             </div>
-        </section>
+            <div class="section-image">
+                <img id="section-image" src="https://via.placeholder.com/600x400?text=Factory+Image" alt="Factory Image">
+            </div>
+        </div>
+
         <!-- END ABOUT SECTION -->
         <!-- STATS SECTION -->
         <section class="stats-section">
@@ -236,6 +217,80 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <!-- ABOUT SECTION FILTER BUTTONS -->
+    <script>
+        const sections = {
+            mission: {
+                title: 'Our Mission',
+                description: 'At Pyramids Adhesives, our mission is to innovate and deliver superior adhesive solutions that meet the evolving needs of our global customers. We strive to set industry standards through continuous research, sustainable practices, and unwavering commitment to quality.',
+                image: 'https://via.placeholder.com/600x400?text=Mission+Image'
+            },
+            safety: {
+                title: 'Safety Measures',
+                description: 'Safety is our top priority. We implement rigorous safety protocols throughout our manufacturing process, ensuring the well-being of our employees, protecting the environment, and maintaining the highest standards of workplace safety and health.',
+                image: 'https://via.placeholder.com/600x400?text=Safety+Measures+Image'
+            },
+            quality: {
+                title: 'Quality Assurance',
+                description: 'Our quality assurance process is comprehensive and meticulous. We conduct extensive testing, maintain strict quality control measures, and continuously improve our manufacturing techniques to guarantee that every product meets or exceeds customer expectations.',
+                image: 'https://via.placeholder.com/600x400?text=Quality+Assurance+Image'
+            },
+            packaging: {
+                title: 'Packaging Solutions',
+                description: 'We offer innovative packaging solutions that protect our adhesive products, ensure easy handling, and minimize environmental impact. Our packaging is designed to maintain product integrity, facilitate transportation, and support sustainable practices.',
+                image: 'https://via.placeholder.com/600x400?text=Packaging+Image'
+            }
+        };
+
+        document.querySelectorAll('.nav-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const textSection = document.querySelector('.section-text');
+                const imageSection = document.querySelector('.section-image');
+                
+                // Prevent multiple clicks during transition
+                if (textSection.classList.contains('text-fade-out')) return;
+                
+                // Remove active class from all buttons
+                document.querySelectorAll('.nav-button').forEach(btn => 
+                    btn.classList.remove('active')
+                );
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Add fade out animations
+                textSection.classList.add('text-fade-out');
+                imageSection.classList.add('image-fade-out');
+
+                // Wait for fade out animation to complete
+                setTimeout(() => {
+                    // Get section data
+                    const sectionKey = button.dataset.section;
+                    const sectionData = sections[sectionKey];
+
+                    // Update content
+                    document.getElementById('section-title').textContent = sectionData.title;
+                    document.getElementById('section-description').textContent = sectionData.description;
+                    document.getElementById('section-image').src = sectionData.image;
+
+                    // Remove fade out classes
+                    textSection.classList.remove('text-fade-out');
+                    imageSection.classList.remove('image-fade-out');
+                    
+                    // Add fade in animations
+                    textSection.classList.add('text-fade-in');
+                    imageSection.classList.add('image-fade-in');
+
+                    // Remove fade in classes after animation completes
+                    setTimeout(() => {
+                        textSection.classList.remove('text-fade-in');
+                        imageSection.classList.remove('image-fade-in');
+                    }, 300);
+
+                }, 300);
+            });
+        });
     </script>
 </body>
 </html>
