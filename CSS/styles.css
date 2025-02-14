@@ -34,8 +34,8 @@ body {
   color: black !important;
 }
 :root{
-  --navy-blue: #005891;
-  --white: #fff;
+  --navy-blue: #5ea000;
+  /* --navy-blue: #88bf47; */
   --black: #000;
   --light-blue: #d1e4f7;
   --light-white: #f7f3f7;
@@ -438,7 +438,7 @@ body {
   position: absolute;
   bottom: -2rem;
   right: -2rem;
-  background-color: #005891;
+  background-color: var(--navy-blue);
   color: white;
   padding: 2rem;
   width: 180px;
@@ -470,7 +470,7 @@ body {
 }
 
 .discover-tag {
-  color: #005891;
+  color: var(--navy-blue);
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -491,7 +491,7 @@ body {
   width: 300px;
   margin: 0 auto;
   height: 5px;
-  background-color: #005891;
+  background-color: var(--navy-blue);
   margin-top: 1rem;
 }
 
@@ -534,7 +534,7 @@ body {
 }
 
 .icon-background{
-  background-color: rgba(0,88,145,1);
+  background-color: var(--navy-blue);
   padding: 5px 5px 5px 5px;
   border-radius: 5px;
 }
@@ -554,7 +554,7 @@ body {
 
 .contact-btn {
   display: inline-block;
-  background-color: #005891;
+  background-color: var(--navy-blue);
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -570,7 +570,7 @@ body {
 }
 
 .contact-btn:hover {
-  background-color: #004674;
+  background-color: var(--navy-blue);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0,88,145,0.2);
 }
@@ -697,7 +697,7 @@ body {
 }
 
 .expertise-card.blue-card {
-  background-color: #005891;
+  background-color: var(--navy-blue);
   color: white;
 }
 
