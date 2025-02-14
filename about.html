@@ -25,7 +25,17 @@
             <!-- HEADER NAV MENU -->
             <nav>
             <ul class="nav-menu">
-                <li><a href="#about">ABOUT US</a></li>
+                <li class="nav-item dropdown" id="aboutDropdown">
+                    <a href="#about" class="nav-link" id="aboutDropdown" role="button">ABOUT US</a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                      <li><a class="dropdown-item" href="#about">Discover Pyrmaids</a></li>
+                      <li><a class="dropdown-item" href="/about.html#team">Our Team</a></li>
+                      <li><a class="dropdown-item" href="/about.html#mission">Mission</a></li>
+                      <li><a class="dropdown-item" href="/about.html#safety-measures">Safety Measures</a></li>
+                      <li><a class="dropdown-item" href="/about.html#quality-assurance">Quality Assurance</a></li>
+                      
+                    </ul>
+                  </li>
                 <li><a href="#expertise">EXPERTISE</a></li>
                 <li><a href="#services">Services</a></li>
                 <li class="nav-item dropdown" id="productsDropdown">
@@ -55,9 +65,9 @@
         </header>
         <!-- END HEADER SECTION -->
         <!-- HERO SECTION -->
-        <div class="hero-section-about">
-            <h1>About Pyramids Adhesives</h1>
-            <div class="breadcrumb">
+        <div class="hero-section-about" id="hero-about">
+            <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">About Pyramids Adhesives</h1>
+            <div class="breadcrumb" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
               <a href="/index.html">Home</a>
               <span style="color: white;">›</span>
               <span style="color: white;">About</span>
@@ -68,26 +78,26 @@
         <!-- END HERO SECTION -->
         <!-- ABOUT SECTION -->
          
-        <div class="nav-buttons">
-            <div class="nav-button active" data-section="mission">Mission</div>
-            <div class="nav-button" data-section="safety">Safety Measures</div>
-            <div class="nav-button" data-section="quality">Quality Assurance</div>
-            <div class="nav-button" data-section="packaging">Packaging</div>
+        <div class="nav-buttons" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
+            <div class="nav-button active" data-section="mission" id="mission">Mission</div>
+            <div class="nav-button" data-section="safety" id="safety-measures">Safety Measures</div>
+            <div class="nav-button" data-section="quality" id="quality-assurance">Quality Assurance</div>
+            <div class="nav-button" data-section="packaging" id="packaging">Packaging</div>
         </div>
     
-        <div id="section-container" class="section-content">
+        <div id="section-container" class="section-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
             <div class="section-text">
-                <h2 id="section-title">Who We Are</h2>
-                <p id="section-description">Pyramids Adhesives is a leading manufacturer of hot melt and Upholstery adhesives. We are dedicated to providing our customers with the highest quality products and services. Our team of experts is committed to helping you find the right adhesive solution for your specific needs. Whether you are looking for a standard adhesive or a custom formulation, we have the knowledge and experience to meet your requirements. Contact us today to learn more about our products and services.</p>
+                <h2 id="section-title" class="discover-title">Who We Are</h2>
+                <p id="section-description" class="discover-description">Pyramids Adhesives is a leading manufacturer of hot melt and Upholstery adhesives. We are dedicated to providing our customers with the highest quality products and services. Our team of experts is committed to helping you find the right adhesive solution for your specific needs. Whether you are looking for a standard adhesive or a custom formulation, we have the knowledge and experience to meet your requirements. Contact us today to learn more about our products and services.</p>
             </div>
-            <div class="section-image">
-                <img id="section-image" src="https://via.placeholder.com/600x400?text=Factory+Image" alt="Factory Image">
+            <div class="section-image" >
+                <img id="section-image" src="/images/image-8.jpg" alt="Factory Image">
             </div>
         </div>
 
         <!-- END ABOUT SECTION -->
         <!-- STATS SECTION -->
-        <section class="stats-section">
+        <section class="stats-section" id="stats" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="stat-box">
               <h2 class="purecounter" data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="2">0</h2>
               <p>Clients Served</p>
@@ -105,7 +115,7 @@
         </section>
         <!-- END STATS SECTION -->
         <!-- CALL TO ACTION SECTION -->
-        <section class="call-to-action">
+        <section class="call-to-action" id="cta" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="call-to-action-content">
                 <div class="call-to-action-text">
                     <h2>Contact Us</h2>
@@ -124,9 +134,8 @@
         </section>
         <!-- END CALL TO ACTION SECTION -->
         <!-- TEAM SECTION -->
-        <div class="team-section">
+        <div class="team-section" id="team">
             <h2 class="team-title">Meet Our Team</h2>
-            
             <div class="team-members">
                 <div class="team-member">
                     <div class="member-image">
@@ -154,7 +163,7 @@
                     <span class="position">CTO</span>
                     <p>Illum minima ea autem doloreque ipsum quidem quas aspernatur modi ut praesentium vel tque sed facilis at qui</p>
                 </div>
-
+                
                 <div class="team-member">
                     <div class="member-image">
                         <img src="https://placehold.co/300x300" alt="Team member">
@@ -224,22 +233,22 @@
             mission: {
                 title: 'Our Mission',
                 description: 'At Pyramids Adhesives, our mission is to innovate and deliver superior adhesive solutions that meet the evolving needs of our global customers. We strive to set industry standards through continuous research, sustainable practices, and unwavering commitment to quality.',
-                image: 'https://via.placeholder.com/600x400?text=Mission+Image'
+                image: '/images/image-12.jpg'
             },
             safety: {
                 title: 'Safety Measures',
                 description: 'Safety is our top priority. We implement rigorous safety protocols throughout our manufacturing process, ensuring the well-being of our employees, protecting the environment, and maintaining the highest standards of workplace safety and health.',
-                image: 'https://via.placeholder.com/600x400?text=Safety+Measures+Image'
+                image: '/images/image-11.jpg'
             },
             quality: {
                 title: 'Quality Assurance',
                 description: 'Our quality assurance process is comprehensive and meticulous. We conduct extensive testing, maintain strict quality control measures, and continuously improve our manufacturing techniques to guarantee that every product meets or exceeds customer expectations.',
-                image: 'https://via.placeholder.com/600x400?text=Quality+Assurance+Image'
+                image: '/images/image-9.jpg'
             },
             packaging: {
                 title: 'Packaging Solutions',
                 description: 'We offer innovative packaging solutions that protect our adhesive products, ensure easy handling, and minimize environmental impact. Our packaging is designed to maintain product integrity, facilitate transportation, and support sustainable practices.',
-                image: 'https://via.placeholder.com/600x400?text=Packaging+Image'
+                image: '/images/image-10.jpg'
             }
         };
 

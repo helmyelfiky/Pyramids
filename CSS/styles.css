@@ -166,10 +166,11 @@ body {
 
 }
 
-#productsDropdown{
+#productsDropdown, #aboutDropdown{
   justify-content: center;
   display: flex;
 }
+
 
 .mobile-menu-toggle {
   display: none;

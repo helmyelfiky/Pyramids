@@ -25,13 +25,22 @@
         <!-- HEADER NAV MENU -->
         <nav>
           <ul class="nav-menu">
-            <li><a href="#about">ABOUT US</a></li>
+            <li class="nav-item dropdown" id="aboutDropdown">
+              <a href="#about" class="nav-link" id="aboutDropdown" role="button">ABOUT US</a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="#about">Discover Pyrmaids</a></li>
+                <li><a class="dropdown-item" href="/about.html#team">Our Team</a></li>
+                <li><a class="dropdown-item" href="/about.html#mission">Mission</a></li>
+                <li><a class="dropdown-item" href="/about.html#safety-measures">Safety Measures</a></li>
+                <li><a class="dropdown-item" href="/about.html#quality-assurance">Quality Assurance</a></li>
+              </ul>
+            </li>
             <li><a href="#expertise">EXPERTISE</a></li>
             <li><a href="#services">Services</a></li>
             <li class="nav-item dropdown" id="productsDropdown">
               <a href="" class="nav-link" id="productsDropdown" role="button">PRODUCTS</a>
               <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                <li><a class="dropdown-item" href="#">All Products</a></li>
+                <li><a class="dropdown-item" href="#products">All Products</a></li>
                 <li><a class="dropdown-item" href="#">Hot Melt</a></li>
                 <li><a class="dropdown-item" href="#">Upholstery Adhesive</a></li>
               </ul>
@@ -580,7 +589,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
                   <path
                     d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg> <a href="mailto@info@pyramids.com" class="email-hyperlink" id="footer-email">info@pyrmaids.com</a>
+                </svg> <a href="mailto:info@pyramidsadhesives.com" class="email-hyperlink" id="footer-email">info@pyrmaidsadhesives.com</a>
               </p>
               <p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">

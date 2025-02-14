@@ -81,6 +81,10 @@
     flex: 1;
 }
 
+#section-title::after{
+    margin: 10px 0;
+}
+
 /* Text animations */
 .text-fade-out {
     animation: textFadeOut 0.3s ease-out forwards;
@@ -146,6 +150,8 @@
 /* Additional styles for the filter buttons */
 .nav-buttons {
     display: flex;
+    justify-content: center;
+    gap: 6rem;
     border-bottom: 1px solid #e0e0e0;
     max-width: 1200px;
     margin: 0 auto;
@@ -266,7 +272,10 @@
 }
 #get-in-touch{
     margin-bottom: 4rem;
+    border-radius: 20px;
+    padding: 1rem 3rem;
 }
+
 @media screen and (max-width: 768px) {
     .call-to-action-content{
         margin: 0 2rem;
