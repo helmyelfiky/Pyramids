@@ -43,6 +43,7 @@
     
 }
 /* ____________________________________________________________________________ */
+/* START - REMOVE LATER */
 .content-section {
     max-width: 1200px;
     margin: 60px auto;
@@ -61,10 +62,11 @@
 .content-section p {
     font-size: 18px;
     line-height: 1.6;
-    color: #666;
+    color: var(--primary-grey);
     margin-bottom: 30px;
     max-width: 800px;
 }
+/* END - REMOVE LATER */
 /* ____________________________________________________________________________________*/
 /* ________________________ABOUT SECTION_____________________________________________ */
 .section-content {
@@ -161,7 +163,7 @@
 .nav-button {
     padding: 15px 20px;
     cursor: pointer;
-    color: #333;
+    color: var(--third-black);
     text-decoration: none;
     transition: all 0.3s ease;
     background: none;
@@ -170,8 +172,8 @@
 }
 
 .nav-button.active {
-    color: #0066cc;
-    border-bottom: 3px solid #0066cc;
+    color: #0066cc; /*CHANGE*/
+    border-bottom: 3px solid #0066cc; /*CHANGE*/
 }
 
 @media screen and (max-width: 768px) {
@@ -197,7 +199,7 @@
 }
   
 .stat-box {
-    background: #f8f9fa;
+    background: var(--secondary-white);
     padding: 20px;
     border-radius: 10px;
     width: 200px;
@@ -212,7 +214,7 @@
   
 .stat-box p {
     font-size: 16px;
-    color: #555;
+    color: #555; /*CHANGE*/
 }
 
 @media screen and (max-width: 768px) {
@@ -305,7 +307,7 @@
 
 .team-title {
     font-size: 32px;
-    color: #333;
+    color: var(--third-black);
     margin: 2rem 0;
     position: relative;
     display: inline-block;
@@ -349,14 +351,14 @@
 }
 
 .team-member h3 {
-    color: #333;
+    color: var(--third-black);
     font-size: 20px;
     margin: 0 0 5px;
     font-weight: 600;
 }
 
 .team-member .position {
-    color: #999;
+    color: var(--third-grey);
     font-size: 14px;
     font-style: italic;
     display: block;
@@ -364,7 +366,7 @@
 }
 
 .team-member p {
-    color: #666;
+    color: var(--primary-grey);
     font-size: 14px;
     line-height: 1.6;
     margin: 0;

@@ -34,9 +34,26 @@ body {
   color: black !important;
 }
 :root{
+  /* WHITE */
+  --primary-white: #ffffff;
+  --secondary-white: #f8f9fa;
+  --third-white: #e1e1e1;
+
+  /* GREEN */
   --navy-blue: #5ea000;
+
   /* --navy-blue: #88bf47; */
-  --black: #000;
+
+  /* BLACK */
+  --primary-black: #000;
+  --secondary-black: #2d2d2d;
+  --third-black: #333;
+  
+  /* GREY */
+  --primary-grey: #666;
+  --secondary-grey: #6b7280;
+  --third-grey: #888;
+
   --light-blue: #d1e4f7;
   --light-white: #f7f3f7;
   --secondary-blue: #00a0e4;
@@ -68,13 +85,17 @@ body {
   font-weight: bold;
   text-decoration: none;
   display: block;
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 200px;
   margin-right: 30px;
 }
 
 #pyramids-logo{
  width: 100%;
- height: 100px;
+ height: auto;
+ max-height: 100px;
+ object-fit: cover;
+
 }
 
 .nav-menu {
@@ -225,6 +246,11 @@ body {
   .nav-menu a {
   font-size: 12px;
   }
+
+  .logo{
+    width: 180px;
+  }
+
   #pyramids-logo{
     max-width: 80%;
   }
@@ -237,6 +263,14 @@ body {
 
   .nav-menu {
   display: none; /* Only hide on mobile and add a hamburger menu */
+  }
+
+  .logo{
+    width: 150px;
+  }
+
+  #pyramids-logo{
+    max-width: 80px;
   }
 
   /* Add hamburger menu for mobile */
@@ -403,7 +437,7 @@ body {
 /* ______________________DISCOVER - ABOUT SECTION______________________ */
 .discover-section {
   padding: 5rem 0;
-  background-color: #f8f9fa;
+  background-color: var(--secondary-white);
   font-family: system-ui, -apple-system, sans-serif;
 }
 
@@ -478,7 +512,7 @@ body {
 }
 
 .discover-title {
-  color: #2d2d2d;
+  color: var(--secondary-black);
   font-size: 2.5rem;
   margin: 0 0 1.5rem 0;
   line-height: 1.2;
@@ -496,7 +530,7 @@ body {
 }
 
 .discover-description {
-  color: #666;
+  color: var(--primary-grey);
   line-height: 1.8;
   margin-bottom: 3rem;
   font-size: 1.1rem;
@@ -509,7 +543,7 @@ body {
 }
 
 .feature-card {
-  background: white;
+  background: var(--primary-white);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
@@ -540,13 +574,13 @@ body {
 }
 
 .feature-title {
-  color: #2d2d2d;
+  color: var(--secondary-black);
   margin: 0 0 0.5rem 0;
   font-size: 1.25rem;
 }
 
 .feature-description {
-  color: #666;
+  color: var(--primary-grey);
   margin: 0;
   line-height: 1.6;
   font-size: 1rem;
@@ -555,7 +589,7 @@ body {
 .contact-btn {
   display: inline-block;
   background-color: var(--navy-blue);
-  color: white;
+  color: var(--primary-white);
   padding: 1rem 2rem;
   border: none;
   margin-top: 3rem;
@@ -726,14 +760,14 @@ body {
 }
 
 .card-title {
-  color: #333;
+  color: var(--third-black);
   font-size: 1.25rem;
   margin-bottom: 10px !important;
   font-weight: 600;
 }
 
 .card-description {
-  color: #666;
+  color: var(--primary-grey);
   line-height: 1.5;
   margin: 0;
   font-size: 1rem;
@@ -782,7 +816,7 @@ body {
 }
 
 .products-description {
-  color: #666;
+  color: var(--primary-grey);
   font-size: 16px;
   margin-bottom: 40px;
   max-width: 800px;
@@ -798,7 +832,7 @@ body {
 .p-filter-btn {
   border: none;
   background: none;
-  color: #666;
+  color: var(--primary-grey);
   font-size: 16px;
   margin: 0 15px;
   padding: 5px 10px;
@@ -827,7 +861,7 @@ body {
 }
 
 .products-item {
-  background: #fff;
+  background: var(--primary-white);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -850,13 +884,13 @@ body {
 
 .products-content h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--third-black);
   margin-bottom: 10px;
 }
 
 .products-content p {
   font-size: 14px;
-  color: #666;
+  color: var(--primary-grey);
   margin: 0;
 }
 @media (max-width: 1024px) {
@@ -917,7 +951,7 @@ body {
 }
 
 .description {
-  color: #6b7280;
+  color: var(--secondary-grey);
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 32px;
@@ -932,7 +966,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #6b7280;
+  color: var(--secondary-grey);
 }
 
 .feature svg {
@@ -963,18 +997,18 @@ body {
 }
 
 .faq-title{
-  color: #1e1b4b !important;
+  color: #1e1b4b !important; /*CHANGE*/
   font-weight: 600 !important;
   font-size: 18px !important; 
 }
 .accordion-button{
-  color: #1e1b4b !important;
+  color: #1e1b4b !important; /*CHANGE*/
   font-weight: 600 !important;
   font-size: 18px !important;
 }
 
 .faq-content {
-  color: #6b7280;
+  color: var(--secondary-grey);
   margin-top: 16px;
   line-height: 1.6;
   font-size: 14px;
@@ -1050,7 +1084,7 @@ body {
 }
 
 .connect-text {
-  color: #3498db;
+  color: #3498db; /*CHANGE*/
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -1148,7 +1182,7 @@ h1 {
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: #333;
+  color: var(--third-black);
   font-size: 14px;
 }
 
@@ -1156,9 +1190,9 @@ h1 {
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--third-white);
   border-radius: 4px;
-  background: #f8f9fa;
+  background: var(--secondary-white);
   font-size: 14px;
 }
 
@@ -1170,7 +1204,7 @@ h1 {
 button {
   width: 100%;
   padding: 15px;
-  background: #006699;
+  background: #006699; /*CHANGE*/
   color: white;
   border: none;
   border-radius: 4px;
@@ -1179,10 +1213,11 @@ button {
   cursor: pointer;
   transition: background 0.3s;
 }
-
-button:hover {
-  background: #005580;
-}
+/* REMOVE LATER */
+/* button:hover {
+  background: #005580; 
+} 
+*/
 
 @media (max-width: 768px) {
   .contact-container {
@@ -1301,7 +1336,7 @@ button:hover {
 }
 
 .footer-links a:hover {
-  color: #0066cc;
+  color: #0066cc; /*CHANGE*/
 }
 
 .footer-contact-info p {
@@ -1323,9 +1358,9 @@ button:hover {
   max-width: 1200px;
   margin: 40px auto 0;
   padding: 20px;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--third-black);
   text-align: left;
-  color: #888;
+  color: var(--third-grey);
   font-size: 14px;
 }
 
@@ -1386,7 +1421,7 @@ button:hover {
   font-style: normal;
   font-size: 2em;
   line-height: 50px;
-  color: #fff;
+  color: var(--primary-white);
 }
 #top-button:hover {
   cursor: pointer;
