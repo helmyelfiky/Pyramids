@@ -40,7 +40,12 @@ body {
   --third-white: #e1e1e1;
 
   /* GREEN */
-  --navy-blue: #5ea000;
+  --primary-green: #5ea000;
+  --secondary-green: #88BF47;
+
+  /* BLUE */
+  --primary-blue: #2A3F51;
+  --secondary-blue: #13222F;
 
   /* --navy-blue: #88bf47; */
 
@@ -56,7 +61,7 @@ body {
 
   --light-blue: #d1e4f7;
   --light-white: #f7f3f7;
-  --secondary-blue: #00a0e4;
+  /* --secondary-blue: #00a0e4; */
   --third-blue: #006699;
   --fourth-blue: #0066cc;
   --dark-background: #212121;
@@ -126,7 +131,7 @@ body {
 }
 
 .nav-menu a:hover {
-  color: var(--third-blue);
+  color: var(--secondary-green);
 }
 
 .dropdown {
@@ -161,7 +166,7 @@ body {
 }
 
 .dropdown-menu .dropdown-item:hover {
-  background: var(--third-blue);
+  background: var(--secondary-green);
   color: white;
 }
 
@@ -174,7 +179,7 @@ body {
 
 /* Ensure dropdown stays visible when hovered */
 .nav-item:hover .nav-link {
-  color: var(--third-blue);
+  color: var(--secondary-green);
 }
 
 .dropdown::after {
@@ -472,7 +477,7 @@ body {
   position: absolute;
   bottom: -2rem;
   right: -2rem;
-  background-color: var(--navy-blue);
+  background-color: var(--primary-blue);
   color: white;
   padding: 2rem;
   width: 180px;
@@ -504,7 +509,7 @@ body {
 }
 
 .discover-tag {
-  color: var(--navy-blue);
+  color: var(--primary-green);
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -525,7 +530,7 @@ body {
   width: 300px;
   margin: 0 auto;
   height: 5px;
-  background-color: var(--navy-blue);
+  background-color: var(--primary-blue);
   margin-top: 1rem;
 }
 
@@ -568,7 +573,7 @@ body {
 }
 
 .icon-background{
-  background-color: var(--navy-blue);
+  background-color: var(--primary-blue);
   padding: 5px 5px 5px 5px;
   border-radius: 5px;
 }
@@ -588,7 +593,7 @@ body {
 
 .contact-btn {
   display: inline-block;
-  background-color: var(--navy-blue);
+  background-color: var(--primary-green);
   color: var(--primary-white);
   padding: 1rem 2rem;
   border: none;
@@ -604,7 +609,7 @@ body {
 }
 
 .contact-btn:hover {
-  background-color: var(--navy-blue);
+  background-color: var(--primary-green);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0,88,145,0.2);
 }
@@ -687,9 +692,10 @@ body {
 }
 
 .expertise-tag {
-  color: var(--secondary-blue);
+  color: var(--primary-green);
   text-align: center;
   font-size: 1.2rem;
+  font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -731,7 +737,7 @@ body {
 }
 
 .expertise-card.blue-card {
-  background-color: var(--navy-blue);
+  background-color: var(--primary-green);
   color: white;
 }
 
@@ -809,7 +815,7 @@ body {
 .products-title {
   font-size: 1.5rem;
   letter-spacing: 1px;
-  color: var(--navy-blue);
+  color: var(--primary-green);
   margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: bold;
@@ -841,7 +847,7 @@ body {
 }
 
 .p-filter-btn.active {
-  color: var(--navy-blue);
+  color: var(--primary-green);
 }
 
 .p-filter-btn.active::after {
@@ -851,7 +857,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--navy-blue);
+  background-color: var(--primary-green);
 }
 
 .products-grid {
@@ -935,7 +941,7 @@ body {
 .faq-tag {
   display: inline-block;
   background-color: rgba(99, 102, 241, 0.1);
-  color: var(--navy-blue);
+  color: var(--primary-green);
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 14px;
@@ -972,7 +978,7 @@ body {
 .feature svg {
   width: 20px;
   height: 20px;
-  color: var(--navy-blue);
+  color: var(--primary-green);
 }
 
 .faq-list {
@@ -1015,7 +1021,7 @@ body {
 }
 
 .chevron {
-  color: var(--navy-blue);
+  color: var(--primary-green);
 }
 
 .active .chevron {
@@ -1036,7 +1042,7 @@ body {
   font-family: 'Inter', sans-serif;
   padding: 40px 20px;
   color: white;
-  background-color: var(--light-blue);
+  background-color: var(--secondary-white);
   position: relative;
 }
 
@@ -1079,12 +1085,12 @@ body {
   width: 61%;
   margin: 0 auto;
   height: 5px;
-  background-color: var(--navy-blue);
+  background-color: var(--primary-green);
   margin-top: 5px;
 }
 
 .connect-text {
-  color: #3498db; /*CHANGE*/
+  color: var(--primary-green); /*CHANGE*/
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -1117,7 +1123,7 @@ h1 {
 .contact-info {
   flex: 1;
   padding: 40px;
-  border: white 35px solid;
+  border: var(--primary-blue) 35px solid;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
    url('/images/image-5.png') center/cover;
   color: white;
@@ -1132,8 +1138,6 @@ h1 {
   z-index: 9;
 }
 
-
-
 .contact-info h3 {
   font-size: 28px;
   margin-bottom: 30px;
@@ -1145,7 +1149,7 @@ h1 {
   display: block;
   width: 55%;
   height: 5px;
-  background-color: var(--navy-blue);
+  background-color: var(--primary-green);
   margin-top: 5px;
 }
 
@@ -1171,7 +1175,7 @@ h1 {
 .contact-form {
   flex: 1;
   padding: 40px;
-  background: white;
+  background: var(--primary-blue);
   z-index: 9;
 }
 
@@ -1182,7 +1186,7 @@ h1 {
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: var(--third-black);
+  color: var(--primary-white);
   font-size: 14px;
 }
 
@@ -1204,7 +1208,7 @@ h1 {
 button {
   width: 100%;
   padding: 15px;
-  background: #006699; /*CHANGE*/
+  background: var(--primary-green);
   color: white;
   border: none;
   border-radius: 4px;
@@ -1273,7 +1277,7 @@ button {
   bottom: -10px;
   width: 100%;
   height: 2px;
-  background-color: var(--fourth-blue);
+  background-color: var(--secondary-green);
 }
 
 #contact-us::after {
@@ -1314,8 +1318,8 @@ button {
 }
 
 .footer-social-icon:hover {
-  background-color: var(--fourth-blue);
-  fill: var(--fourth-blue)
+  background-color: var(--secondary-green);
+  fill: var(--secondary-green)
 }
 
 .footer-links {
@@ -1336,7 +1340,7 @@ button {
 }
 
 .footer-links a:hover {
-  color: #0066cc; /*CHANGE*/
+  color: var(--secondary-green);
 }
 
 .footer-contact-info p {
@@ -1399,7 +1403,7 @@ button {
 /* __________________________TO THE TOP BUTTON_________________________ */
 #top-button {
   display: inline-block;
-  background-color: var(--navy-blue);
+  background-color: var(--primary-green);
   width: 50px;
   height: 50px;
   text-align: center;
@@ -1439,3 +1443,9 @@ button {
   
 }
 /* ______________________________________________________________________*/
+
+
+
+
+
+

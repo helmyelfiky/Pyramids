@@ -6,7 +6,7 @@
 }
 /* ________________________HERO SECTION_____________________________________________ */
 .hero-section-about {
-    background: var(--navy-blue);
+    background: var(--primary-blue);
     color: var(--white);
     padding: 60px 20px;
     position: relative;
@@ -15,6 +15,7 @@
 }
   
 .hero-section-about h1 {
+    color: var(--primary-white);
     max-width: 1200px;
     margin: 0 auto;
     font-size: 48px;
@@ -26,11 +27,11 @@
     margin: 0 auto;
     display: flex;
     gap: 10px;
-    color: var(--black)
+    color: var(--primary-white)
 }
 
 .breadcrumb a {
-    color: var(--white);
+    color: var(--primary-white);
     text-decoration: none;
 }
 @media screen and (max-width: 768px) {
@@ -172,8 +173,8 @@
 }
 
 .nav-button.active {
-    color: #0066cc; /*CHANGE*/
-    border-bottom: 3px solid #0066cc; /*CHANGE*/
+    color: var(--secondary-green); /*CHANGE*/
+    border-bottom: 3px solid var(--secondary-green); /*CHANGE*/
 }
 
 @media screen and (max-width: 768px) {
@@ -209,7 +210,7 @@
 .stat-box h2 {
     font-size: 36px;
     font-weight: bold;
-    color: var(--third-blue);
+    color: var(--primary-green);
 }
   
 .stat-box p {
@@ -243,6 +244,7 @@
     justify-content: space-around;
     align-items: center;
     z-index: 2;
+    color: var(--white) !important;
 }
 .call-to-action h2 {
     color: var(--white) !important;
@@ -371,4 +373,40 @@
     line-height: 1.6;
     margin: 0;
     padding: 0 15px;
+}
+/* ____________________________________________________________________________________*/ 
+/* ________________________CAROUSEL SECTION_____________________________________________ */
+.splide__slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.splide {
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+.splide__track {
+    padding: 10px;
+}
+
+.splide__list{
+    margin: 0 10px;
+}
+
+#carousel-title{
+    text-align: center;
+}
+
+/* ____________________________________________________________________________________*/
+/* ________________________FOOTER SECTION_____________________________________________ */
+.footer-link-about{
+    display: flex;
+    margin: 0 auto;
+}
+
+.margin-top{
+    margin-top: 4px;
 }
