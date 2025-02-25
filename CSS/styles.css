@@ -659,8 +659,8 @@ body {
   }
 }
 /* ______________________________________________________________________ */
-/* ______________________EXPERTISE SECTION______________________ */
-.expertise-section {
+/* ______________________Services SECTION______________________ */
+.services-section {
   padding: 5rem 0;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
@@ -673,7 +673,7 @@ body {
   
 }
 
-.expertise-section::before {
+.services-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -683,7 +683,7 @@ body {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
 }
 
-.expertise-container {
+.services-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -691,7 +691,7 @@ body {
   z-index: 1;
 }
 
-.expertise-tag {
+.services-tag {
   color: var(--primary-green);
   text-align: center;
   font-size: 1.2rem;
@@ -701,7 +701,7 @@ body {
   text-transform: uppercase;
 }
 
-.expertise-title {
+.services-title {
   color: white;
   text-align: center;
   font-size: 2.5rem;
@@ -710,7 +710,7 @@ body {
   text-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
-.expertise-description {
+.services-description {
   color: white;
   text-align: center;
   max-width: 800px;
@@ -719,13 +719,13 @@ body {
   font-size: 1.1rem;
 }
 
-.expertise-grid {
+.services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
 }
 
-.expertise-card {
+.services-card {
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
@@ -736,12 +736,12 @@ body {
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.expertise-card.blue-card {
+.services-card.blue-card {
   background-color: var(--primary-green);
   color: white;
 }
 
-.expertise-card:hover {
+.services-card:hover {
   transform: translateY(-5px);
 }
 
@@ -784,25 +784,25 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .expertise-grid {
+  .services-grid {
       grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .expertise-grid {
+  .services-grid {
       grid-template-columns: 1fr;
   }
 
-  .expertise-title {
+  .services-title {
       font-size: 2rem;
   }
 
-  .expertise-description {
+  .services-description {
       font-size: 1rem;
   }
 
-  .expertise-section{
+  .services-section{
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -1226,6 +1226,10 @@ button {
 }
 #footer-emai{
   color: #cccccc;
+}
+.location-link{
+  text-decoration: none;
+  color: var(--primary-white);
 }
 /* __________________________FOOTER SECTION____________________________________________*/
 .footer {
