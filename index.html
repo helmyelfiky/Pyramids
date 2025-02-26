@@ -6,11 +6,11 @@
     <link href="/CSS/styles.css" rel="stylesheet">
     <link href="/CSS/animations.css" rel="stylesheet">
     <title>Pyrmaids Adhesives</title>
+    <link rel="icon" type="image/x-icon" href="/images/logos/logo-2.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
   </head>
 
   <body>
@@ -35,7 +35,7 @@
                 <li><a class="dropdown-item" href="/about.html#quality-assurance">Quality Assurance</a></li>
               </ul>
             </li>
-            <li><a href="#services">services</a></li>
+            <li><a href="#services" class="nav-item">services</a></li>
             <li class="nav-item dropdown" id="productsDropdown">
               <a href="" class="nav-link" id="productsDropdown" role="button">PRODUCTS</a>
               <ul class="dropdown-menu" aria-labelledby="productsDropdown">
@@ -44,23 +44,25 @@
                 <li><a class="dropdown-item" href="#">Upholstery Adhesive</a></li>
               </ul>
             </li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#contact" class="nav-item">Contact Us</a></li>
           </ul>
         </nav>
+        <div class="language-dropdown">
+          <button>
+            <img src="/images/flags/Egypt-flag.png" width="20">Arabic 
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#"><img src="/images/flags/uk-logo.png" alt="England Flag">English</a></li>
+            <li><a href="#"><img src="/images/flags/Egypt-flag.png" alt="Egyptian Flag">العربية</a></li>
+            <li><a href="#"><img src="/images/flags/france-logo.png" alt="France Flag">Français</a></li>
+          </ul>
+        </div>
         <!-- MOBILE MENU TOGGLE -->
-        <div class="mobile-menu-toggle">
+        <div class="mobile-menu-toggle" onclick="toggleMenu()">
           <span></span>
           <span></span>
           <span></span>
         </div>
-
-        <!-- <a href="tel:(555) 123-4567" class="contact-button">
-          <span class="phone-icon">📞</span>
-          <div>
-            <div data-i18n="contact_us_today">Contact Us Today</div>
-            <div>(555) 123-4567</div>
-          </div>
-        </a> -->
       </header>
       <!-- END HEADER SECTION -->
       <!-- HERO SECTION -->
@@ -69,6 +71,7 @@
           <video autoplay muted loop>
             <source src="https://res.cloudinary.com/dsjk9cowq/video/upload/v1739561420/hero-4-c_rxucbs.mp4" type="video/mp4">
           </video>
+        </div>
         <!-- <div class="hero-slider">
           <div class="slide active">
             <h2 data-i18n="welcome_to_pyramids">Welcome to Pyrmaids</h2>
@@ -100,7 +103,7 @@
               <img src="/images/image-13.jpg" alt="Manufacturing Facility" class="discover-image">
               <div class="experience-badge">
                 <p class="experience-number">20+</p>
-                <p class="experience-text" data-i18n="years_of_services">Years of services</p>
+                <p class="experience-text" data-i18n="years_of_services">Years of Service</p>
               </div>
             </div>
             <div class="discover-content">
@@ -276,13 +279,13 @@
               your manufacturing processes.
             </div>
           </div>
-          <div class="products-filter-buttons" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+          <!-- <div class="products-filter-buttons" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
             data-aos-delay="200">
             <button class="p-filter-btn active" data-filter="all">All Products</button>
             <button class="p-filter-btn" data-filter="small">Small</button>
             <button class="p-filter-btn" data-filter="medium">Medium</button>
             <button class="p-filter-btn" data-filter="large">Large</button>
-          </div>
+          </div> -->
           <div class="products-grid">
             <!-- CARD 1 -->
             <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
@@ -339,28 +342,6 @@
                 </div>
               </div>
             </div>
-            <!-- CARD 6 -->
-            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-              data-aos-delay="400">
-              <div class="products-item">
-                <img src="/images/400x300.jpg" alt="Branding 2" class="products-image">
-                <div class="products-content">
-                  <h3>Branding 2</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div>
-            <!-- CARD 7 -->
-            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-              data-aos-delay="600">
-              <div class="products-item">
-                <img src="/images/400x300.jpg" alt="App 3" class="products-image">
-                <div class="products-content">
-                  <h3>App 3</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div>
           </div>
       </section>
       <!-- End Products Section -->
@@ -372,7 +353,7 @@
         </div>
       
         <div class="faq-grid">
-    
+          <!-- FAQ 1 -->
           <div class="faq-item">
             <div class="faq-question">
               <div class="icon">
@@ -385,7 +366,7 @@
               <p>Our manufacturing facilities are located in the Fayoum and Qalyoub industrial areas, with warehouses in both locations to ensure efficient storage and distribution.</p>
             </div>
           </div>
-      
+          <!-- FAQ 2 -->
           <div class="faq-item">
             <div class="faq-question">
               <div class="icon">
@@ -397,7 +378,7 @@
               <p>Yes, we export our adhesive products to the Middle East and Africa, with plans to expand into other international markets.</p>
             </div>
           </div>
-      
+          <!-- FAQ 3 -->
           <div class="faq-item">
             <div class="faq-question">
               <div class="icon">
@@ -409,7 +390,7 @@
               <p>Yes, we offer comprehensive after-sales services to ensure customer satisfaction, including technical support and assistance tailored to your needs.</p>
             </div>
           </div>
-
+          <!-- FAQ 4 -->
           <div class="faq-item">
             <div class="faq-question">
               <div class="icon">
@@ -421,7 +402,7 @@
               <p>Yes, we provide all payment plan options to accommodate the diverse needs of our customers and ensure a smooth purchasing experience.</p>
             </div>
           </div>
-
+          <!-- FAQ 5 -->
           <div class="faq-item">
             <div class="faq-question">
               <div class="icon">
@@ -437,7 +418,7 @@
               <p>You can contact us through our website, email, or phone. Our sales team is ready to assist you with your requirements and provide detailed product information.</p>
             </div>
           </div>
-
+          <!-- FAQ 6 -->
           <div class="faq-item">
             <div class="faq-question">
               <div class="icon">
@@ -533,13 +514,13 @@
             <img src="/images/logos/logo-2-No-background.png" alt="Pyrmaids Logo" class="footer-logo">
             <div class="footer-social-icons">
               <a href="#" class="footer-social-icon">
-                <img src="/images/icons/facebook-2.png" alt="Facebook" width="30">
+                <img src="/images/icons/facebook-2.png" alt="Facebook" class="social-icon">
               </a>
               <a href="#" class="footer-social-icon">
-                <img src="/images/icons/linkedin-2.png" alt="LinkedIn" width="30">
+                <img src="/images/icons/linkedin-2.png" alt="LinkedIn" class="social-icon">
               </a>
               <a href="#" class="footer-social-icon">
-                <img src="/images/icons/whatsapp.png" alt="WhatsApp" width="30">
+                <img src="/images/icons/whatsapp.png" alt="WhatsApp" class="social-icon">
               </a>
             </div>
           </div>
@@ -599,13 +580,13 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
                   <path
                     d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg> <a href="mailto:info@pyramidsadhesives.com" class="email-hyperlink" id="footer-email">info@pyrmaidsadhesives.com</a>
+                </svg> <a href="mailto:info@pyramidsadhesives.com" class="email-hyperlink" id="footer-email">info@pyramidsadhesives.com</a>
               </p>
               <p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
                   <path
                     d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg> (555) 123 - 4567
+                </svg> +2 01144500795 , +2  01144500791 </br> +2 01008330064 ,  +2 01146871929
               </p>
               <a href="https://maps.app.goo.gl/vgEyWQmzgsb4d7vf6" class="location-link">
                 <p>
@@ -625,7 +606,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2025 Pyrmaids, all rights reserved.</p>
+          <p>© 2025 Pyramids Adhesives, all rights reserved.</p>
         </div>
       </div>
       <!-- END FOOTER SECTION -->
@@ -637,7 +618,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
       <!-- ANIMATIONS JS -->
       <script>
-        AOS.init();
+        AOS.init({
+          once: true
+        });
       </script>
       <!-- FILTER BUTTONS - OUR PRODUCTS SECTION JS -->
       <script>
@@ -770,8 +753,17 @@
       </script>
       <!-- Bootstrap JS (only required for dropdown functionality on mobile) -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-      <!-- Font Awesome Script -->
-      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      <!-- MOBILE TOGGLE BUTTON FUNCTIONALITY -->
+      <script>
+        function toggleMenu() {
+          const navMenu = document.querySelector('.nav-menu');
+          const toggleButton = document.querySelector('.mobile-menu-toggle');
+          const langMenu = document.querySelector('language-dropdown')
+          // langMenu.classList.toggle('active');
+          navMenu.classList.toggle('active');
+          toggleButton.classList.toggle('active');
+        }
+      </script>
     </main>
   </body>
 
