@@ -91,7 +91,7 @@ body {
   text-decoration: none;
   flex: 0 0 auto;
   width: 200px;
-  margin-right: 30px;
+  
 }
 
 #pyramids-logo{
@@ -527,7 +527,7 @@ body {
   height: 500px;
   object-fit: cover;
   border-radius: 10px;
-  border: 10px solid black;
+  /* border: 10px solid black; */
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
@@ -868,11 +868,11 @@ body {
 /* _________________________________________________________________________________________*/
 /* ______________________________PRODUCTS SECTION ________________________________________ */
 .products-section {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 5rem;
   text-align: center;
-  background-color: var(--light-white) !important;
+  background-color: var(--secondary-white) !important;
 }
 
 .products-title {
@@ -1082,7 +1082,7 @@ body {
   font-family: 'Inter', sans-serif;
   padding: 40px 20px;
   color: white;
-  background-color: var(--secondary-blue);
+  background-color: var(--secondary-white);
   position: relative;
 }
 
@@ -1130,8 +1130,8 @@ body {
 }
 
 .connect-text {
-  color: var(--primary-green); /*CHANGE*/
-  font-size: 14px;
+  color: var(--primary-green);
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: 1px;
   z-index: 9;
@@ -1163,7 +1163,7 @@ h1 {
 .contact-info {
   flex: 1;
   padding: 40px;
-  border: var(--secondary-white) 35px solid;
+  border: var(--dark-background) 35px solid;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
    url('/images/image-5.png') center/cover;
   color: white;
@@ -1171,6 +1171,7 @@ h1 {
 }
 
 .contact-info h2 {
+  color: var(--primary-green);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -1215,7 +1216,7 @@ h1 {
 .contact-form {
   flex: 1;
   padding: 40px;
-  background: var(--primary-grey);
+  background: var(--dark-background);
   z-index: 9;
 }
 
@@ -1301,7 +1302,7 @@ button {
   margin: 0 10rem;
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
-  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1.5fr 1fr;
   gap: 3%;
   padding: 0 20px;
 }
@@ -1368,6 +1369,96 @@ button {
   width: 30px;
 }
 
+/* SOCIAL ICONS */
+.social-card{
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 15px;
+  gap: 15px;
+  overflow: hidden;
+  border-radius: 27px;
+}
+
+/* for all social containers*/
+.social-card a {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.social-card a:hover {
+  transform: scale(1.2);
+  border-radius: 15px;
+}
+/*ALIBABA*/
+.social-card a:nth-child(1):hover {
+  background-color: #ff6600;
+}
+/* twitter*/
+.social-card a:nth-child(2):hover {
+  background-color: #00acee;
+}
+/* linkdin*/
+.social-card a:nth-child(3):hover {
+  background-color: #0072b1;
+}
+/* Whatsapp*/
+.social-card a:nth-child(4):hover {
+  background-color: #25d366;
+}
+
+.social-card a:active {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+
+/*first-child*/
+.social-card a svg:first-child {
+  display: flex;
+  scale: 1.3;
+  position: absolute;
+  width: 17px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.social-card a svg:first-child path {
+  fill: rgb(255, 255, 255);
+}
+
+.social-card a:hover svg:first-child {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+/*last-child*/
+.social-card a svg:last-child {
+  display: flex;
+  position: absolute;
+  width: 17px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+.social-card a svg:last-child path {
+  fill: rgb(255, 255, 255);
+}
+
+.social-card a:hover svg:last-child {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* FOOTER LINKS */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -1429,10 +1520,10 @@ button {
     transform: translateX(-50%);
   }
   
-  .social-icons {
-    justify-content: center;
+  .social-card {
+    width: auto;
   }
-  
+
   .contact-info p {
     justify-content: center;
   }
@@ -1449,9 +1540,6 @@ button {
     width: 50%;
   }
 
-  .social-icon{
-    width: 30px;
-  }
 }
 
 /* ______________________________________________________________________*/

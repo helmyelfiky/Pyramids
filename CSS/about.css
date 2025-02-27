@@ -298,83 +298,7 @@
     
 }
 /* ____________________________________________________________________________________*/
-/* ________________________TEAM SECTION_____________________________________________ */
-.team-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-}
-
-.team-title {
-    font-size: 32px;
-    color: var(--third-black);
-    margin: 2rem 0;
-    position: relative;
-    display: inline-block;
-    padding: 0 20px;
-}
-
-.team-title::before {
-    left: -30px;
-}
-
-.team-title::after {
-    right: -30px;
-}
-
-.team-members {
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    flex-wrap: wrap;
-}
-
-.team-member {
-    flex: 0 1 300px;
-    margin-bottom: 30px;
-}
-
-.member-image {
-    width: 250px;
-    height: 250px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 8px solid #fff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-
-.member-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.team-member h3 {
-    color: var(--third-black);
-    font-size: 20px;
-    margin: 0 0 5px;
-    font-weight: 600;
-}
-
-.team-member .position {
-    color: var(--third-grey);
-    font-size: 14px;
-    font-style: italic;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.team-member p {
-    color: var(--primary-grey);
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0 15px;
-}
-/* ____________________________________________________________________________________*/ 
+ 
 /* ________________________CAROUSEL SECTION_____________________________________________ */
 .splide__slide img {
     width: 100%;
@@ -384,8 +308,8 @@
 }
 
 .splide {
-    max-width: 1200px;
-    margin: 25px auto;
+    /* max-width: 1200px; */
+    margin: 25px 5rem;
 }
 
 .splide__track {
@@ -398,6 +322,8 @@
 
 #carousel-title{
     text-align: center;
+    color: var(--primary-blue);
+    margin: 2rem 0;
 }
 
 /* ____________________________________________________________________________________*/

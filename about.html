@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Pyramids Adhesives</title>
+    <link rel="icon" type="image/x-icon" href="/images/logos/logo-2.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link href="/CSS/styles.css" rel="stylesheet">
@@ -37,10 +38,8 @@
                       <li><a class="dropdown-item" href="/about.html#mission">Mission</a></li>
                       <li><a class="dropdown-item" href="/about.html#safety-measures">Safety Measures</a></li>
                       <li><a class="dropdown-item" href="/about.html#quality-assurance">Quality Assurance</a></li>
-                      
                     </ul>
                   </li>
-                <li><a href="index.html#expertise">EXPERTISE</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li class="nav-item dropdown" id="productsDropdown">
                     <a href="" class="nav-link" id="productsDropdown" role="button">PRODUCTS</a>
@@ -52,8 +51,19 @@
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
             </nav>
+            <!-- LANGUAGE SWITCHER -->
+            <div class="language-dropdown">
+                <button>
+                  <img src="/images/flags/Egypt-flag.png" width="20">Arabic 
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><img src="/images/flags/uk-logo.png" alt="England Flag">English</a></li>
+                  <li><a href="#"><img src="/images/flags/Egypt-flag.png" alt="Egyptian Flag">العربية</a></li>
+                  <li><a href="#"><img src="/images/flags/france-logo.png" alt="France Flag">Français</a></li>
+                </ul>
+              </div>
             <!-- MOBILE MENU TOGGLE -->
-            <div class="mobile-menu-toggle">
+            <div class="mobile-menu-toggle" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -127,88 +137,94 @@
             </div>
         </section>
         <!-- END CALL TO ACTION SECTION -->
-        <!-- TEAM SECTION -->
-        <div class="team-section" id="team">
-            <h2 class="team-title">Meet Our Team</h2>
-            <div class="team-members">
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://placehold.co/300x300" alt="Team member">
-                    </div>
-                    <h3>Amin</h3>
-                    <span class="position">Chief Executive Officer</span>
-                    <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio dire flow</p>
-                </div>
-        
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://placehold.co/300x300" alt="Team member">
-                    </div>
-                    <h3>Amr Amin</h3>
-                    <span class="position">Product Manager</span>
-                    <p>Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores exercitationem ut</p>
-                </div>
-        
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://placehold.co/300x300" alt="Team member">
-                    </div>
-                    <h3>Karim Amin</h3>
-                    <span class="position">CTO</span>
-                    <p>Illum minima ea autem doloreque ipsum quidem quas aspernatur modi ut praesentium vel tque sed facilis at qui</p>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://placehold.co/300x300" alt="Team member">
-                    </div>
-                    <h3>Mohamed Amin</h3>
-                    <span class="position">CFO</span>
-                    <p>Illum minima ea autem doloreque ipsum quidem quas aspernatur modi ut praesentium vel tque sed facilis at qui</p>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://placehold.co/300x300" alt="Team member">
-                    </div>
-                    <h3>Amin</h3>
-                    <span class="position">CTO</span>
-                    <p>Illum minima ea autem doloreque ipsum quidem quas aspernatur modi ut praesentium vel tque sed facilis at qui</p>
-                </div>
-            </div>
-        </div>
-        <!-- END TEAM SECTION -->
         <!-- CAROUSEL SECTION -->
-        <!-- SECTION TITLE -->
-        <h2 class="section-title discover-title" id="carousel-title">Our Certificates</h2>
-        <!-- CAROUSEL CONTAINER -->
-        <div class="splide" id="carousel">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 1"></li>
-                    <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 2"></li>
-                    <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 3"></li>
-                    <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 4"></li>
-                </ul>
+        <section class="certificates-carousel">
+            <!-- SECTION TITLE -->
+            <h2 class="section-title discover-title" id="carousel-title">Our Certificates</h2>
+            <!-- CAROUSEL CONTAINER -->
+            <div class="splide" id="carousel">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 1"></li>
+                        <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 2"></li>
+                        <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 3"></li>
+                        <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 4"></li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </section>
         <!-- END CAROUSEL SECTION -->
         <!-- FOOTER SECTION -->
         <div class="footer">
             <div class="footer-content">
               <div class="footer-section" id="footer-logo-section">
                 <img src="/images/logos/logo-2-No-background.png" alt="Pyrmaids Logo" class="footer-logo">
-                <div class="footer-social-icons">
-                  <a href="#" class="footer-social-icon">
-                    <img src="/images/icons/facebook-2.png" alt="Facebook" width="30">
-                  </a>
-                  <a href="#" class="footer-social-icon">
-                    <img src="/images/icons/linkedin-2.png" alt="LinkedIn" width="30">
-                  </a>
-                  <a href="#" class="footer-social-icon">
-                    <img src="/images/icons/whatsapp.png" alt="WhatsApp" width="30">
-                  </a>
-                </div>
+                <div class="social-card">
+                    <!-- ALIBABA -->
+                    <a>
+                      <svg class="socialSvg" version="1.1" id="logo" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="138.678 262.426 372.4 189.923" enable-background="new 138.678 262.426 372.4 189.923" xml:space="preserve">
+                        <g id="g4739" transform="translate(112.6077,398.8102)">
+                        <path id="path4741" d="M66.732,28.252c-1.488-0.148-3.87-1.488-5.507-2.828 C45.302,9.798,65.69-8.209,89.501-18.627v-29.764c5.507,3.572,8.632,3.721,8.781,4.167l18.155-18.007l-6.102-15.477 c53.129-18.305,74.41-25.299,117.568-32.592l-7.739-7.292l12.649-7.143c29.021,9.524,56.403,12.054,51.641,36.46 c1.191-16.519-19.346-22.769-50.599-31.55l-6.102,3.721l11.608,9.524c-51.641,8.929-83.488,19.049-121.288,32.145l5.208,13.394 l-19.049,18.9c3.125,0.893,36.313,11.906,70.689-12.054c0,0,0.744-0.447,0.744-0.744c-1.041-1.637-3.423-3.572-6.25-6.102 c10.119,0.744,16.667,9.524,15.478,18.751h-4.763c0.298-2.976-0.298-6.25-1.339-8.333C152.154-31.128,121.2-28.3,94.859-37.527 v23.067C82.061-9.995,59.291,4.143,59.439,17.834C60.333,24.234,63.606,26.615,66.732,28.252"/></g>
+                        <g id="g4743" transform="translate(147.6202,401.2868)">
+                          <path id="path4745" fill="#FFFFFF" d="M140.674,18.151 c-28.573,14.435-55.956,26.042-98.072,27.681C-12.312,44.64-20.796,8.18,5.099-29.919c24.556-38.396,63.547-73.219,125.456-94.947 c18.007-6.399,44.348-13.543,69.796-13.989c36.61-0.298,72.178,11.013,69.797,46.134c-1.34,26.937-40.182,64.737-60.57,91.971 c-8.78,11.906-10.269,19.644,4.763,18.9c54.319-3.572,103.43-22.323,149.118-41.819C332.503-2.684,172.82,76.34,172.224,22.467 c0.149-6.846,3.274-14.138,8.482-21.877c5.061-7.739,12.055-15.775,19.347-23.96c10.864-12.352,37.949-42.116,47.027-59.975 c15.329-33.335-18.9-34.973-48.515-45.39l-12.65,7.144l7.739,7.292c-43.158,7.144-64.439,14.287-117.568,32.592l6.102,15.477 L64.181-48.372c-0.446-0.446-3.125-0.595-8.78-4.167v29.764C31.738-12.358,11.201,5.65,27.124,21.275 c1.638,1.34,4.019,2.68,5.507,2.828C61.8,40.474,140.823,18.151,140.674,18.151"/></g>
+                          <g id="g4747" transform="translate(202.4596,395.08025)">
+                            <path id="path4749" fill="#FFFFFF" d="M256.589,43.695h3.721c0.744,0,1.34-0.15,1.786-0.299 s0.744-0.445,1.042-0.744c0.297-0.445,0.297-0.744,0.297-1.189c0-0.596-0.297-1.191-0.744-1.488 c-0.446-0.447-1.19-0.596-2.083-0.596h-4.019V43.695z M254.953,51.134V37.89h5.953c1.19,0,2.083,0.148,2.679,0.297 c0.595,0.299,1.042,0.596,1.488,1.34c0.446,0.596,0.595,1.191,0.595,1.936c0,0.893-0.297,1.785-0.893,2.381 s-1.488,1.041-2.827,1.189c0.446,0.15,0.893,0.447,1.041,0.596c0.446,0.447,1.042,1.041,1.488,1.785l2.382,3.572h-2.232 l-1.786-2.678c-0.446-0.895-0.893-1.488-1.34-1.936c-0.297-0.445-0.595-0.744-0.893-0.893s-0.446-0.297-0.744-0.297 c-0.148,0-0.446,0-1.042,0h-2.232v5.951H254.953L254.953,51.134z"/></g>
+                        <g id="g4751" transform="translate(203.6136,390.7014)">
+                          <path id="path4753" fill="#FFFFFF" d="M259.088,61.648c6.995,0,12.649-5.656,12.649-12.65 s-5.654-12.65-12.649-12.65c-6.994,0-12.649,5.656-12.649,12.65S252.094,61.648,259.088,61.648 M248.373,48.997 c0-5.953,4.762-10.715,10.715-10.715c5.953,0,10.715,4.762,10.715,10.715c0,5.805-4.762,10.715-10.715,10.715 C253.135,59.712,248.373,54.95,248.373,48.997"/>
+                        </g>
+                      </svg>
+                      <svg class="socialSvg" version="1.1" id="logo" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="138.678 262.426 372.4 189.923" enable-background="new 138.678 262.426 372.4 189.923" xml:space="preserve">
+                        <g id="g4739" transform="translate(112.6077,398.8102)">
+                        <path id="path4741" d="M66.732,28.252c-1.488-0.148-3.87-1.488-5.507-2.828 C45.302,9.798,65.69-8.209,89.501-18.627v-29.764c5.507,3.572,8.632,3.721,8.781,4.167l18.155-18.007l-6.102-15.477 c53.129-18.305,74.41-25.299,117.568-32.592l-7.739-7.292l12.649-7.143c29.021,9.524,56.403,12.054,51.641,36.46 c1.191-16.519-19.346-22.769-50.599-31.55l-6.102,3.721l11.608,9.524c-51.641,8.929-83.488,19.049-121.288,32.145l5.208,13.394 l-19.049,18.9c3.125,0.893,36.313,11.906,70.689-12.054c0,0,0.744-0.447,0.744-0.744c-1.041-1.637-3.423-3.572-6.25-6.102 c10.119,0.744,16.667,9.524,15.478,18.751h-4.763c0.298-2.976-0.298-6.25-1.339-8.333C152.154-31.128,121.2-28.3,94.859-37.527 v23.067C82.061-9.995,59.291,4.143,59.439,17.834C60.333,24.234,63.606,26.615,66.732,28.252"/></g>
+                        <g id="g4743" transform="translate(147.6202,401.2868)">
+                          <path id="path4745" fill="#FFFFFF" d="M140.674,18.151 c-28.573,14.435-55.956,26.042-98.072,27.681C-12.312,44.64-20.796,8.18,5.099-29.919c24.556-38.396,63.547-73.219,125.456-94.947 c18.007-6.399,44.348-13.543,69.796-13.989c36.61-0.298,72.178,11.013,69.797,46.134c-1.34,26.937-40.182,64.737-60.57,91.971 c-8.78,11.906-10.269,19.644,4.763,18.9c54.319-3.572,103.43-22.323,149.118-41.819C332.503-2.684,172.82,76.34,172.224,22.467 c0.149-6.846,3.274-14.138,8.482-21.877c5.061-7.739,12.055-15.775,19.347-23.96c10.864-12.352,37.949-42.116,47.027-59.975 c15.329-33.335-18.9-34.973-48.515-45.39l-12.65,7.144l7.739,7.292c-43.158,7.144-64.439,14.287-117.568,32.592l6.102,15.477 L64.181-48.372c-0.446-0.446-3.125-0.595-8.78-4.167v29.764C31.738-12.358,11.201,5.65,27.124,21.275 c1.638,1.34,4.019,2.68,5.507,2.828C61.8,40.474,140.823,18.151,140.674,18.151"/></g>
+                          <g id="g4747" transform="translate(202.4596,395.08025)">
+                            <path id="path4749" fill="#FFFFFF" d="M256.589,43.695h3.721c0.744,0,1.34-0.15,1.786-0.299 s0.744-0.445,1.042-0.744c0.297-0.445,0.297-0.744,0.297-1.189c0-0.596-0.297-1.191-0.744-1.488 c-0.446-0.447-1.19-0.596-2.083-0.596h-4.019V43.695z M254.953,51.134V37.89h5.953c1.19,0,2.083,0.148,2.679,0.297 c0.595,0.299,1.042,0.596,1.488,1.34c0.446,0.596,0.595,1.191,0.595,1.936c0,0.893-0.297,1.785-0.893,2.381 s-1.488,1.041-2.827,1.189c0.446,0.15,0.893,0.447,1.041,0.596c0.446,0.447,1.042,1.041,1.488,1.785l2.382,3.572h-2.232 l-1.786-2.678c-0.446-0.895-0.893-1.488-1.34-1.936c-0.297-0.445-0.595-0.744-0.893-0.893s-0.446-0.297-0.744-0.297 c-0.148,0-0.446,0-1.042,0h-2.232v5.951H254.953L254.953,51.134z"/></g>
+                        <g id="g4751" transform="translate(203.6136,390.7014)">
+                          <path id="path4753" fill="#FFFFFF" d="M259.088,61.648c6.995,0,12.649-5.656,12.649-12.65 s-5.654-12.65-12.649-12.65c-6.994,0-12.649,5.656-12.649,12.65S252.094,61.648,259.088,61.648 M248.373,48.997 c0-5.953,4.762-10.715,10.715-10.715c5.953,0,10.715,4.762,10.715,10.715c0,5.805-4.762,10.715-10.715,10.715 C253.135,59.712,248.373,54.95,248.373,48.997"/>
+                        </g>
+                      </svg>
+                    </a>
+                    <!-- TWITTER - X -->
+                    <a>
+                      <svg class="socialSvg" viewBox="0 0 16 16">
+                        <path
+                          d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                        ></path>
+                      </svg>
+                      <svg class="socialSvg" viewBox="0 0 16 16">
+                        <path
+                          d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <!-- LINKEDIN -->
+                    <a>
+                      <svg class="socialSvg" viewBox="0 0 448 512">
+                        <path
+                          d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                        ></path>
+                      </svg>
+                      <svg class="socialSvg" viewBox="0 0 448 512">
+                        <path
+                          d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <!-- WHATSAPP -->
+                    <a>
+                      <svg class="socialSvg" viewBox="0 0 16 16">
+                        <path
+                          d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                        ></path>
+                      </svg>
+                      <svg class="socialSvg" viewBox="0 0 16 16">
+                        <path
+                          d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
               </div>
               <!-- USEFUL LINKS -->
               <div class="footer-section" id="useful-links">
@@ -274,25 +290,27 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
                       <path
                         d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                    </svg> <a href="mailto:info@pyramidsadhesives.com" class="email-hyperlink" id="footer-email">info@pyrmaidsadhesives.com</a>
+                    </svg> <a href="mailto:info@pyramidsadhesives.com" class="email-hyperlink" id="footer-email">info@pyramidsadhesives.com</a>
                   </p>
                   <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
                       <path
                         d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                    </svg> (555) 123 - 4567
+                    </svg> +2 01144500795 , +2  01144500791 </br> +2 01008330064 ,  +2 01146871929
                   </p>
-                  <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
-                      <path
-                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                    </svg> 456 Oak Ave. Denver, CO
-                  </p>
+                  <a href="https://maps.app.goo.gl/vgEyWQmzgsb4d7vf6" class="location-link">
+                    <p>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                      </svg> Plot No 68, Kom Oushim, Tamiya City</br> Fayoum Governorate, Egypt.
+                    </p>
+                  </a>
                   <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
                       <path
                         d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
-                    </svg> Saturday - Thursday: 9 AM - 5 PM
+                    </svg> Saturday - Thursday: 8 AM - 5 PM
                   </p>
                 </div>
               </div>
@@ -303,7 +321,6 @@
             </div>
         </div>
         <!-- END FOOTER SECTION -->
-          
     </main>
 
 
@@ -334,7 +351,9 @@
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true
+        });
     </script>
     <!-- ABOUT SECTION FILTER BUTTONS -->
     <script>
@@ -502,11 +521,23 @@
                 drag    : false,      // Disable manual dragging for a smooth effect
                 speed   : 5000,       // Adjust speed (higher value = smoother scrolling)
                 autoScroll: {
-                    speed: 1,         // Adjust speed (smaller values = smoother movement)
+                    speed: 0.5,         // Adjust speed (smaller values = smoother movement)
                 },
             }).mount(window.splide.Extensions);
         });
-
+    </script>
+    <!-- Bootstrap JS (only required for dropdown functionality on mobile) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- MOBILE TOGGLE BUTTON FUNCTIONALITY -->
+    <script>
+        function toggleMenu() {
+          const navMenu = document.querySelector('.nav-menu');
+          const toggleButton = document.querySelector('.mobile-menu-toggle');
+          const langMenu = document.querySelector('language-dropdown')
+          // langMenu.classList.toggle('active');
+          navMenu.classList.toggle('active');
+          toggleButton.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
