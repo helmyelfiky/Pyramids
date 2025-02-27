@@ -1496,7 +1496,7 @@ button {
 }
 
 .footer-bottom {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 40px auto 0;
   padding: 20px;
   border-top: 1px solid var(--third-black);
@@ -1513,6 +1513,10 @@ button {
   
   .footer-section {
     text-align: left;
+  }
+
+  .footer-links{
+    grid-template-columns: 1fr;
   }
   
   .footer-section h2::after {
