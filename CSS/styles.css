@@ -1282,7 +1282,7 @@ button {
   color: var(--white);
   text-decoration: none;
 }
-#footer-emai{
+#footer-email{
   color: #cccccc;
 }
 .location-link{
@@ -1406,7 +1406,7 @@ button {
 .social-card a:nth-child(2):hover {
   background-color: #00acee;
 }
-/* linkdin*/
+/* linkedin*/
 .social-card a:nth-child(3):hover {
   background-color: #0072b1;
 }
