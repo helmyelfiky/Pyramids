@@ -8,6 +8,8 @@
     <link rel="icon" type="image/x-icon" href="/images/logos/logo-2.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
@@ -167,10 +169,10 @@
         <div class="services-container">
           <div class="services-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out"
             data-aos-delay="400">
-            <div class="services-tag">EXPLORE PYRAMIDS Services</div>
+            <div class="services-tag">EXPLORE PYRMAIDS Services</div>
             <h2 class="services-title">Innovative Adhesive Solutions Tailored for Industry Leaders</h2>
             <p class="services-description">
-              Pyramids stands at the forefront of adhesive manufacturing, offering specialized products that enhance
+              Pyrmaids stands at the forefront of adhesive manufacturing, offering specialized products that enhance
               operational efficiency and product quality. Our commitment to innovation ensures that businesses can rely on
               our
               adhesives for superior performance in their projects.
@@ -282,77 +284,342 @@
               your manufacturing processes.
             </div>
           </div>
-          <!-- <div class="products-filter-buttons" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-            data-aos-delay="200">
-            <button class="p-filter-btn active" data-filter="all">All Products</button>
-            <button class="p-filter-btn" data-filter="small">Small</button>
-            <button class="p-filter-btn" data-filter="medium">Medium</button>
-            <button class="p-filter-btn" data-filter="large">Large</button>
-          </div> -->
           <div class="products-grid">
             <!-- CARD 1 -->
             <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
               data-aos-delay="200">
               <div class="products-item">
-                <img src="/images/400x300.jpg" alt="App 1" class="products-image">
+                <img src="/images/products/El-Borg/large/L-1.png" alt="App 1" class="products-image">
                 <div class="products-content">
-                  <h3>App 1</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <h3>El Borg</h3>
                 </div>
+                <!-- Button to trigger modal -->
+                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="El-Borg">
+                  View Details
+                </button>
               </div>
             </div>
             <!-- CARD 2 -->
             <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
               data-aos-delay="200">
               <div class="products-item">
-                <img src="/images/400x300.jpg" alt="Product 1" class="products-image">
+                <img src="/images/products/King/medium/M-1.png" alt="Product 1" class="products-image">
                 <div class="products-content">
-                  <h3>Product 1</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <h3>King</h3>
                 </div>
+                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal2" data-product-id="King">
+                  View Details
+                </button>
               </div>
             </div>
             <!-- CARD 3 -->
             <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
               data-aos-delay="200">
               <div class="products-item">
-                <img src="/images/400x300.jpg" alt="Branding 1" class="products-image">
+                <img src="/images/products/Forsan/medium/M-1.png" alt="Branding 1" class="products-image">
                 <div class="products-content">
-                  <h3>Branding 1</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <h3>Forsan</h3>
                 </div>
+                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal3" data-product-id="Forsan">
+                  View Details
+                </button>
               </div>
             </div>
             <!-- CARD 4 -->
             <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
               data-aos-delay="400">
               <div class="products-item">
-                <img src="/images/400x300.jpg" alt="App 2" class="products-image">
+                <img src="/images/products/Fox/medium/M-1.png" alt="App 2" class="products-image">
                 <div class="products-content">
-                  <h3>App 2</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <h3>Fox</h3>
                 </div>
+                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal4" data-product-id="Fox">
+                  View Details
+                </button>
               </div>
             </div>
             <!-- CARD 5 -->
             <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
               data-aos-delay="400">
               <div class="products-item">
-                <img src="/images/400x300.jpg" alt="Product 2" class="products-image">
+                <img src="/images/products/Healthy/Medium/M-1.png" alt="Product 2" class="products-image">
                 <div class="products-content">
-                  <h3>Product 2</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <h3>Healthy</h3>
                 </div>
+                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal5" data-product-id="Healthy">
+                  View Details
+                </button>
               </div>
             </div>
           </div>
       </section>
       <!-- End Products Section -->
+      <!-- PRODUCTS MODAL  -->
+       <!-- PRODUCT 1 - ELBORG -->
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <div class="modal-container">
+                  <!-- Splide Carousel -->
+                  <div class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="/images/products/El-Borg/medium/M-1.png" alt="Product Image 1">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="/images/products/El-Borg/medium/M-2.png" alt="Product Image 2">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="/images/products/El-Borg/medium/M-3.png" alt="Product Image 3">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Right Side: Product Details -->
+                  <div class="details-container">
+                    <div class="size-buttons">
+                      <button class="size-button active" data-size="medium">Medium</button>
+                      <button class="size-button" data-size="large">Large</button>
+                    </div>
+                    <div class="product-details">
+                      <ul>
+                        <li>Detail 1</li>
+                        <li>Detail 2</li>
+                        <li>Detail 3</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- PRODUCT 2 - KING -->
+        <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel2">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <div class="modal-container">
+                  <!-- Splide Carousel -->
+                  <div class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="/images/products/King/medium/M-1.png" alt="Product Image 1">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="/images/products/King/medium/M-2.png" alt="Product Image 2">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="/images/products/King/medium/M-3.png" alt="Product Image 3">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Right Side: Product Details -->
+                  <div class="details-container">
+                    <div class="size-buttons">
+                      <button class="size-button" data-size="small">Small</button>
+                      <button class="size-button active" data-size="medium">Medium</button>
+                      <button class="size-button" data-size="large">Large</button>
+                    </div>
+                    <div class="product-details">
+                      <ul>
+                        <li>Detail 1</li>
+                        <li>Detail 2</li>
+                        <li>Detail 3</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- PRODUCT 3 - Forsan -->
+        <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel3">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <div class="modal-container">
+                  <!-- Splide Carousel -->
+                  <div class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="/images/products/Forsan/medium/M-1.png" alt="Product Image 1">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="/images/products/Forsan/medium/M-2.png" alt="Product Image 2">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="/images/products/Forsan/medium/M-3.png" alt="Product Image 3">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Right Side: Product Details -->
+                  <div class="details-container">
+                    <div class="size-buttons">
+                      <button class="size-button active" data-size="medium">Medium</button>
+                    </div>
+                    <div class="product-details">
+                      <ul>
+                        <li>Detail 1</li>
+                        <li>Detail 2</li>
+                        <li>Detail 3</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- PRODUCT 4 - Fox -->
+        <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel4">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <div class="modal-container">
+                  <!-- Splide Carousel -->
+                  <div class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="/images/products/Fox/medium/M-1.png" alt="Product Image 1">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="/images/products/Fox/medium/M-2.png" alt="Product Image 2">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="/images/products/Fox/medium/M-3.png" alt="Product Image 3">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Right Side: Product Details -->
+                  <div class="details-container">
+                    <div class="size-buttons">
+                      <button class="size-button active" data-size="medium">Large</button>
+                    </div>
+                    <div class="product-details">
+                      <ul>
+                        <li>Detail 1</li>
+                        <li>Detail 2</li>
+                        <li>Detail 3</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- PRODUCT 5 - Healthy -->
+        <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel5">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <div class="modal-container">
+                  <!-- Splide Carousel -->
+                  <div class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="/images/products/Healthy/medium/M-1.png" alt="Product Image 1">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="/images/products/Healthy/medium/M-2.png" alt="Product Image 2">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="/images/products/Healthy/medium/M-3.png" alt="Product Image 3">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Right Side: Product Details -->
+                  <div class="details-container">
+                    <div class="size-buttons">
+                      <button class="size-button active" data-size="medium">Large</button>
+                    </div>
+                    <div class="product-details">
+                      <ul>
+                        <li>Detail 1</li>
+                        <li>Detail 2</li>
+                        <li>Detail 3</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <!-- FREQUENTLY ASKED QUESTIONS -->
       <section class="faq-section">
         <div class="faq-header" data-aos="zoom-out" data-aos-duration="600" data-aos-delay="200" data-aos-easing="ease-in-out">
           <h1>Frequently Asked Questions</h1>
-          <p>Quick answers to questions you may have. Can't find what you're looking for? Don't hesitate to contact us.</p>
+          <p>Quick answers to questions you may have. Can't find what you're looking for? Don't hesistate to contact us.</p>
         </div>
       
         <div class="faq-grid">
@@ -672,87 +939,12 @@
       <!-- SCRIPTS -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+      </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
       <!-- ANIMATIONS JS -->
       <script>
         AOS.init({
           once: true
-        });
-      </script>
-      <!-- FILTER BUTTONS - OUR PRODUCTS SECTION JS -->
-      <script>
-        document.querySelectorAll('.filter-button').forEach(button => {
-          button.addEventListener('click', () => {
-            document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-          });
-        });
-      </script>
-      <!-- SLIDER JS - HERO SECTION -->
-      <script>
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
-        const prevBtn = document.querySelector('.prev');
-        const nextBtn = document.querySelector('.next');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-          slides.forEach(slide => slide.classList.remove('active'));
-          dots.forEach(dot => dot.classList.remove('active'));
-
-          slides[index].classList.add('active');
-          dots[index].classList.add('active');
-        }
-
-        function nextSlide() {
-          currentSlide = (currentSlide + 1) % slides.length;
-          showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-          showSlide(currentSlide);
-        }
-
-        // Event listeners
-        prevBtn.addEventListener('click', prevSlide);
-        nextBtn.addEventListener('click', nextSlide);
-
-        dots.forEach((dot, index) => {
-          dot.addEventListener('click', () => {
-            currentSlide = index;
-            showSlide(currentSlide);
-          });
-        });
-
-        // Auto-advance slides every 5 seconds
-        setInterval(nextSlide, 5000);
-      </script>
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const filterButtons = document.querySelectorAll('.filter-btn');
-          const productItems = document.querySelectorAll('.product-item');
-
-          filterButtons.forEach(button => {
-            button.addEventListener('click', function () {
-              // Remove active class from all buttons
-              filterButtons.forEach(btn => btn.classList.remove('active'));
-
-              // Add active class to clicked button
-              this.classList.add('active');
-
-              const filterValue = this.getAttribute('data-filter');
-
-              productItems.forEach(item => {
-                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                  item.classList.remove('hidden');
-                } else {
-                  item.classList.add('hidden');
-                }
-              });
-            });
-          });
         });
       </script>
       <!-- LANGUAGE SWITCHER -->
@@ -820,6 +1012,110 @@
           // langMenu.classList.toggle('active');
           navMenu.classList.toggle('active');
           toggleButton.classList.toggle('active');
+        }
+      </script>
+      <!-- MODAL JS -->
+      <!-- Splide JS -->
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+      <script>
+        // Initialize Splide Carousel for each modal
+        document.addEventListener('DOMContentLoaded', function () {
+          // Select all "View Details" buttons
+          const detailButtons = document.querySelectorAll('.detail-button');
+
+          detailButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+              // Get the product ID from the button's data attribute
+              const productId = button.getAttribute('data-product-id');
+
+              // Find the corresponding modal
+              const modalId = button.getAttribute('data-bs-target');
+              const modal = document.querySelector(modalId);
+
+              if (modal) {
+                // Initialize Splide and handle size buttons for this modal
+                const splideElement = modal.querySelector('.splide');
+                const sizeButtons = modal.querySelectorAll('.size-button');
+                const productDetails = modal.querySelector('.product-details ul');
+
+                if (splideElement) {
+                  // Initialize Splide
+                  const splide = new Splide(splideElement, {
+                    type: 'loop', // Enable infinite looping
+                    perPage: 1, // Show one slide at a time
+                    pagination: false, // Disable default pagination
+                    arrows: true, // Enable navigation arrows
+                  });
+
+                  splide.mount();
+
+                  // Function to update the Splide carousel with new images
+                  const updateCarousel = (size) => {
+                    const imagePaths = {
+                      small: ['S-1', 'S-2', 'S-3'], // Replace with actual file paths
+                      medium: ['M-1', 'M-2', 'M-3'], // Replace with actual file paths
+                      large: ['L-1', 'L-2', 'L-3'], // Replace with actual file paths
+                    };
+
+                    // Construct the folder path using the product ID and size
+                    const images = imagePaths[size].map(
+                      (image) => `/images/products/${productId}/${size}/${image}.png`
+                    );
+
+                    // Update the Splide carousel with new images
+                    const splideList = splideElement.querySelector('.splide__list');
+                    splideList.innerHTML = images
+                      .map(
+                        (image, index) => `
+                          <li class="splide__slide">
+                            <img src="${image}" alt="Product Image ${index + 1}">
+                          </li>
+                        `
+                      )
+                      .join('');
+
+                    // Refresh the Splide instance to reflect the new images
+                    splide.refresh();
+                  };
+
+                  // Handle size buttons for this modal
+                  if (sizeButtons && productDetails) {
+                    sizeButtons.forEach((button) => {
+                      button.addEventListener('click', () => {
+                        // Remove active class from all buttons
+                        sizeButtons.forEach((btn) => btn.classList.remove('active'));
+                        // Add active class to the clicked button
+                        button.classList.add('active');
+                        // Get the selected size
+                        const size = button.getAttribute('data-size');
+                        // Update the Splide carousel with the new images
+                        updateCarousel(size);
+                        // Update product details based on size
+                        updateDetails(productDetails, size);
+                      });
+                    });
+
+                    // Initialize modal with medium details and images
+                    updateCarousel('medium');
+                    updateDetails(productDetails, 'medium');
+                  }
+                }
+              }
+            });
+          });
+        });
+
+        // Function to update product details
+        function updateDetails(productDetails, size) {
+          // Dummy data for details
+          const details = {
+            small: ['Small Detail 1', 'Small Detail 2', 'Small Detail 3'],
+            medium: ['Medium Detail 1', 'Medium Detail 2', 'Medium Detail 3'],
+            large: ['Large Detail 1', 'Large Detail 2', 'Large Detail 3'],
+          };
+
+          // Update the details list
+          productDetails.innerHTML = details[size].map((detail) => `<li>${detail}</li>`).join('');
         }
       </script>
     </main>
