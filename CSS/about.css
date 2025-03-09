@@ -274,7 +274,7 @@ body {
 .call-to-action h2 {
     color: var(--white) !important;
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     z-index: 2;
 }
 .call-to-action p {
@@ -316,6 +316,7 @@ body {
     }
     .call-to-action p {
         font-size: 16px;
+        margin: 0;
     }
     .call-to-action{
         padding: 50px 0px;
@@ -334,7 +335,6 @@ body {
 
 .splide {
     /* max-width: 1200px; */
-    margin: 25px 5rem;
 }
 
 .splide__track {
@@ -350,6 +350,7 @@ body {
     color: var(--primary-blue);
     margin: 2rem 0;
 }
+
 
 /* ____________________________________________________________________________________*/
 /* ________________________FOOTER SECTION_____________________________________________ */

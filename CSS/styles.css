@@ -832,9 +832,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .services-grid {
-      grid-template-columns: repeat(2, 1fr);
-  }
+  
 }
 
 @media (max-width: 768px) {
@@ -1604,6 +1602,7 @@ button {
 
 .footer-contact-info p {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   margin-bottom: 15px;
@@ -1651,7 +1650,7 @@ button {
   }
 
   .contact-info p {
-    justify-content: center;
+    justify-content: left;
   }
   
   .footer-bottom {
@@ -1666,6 +1665,17 @@ button {
     width: 50%;
   }
 
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+  .footer-content{
+    grid-template-columns: 0.2fr 1fr 1fr;
+    margin: 0;
+    gap: 0;
+  }
+  .footer-links{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ______________________________________________________________________*/
