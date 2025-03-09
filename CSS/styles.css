@@ -706,6 +706,12 @@ body {
       padding: 0 1rem;
   }
 }
+/* MACBOOK 12" */
+@media (min-width:1280px) and (max-width: 1366px){
+  .features-grid{
+    grid-template-columns: 1fr;
+  }
+}
 /* ______________________________________________________________________ */
 /* ______________________SERVICES SECTION______________________ */
 .services-section {
@@ -831,9 +837,6 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
-@media (max-width: 1024px) {
-  
-}
 
 @media (max-width: 768px) {
   .services-grid {
@@ -1602,7 +1605,6 @@ button {
 
 .footer-contact-info p {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   margin-bottom: 15px;
@@ -1675,6 +1677,15 @@ button {
   }
   .footer-links{
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1366px){
+  .footer-content{
+    gap: 0;
+  }
+  .footer-content{
+    margin: 0;
   }
 }
 
