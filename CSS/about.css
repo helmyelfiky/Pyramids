@@ -1,3 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: var(--light-white) !important;
+}
+@media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+}
 /* ________________________HEADER SECTION_____________________________________________ */
 #header-about{
     background-color: white;
@@ -153,6 +171,7 @@
 /* Additional styles for the filter buttons */
 .nav-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 6rem;
     border-bottom: 1px solid #e0e0e0;
@@ -187,6 +206,12 @@
     .section-image {
         max-width: 100%;
     }
+
+    .nav-buttons{
+        justify-content: space-around;
+        gap: 0.5rem;
+    }
+    
 }
 /* ____________________________________________________________________________________*/
 /* ________________________STATS SECTION_____________________________________________ */
