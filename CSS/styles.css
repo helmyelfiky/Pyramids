@@ -924,7 +924,8 @@ body {
 }
 
 .products-content h3 {
-  font-size: 18px;
+  font-size: 1.25rem;
+  font-weight: 600;
   color: var(--third-black);
   margin-bottom: 10px;
 }
