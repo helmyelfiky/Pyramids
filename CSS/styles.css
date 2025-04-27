@@ -571,7 +571,7 @@ body {
   position: relative;
 }
 
-.discover-title::after {
+/* .discover-title::after {
   content: '';
   display: block;
   width: 300px;
@@ -579,7 +579,7 @@ body {
   height: 5px;
   background-color: var(--primary-blue);
   margin-top: 1rem;
-}
+} */
 
 .discover-description {
   color: var(--primary-grey);
@@ -959,6 +959,7 @@ body {
 .modal-content {
   max-width: 100%;
   margin: auto;
+  direction: ltr !important;
 }
 
 .modal-container {
@@ -1527,16 +1528,12 @@ button {
 .social-card a:nth-child(1):hover {
   background-color: #ff6600;
 }
-/* twitter*/
-.social-card a:nth-child(2):hover {
-  background-color: #00acee;
-}
 /* linkedin*/
-.social-card a:nth-child(3):hover {
+.social-card a:nth-child(2):hover {
   background-color: #0072b1;
 }
 /* Whatsapp*/
-.social-card a:nth-child(4):hover {
+.social-card a:nth-child(3):hover {
   background-color: #25d366;
 }
 

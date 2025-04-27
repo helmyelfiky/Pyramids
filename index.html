@@ -28,16 +28,16 @@
         <nav>
           <ul class="nav-menu">
             <li class="nav-item dropdown" id="aboutDropdown">
-              <a href="#about" class="nav-link" id="aboutDropdown" role="button">ABOUT US</a>
+              <a href="#about" class="nav-link" id="aboutDropdown" role="button" data-i18n="about_us">ABOUT US</a>
               <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                <li><a class="dropdown-item" href="#about">Discover Pyramids</a></li>
-                <li><a class="dropdown-item" href="/about.html#mission">Mission</a></li>
-                <li><a class="dropdown-item" href="/about.html#safety-measures">Safety Measures</a></li>
-                <li><a class="dropdown-item" href="/about.html#quality-assurance">Quality Assurance</a></li>
+                <li><a class="dropdown-item" href="#about" data-i18n="discover_pyramids">Discover Pyramids</a></li>
+                <li><a class="dropdown-item" href="/about.html#mission" data-i18n="mission">Mission</a></li>
+                <li><a class="dropdown-item" href="/about.html#safety-measures" data-i18n="safety_measures">Safety Measures</a></li>
+                <li><a class="dropdown-item" href="/about.html#quality-assurance" data-i18n="quality_assurance">Quality Assurance</a></li>
               </ul>
             </li>
-            <li><a href="#services" class="nav-item">services</a></li>
-            <li><a href="#products" class="nav-item">Products</a></li>
+            <li><a href="#services" class="nav-item" data-i18n="services">services</a></li>
+            <li><a href="#products" class="nav-item" data-i18n="products">Products</a></li>
             <!-- <li class="nav-item dropdown" id="productsDropdown">
               <a href="" class="nav-link" id="productsDropdown" role="button">PRODUCTS</a>
               <ul class="dropdown-menu" aria-labelledby="productsDropdown">
@@ -46,7 +46,7 @@
                 <li><a class="dropdown-item" href="#">Upholstery Adhesive</a></li>
               </ul>
             </li> -->
-            <li><a href="#contact" class="nav-item">Contact Us</a></li>
+            <li><a href="#contact" class="nav-item" data-i18n="contact_us">Contact Us</a></li>
           </ul>
         </nav>
         <!-- LANGUAGE SWITCHER -->
@@ -55,9 +55,9 @@
             <img src="/images/flags/Egypt-flag.png" width="20">Arabic 
           </button>
           <ul class="dropdown-menu">
-            <li><a href="#"><img src="/images/flags/uk-logo.png" alt="England Flag">English</a></li>
-            <li><a href="#"><img src="/images/flags/Egypt-flag.png" alt="Egyptian Flag">العربية</a></li>
-            <li><a href="#"><img src="/images/flags/france-logo.png" alt="France Flag">Français</a></li>
+            <li><a href="#" id="english-btn"><img src="/images/flags/uk-logo.png" alt="England Flag">English</a></li>
+            <li><a href="#" id="arabic-btn"><img src="/images/flags/Egypt-flag.png" alt="Egyptian Flag">العربية</a></li>
+            <li><a href="#" id="french-btn"><img src="/images/flags/france-logo.png" alt="France Flag">Français</a></li>
           </ul>
         </div>
         <!-- MOBILE MENU TOGGLE -->
@@ -109,7 +109,7 @@
               <img src="/images/image-13.jpg" alt="Manufacturing Facility" class="discover-image">
               <div class="experience-badge">
                 <p class="experience-number">20+</p>
-                <p class="experience-text" data-i18n="years_of_services">Years of Service</p>
+                <p class="experience-text" data-i18n="years_of_service">Years of Service</p>
               </div>
             </div>
             <div class="discover-content">
@@ -133,8 +133,8 @@
                         <img src="/images/icons/bullseye.png" alt="Bullseye Icon" class="img-card-icon">
                       </div>
                     </div>
-                    <h3 class="feature-title">Our Commitment</h3>
-                    <p class="feature-description">
+                    <h3 class="feature-title" data-i18n="our_commitment">Our Commitment</h3>
+                    <p class="feature-description" data-i18n="card_1">
                       Delivering high-performance adhesive solutions for optimal manufacturing processes.
                     </p>
                   </div>
@@ -148,15 +148,15 @@
                         <img src="/images/icons/eye.png" alt="Eye Icon" class="img-card-icon">
                       </div>
                     </div>
-                    <h3 class="feature-title">Our Vision</h3>
-                    <p class="feature-description">
+                    <h3 class="feature-title" data-i18n="our_vision">Our Vision</h3>
+                    <p class="feature-description" data-i18n="card_2">
                       To innovate adhesive technology that meets the ever-evolving needs of multiple industries.
                     </p>
                   </div>
                 </div>
               </div>
               <a href="/about.html" class="contact-btn" data-aos="fade-left" data-aos-duration="900"
-                data-aos-easing="ease-in-out" data-os-delay="600">
+                data-aos-easing="ease-in-out" data-os-delay="600" data-i18n="discover_more_about_us">
                 Discover More About Us
               </a>
             </div>
@@ -170,9 +170,9 @@
         <div class="services-container">
           <div class="services-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out"
             data-aos-delay="400">
-            <div class="services-tag">EXPLORE PYRMAIDS Services</div>
-            <h2 class="services-title">Innovative Adhesive Solutions Tailored for Industry Leaders</h2>
-            <p class="services-description">
+            <div class="services-tag" data-i18n="explore_pyrmaids_services">EXPLORE PYRMAIDS Services</div>
+            <h2 class="services-title" data-i18n="innovative_adhesive_solutions_tailored_for_industry_leaders">Innovative Adhesive Solutions Tailored for Industry Leaders</h2>
+            <p class="services-description" data-i18n="services_description">
               Pyrmaids stands at the forefront of adhesive manufacturing, offering specialized products that enhance
               operational efficiency and product quality. Our commitment to innovation ensures that businesses can rely on
               our
@@ -187,8 +187,8 @@
                 <div class="card-icon">
                   <img src="/images/icons/formula.png" alt="Formula Icon" class="img-card-icon">
                 </div>
-                <h3 class="card-title black">Customized Adhesive Formulations</h3>
-                <p class="card-description">
+                <h3 class="card-title black" data-i18n="customized_adhesive_formulations">Customized Adhesive Formulations</h3>
+                <p class="card-description" data-i18n="services_1">
                   Tailored adhesive formulations to meet specific 
                   industry requirements, ensuring optimal performance for your unique applications 
                 </p>
@@ -201,8 +201,8 @@
                 <div class="card-icon">
                   <img src="/images/icons/quality.png" alt="Quality Icon" class="img-card-icon">
                 </div>
-                <h3 class="card-title">Quality Assurance Standards</h3>
-                <p class="card-description">
+                <h3 class="card-title" data-i18n="quality_assurance_standards">Quality Assurance Standards</h3>
+                <p class="card-description" data-i18n="services_2">
                   Rigorous testing processes to ensure every 
                   adhesive product meets international quality and safety standards before reaching 
                   your hands.  
@@ -215,8 +215,8 @@
                 <div class="card-icon">
                   <img src="/images/icons/recycle.png" alt="Recycle Icon" class="img-card-icon">
                 </div>
-                <h3 class="card-title black">Sustainable Manufacturing Practices</h3>
-                <p class="card-description ">
+                <h3 class="card-title black" data-i18n="sustainable_manufacturing_practices">Sustainable Manufacturing Practices</h3>
+                <p class="card-description" data-i18n="services_3">
                   Sustainable adhesive solutions made with environmentally 
                   friendly materials, supporting your green initiatives and compliance with 
                   environmental regulations.  
@@ -230,8 +230,8 @@
                 <div class="card-icon">
                   <img src="/images/icons/customer-service.png" alt="Support Icon" class="img-card-icon">
                 </div>
-                <h3 class="card-title black">After Sales Service</h3>
-                <p class="card-description">
+                <h3 class="card-title black" data-i18n="after_sales_service">After Sales Service</h3>
+                <p class="card-description" data-i18n="services_4">
                   Comprehensive support after purchase, including 
                   troubleshooting, product training, and usage recommendations to ensure customer 
                   satisfaction.  
@@ -245,8 +245,8 @@
                 <div class="card-icon">
                   <img src="/images/icons/team.png" alt="Team Icon" class="img-card-icon">
                 </div>
-                <h3 class="card-title">R&D Collaboration</h3>
-                <p class="card-description">
+                <h3 class="card-title" data-i18n="r&d_collaboration">R&D Collaboration</h3>
+                <p class="card-description" data-i18n="services_5">
                   We believe in building strong partnerships with our clients, ensuring open communication and
                   collaboration
                   to achieve the best outcomes.
@@ -260,8 +260,8 @@
                 <div class="card-icon">
                   <img src="/images/icons/best-price-2.png" alt="Price Icon" class="img-card-icon">
                 </div>
-                <h3 class="card-title black">Competitive Pricing</h3>
-                <p class="card-description">
+                <h3 class="card-title black" data-i18n="competitive_pricing">Competitive Pricing</h3>
+                <p class="card-description" data-i18n="services_6">
                   Pyrmaids offers high-quality adhesive products at competitive prices with customized 
                   payment plans, ensuring you receive the best value without compromising on quality 
                   and accommodating your financial needs.
@@ -275,8 +275,8 @@
                <div class="card-icon">
                  <img src="/images/icons/workshop.png" alt="Formula Icon" class="img-card-icon">
                </div>
-               <h3 class="card-title black">Training and Workshops</h3>
-               <p class="card-description">
+               <h3 class="card-title black" data-i18n="training_and_workshops">Training and Workshops</h3>
+               <p class="card-description" data-i18n="services_7">
                 Educational sessions for customers and partners on the 
                 proper use and application of our adhesive products, ensuring optimal results.  
                </p>
@@ -289,8 +289,8 @@
                <div class="card-icon">
                  <img src="/images/icons/export-White.png" alt="Quality Icon" class="img-card-icon">
                </div>
-               <h3 class="card-title">Export Services</h3>
-               <p class="card-description">
+               <h3 class="card-title" data-i18n="export_services">Export Services</h3>
+               <p class="card-description" data-i18n="services_8">
                 Reliable export of our adhesive products to global markets, 
                 supported by efficient logistics and compliance with international trade regulations.    
              </div>
@@ -302,8 +302,8 @@
                <div class="card-icon">
                  <img src="/images/icons/customer-support.png" alt="Recycle Icon" class="img-card-icon">
                </div>
-               <h3 class="card-title black">Technical Support</h3>
-               <p class="card-description ">
+               <h3 class="card-title black" data-i18n="technical_support">Technical Support</h3>
+               <p class="card-description" data-i18n="services_9">
                 Expert guidance and assistance to help you select the right 
                 adhesive products for your projects, including on-site consultations if needed.    
                </p>
@@ -319,8 +319,8 @@
         <div class="products-container">
           <div class="products-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out"
             data-aos-delay="400">
-            <h1>Our Products</h1>
-            <p>
+            <h1 data-i18n="our_products">Our Products</h1>
+            <p data-i18n="products_description">
               Explore our range of adhesive solutions designed to meet the diverse needs of various industries
             </p>
           </div>
@@ -334,7 +334,7 @@
                   <h3>El Borg</h3>
                 </div>
                 <!-- Button to trigger modal -->
-                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="El-Borg">
+                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="El-Borg" data-i18n="view_details">
                   View Details
                 </button>
               </div>
@@ -347,7 +347,7 @@
                 <div class="products-content">
                   <h3>King</h3>
                 </div>
-                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal2" data-product-id="King">
+                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="King" data-i18n="view_details">
                   View Details
                 </button>
               </div>
@@ -360,7 +360,7 @@
                 <div class="products-content">
                   <h3>Forsan</h3>
                 </div>
-                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal3" data-product-id="Forsan">
+                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Forsan" data-i18n="view_details">
                   View Details
                 </button>
               </div>
@@ -373,7 +373,7 @@
                 <div class="products-content">
                   <h3>Fox</h3>
                 </div>
-                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal4" data-product-id="Fox">
+                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Fox" data-i18n="view_details">
                   View Details
                 </button>
               </div>
@@ -386,20 +386,20 @@
                 <div class="products-content">
                   <h3>Healthy</h3>
                 </div>
-                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal5" data-product-id="Healthy">
+                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Healthy" data-i18n="view_details">
                   View Details
                 </button>
               </div>
             </div>
-             <!-- CARD 6 -->
-             <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+            <!-- CARD 6 -->
+            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
              data-aos-delay="400">
              <div class="products-item">
                <img src="/images/products/Fo-Max/medium/M-1.png" alt="Product 2" class="products-image">
                <div class="products-content">
                  <h3>Fo-Max</h3>
                </div>
-               <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal6" data-product-id="Fo-Max">
+               <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Fo-Max" data-i18n="view_details">
                  View Details
                </button>
              </div>
@@ -409,289 +409,33 @@
       <!-- End Products Section -->
 
       <!-- PRODUCTS MODAL  -->
-      <!-- PRODUCT 1 - ELBORG -->
-      <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-              <!-- Modal Header -->
-              <div class="modal-header">
-                <h5 class="modal-title" id="productModalLabel">El Borg</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <!-- Modal Body -->
-              <div class="modal-body">
-                <div class="modal-container">
-                  <!-- Splide Carousel -->
-                  <div class="splide">
-                    <div class="splide__track">
-                      <ul class="splide__list">
-                        <li class="splide__slide">
-                          <img src="/images/products/El-Borg/medium/M-1.png" alt="Product Image 1">
-                        </li>
-                        <li class="splide__slide">
-                          <img src="/images/products/El-Borg/medium/M-2.png" alt="Product Image 2">
-                        </li>
-                        <li class="splide__slide">
-                          <img src="/images/products/El-Borg/medium/M-3.png" alt="Product Image 3">
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!-- Right Side: Product Details -->
-                  <div class="details-container">
-                    <div class="size-buttons">
-                      <button class="size-button active" data-size="medium">Medium</button>
-                      <button class="size-button" data-size="large">Large</button>
-                    </div>
-                    <div class="product-details">
-                      <h3>Product Details</h3>
-                      <ul>
-                        <li>Detail 1</li>
-                        <li>Detail 2</li>
-                        <li>Detail 3</li>
-                        <li>Detail 4</li>
-                        <li>Detail 5</li>
-                        
-                      </ul>
-                    </div>
-                    <a href="index.html#contact" style="color: black;">To Request TDS</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-      <!-- PRODUCT 2 - KING -->
-      <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+      <!-- Replace all individual modals with this single one -->
+      <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
           <div class="modal-content">
-            <!-- Modal Header -->
             <div class="modal-header">
-              <h5 class="modal-title" id="productModalLabel2">Product Details</h5>
+              <h5 class="modal-title" id="productModalLabel" data-i18n="product_details">Product Details</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <!-- Modal Body -->
             <div class="modal-body">
               <div class="modal-container">
-                <!-- Splide Carousel -->
                 <div class="splide">
                   <div class="splide__track">
-                    <ul class="splide__list">
-                      <li class="splide__slide">
-                        <img src="/images/products/King/medium/M-1.png" alt="Product Image 1">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="/images/products/King/medium/M-2.png" alt="Product Image 2">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="/images/products/King/medium/M-3.png" alt="Product Image 3">
-                      </li>
+                    <ul class="splide__list" id="productImagesContainer">
+                      <!-- Images will be inserted here by JS -->
                     </ul>
                   </div>
                 </div>
-                <!-- Right Side: Product Details -->
                 <div class="details-container">
-                  <div class="size-buttons">
-                    <button class="size-button" data-size="small">Small</button>
-                    <button class="size-button active" data-size="medium">Medium</button>
-                    <button class="size-button" data-size="large">Large</button>
+                  <div class="size-buttons" id="sizeButtonsContainer">
+                    <!-- Size buttons will be inserted here by JS -->
                   </div>
                   <div class="product-details">
-                    <ul>
-                      <li>Detail 1</li>
-                      <li>Detail 2</li>
-                      <li>Detail 3</li>
+                    <h3 data-i18n="product_details">Product Details</h3>
+                    <ul id="productDetailsList">
+                      <!-- Details will be inserted here by JS -->
                     </ul>
                   </div>
-                  <a href="https://drive.google.com/file/d/14YjPq00adOvETXXXGHZ31yqpHByR8QF3/view?usp=sharing" style="color: black;">To View Safety Data Sheet</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- PRODUCT 3 - Forsan -->
-      <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-          <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <h5 class="modal-title" id="productModalLabel3">Product Details</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <!-- Modal Body -->
-            <div class="modal-body">
-              <div class="modal-container">
-                <!-- Splide Carousel -->
-                <div class="splide">
-                  <div class="splide__track">
-                    <ul class="splide__list">
-                      <li class="splide__slide">
-                        <img src="/images/products/Forsan/medium/M-1.png" alt="Product Image 1">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="/images/products/Forsan/medium/M-2.png" alt="Product Image 2">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="/images/products/Forsan/medium/M-3.png" alt="Product Image 3">
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- Right Side: Product Details -->
-                <div class="details-container">
-                  <div class="size-buttons">
-                    <button class="size-button active" data-size="medium">Medium</button>
-                  </div>
-                  <div class="product-details">
-                    <ul>
-                      <li>Detail 1</li>
-                      <li>Detail 2</li>
-                      <li>Detail 3</li>
-                    </ul>
-                  </div>
-                  <a href="https://drive.google.com/file/d/14YjPq00adOvETXXXGHZ31yqpHByR8QF3/view?usp=sharing" style="color: black;">To View Safety Data Sheet</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- PRODUCT 4 - Fox -->
-      <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-          <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <h5 class="modal-title" id="productModalLabel4">Product Details</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <!-- Modal Body -->
-            <div class="modal-body">
-              <div class="modal-container">
-                <!-- Splide Carousel -->
-                <div class="splide">
-                  <div class="splide__track">
-                    <ul class="splide__list">
-                      <li class="splide__slide">
-                        <img src="/images/products/Fox/medium/M-1.png" alt="Product Image 1">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="/images/products/Fox/medium/M-2.png" alt="Product Image 2">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="/images/products/Fox/medium/M-3.png" alt="Product Image 3">
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- Right Side: Product Details -->
-                <div class="details-container">
-                  <div class="size-buttons">
-                    <button class="size-button active" data-size="medium">Large</button>
-                  </div>
-                  <div class="product-details">
-                    <ul>
-                      <li>Detail 1</li>
-                      <li>Detail 2</li>
-                      <li>Detail 3</li>
-                    </ul>
-                  </div>
-                  <a href="https://drive.google.com/file/d/14YjPq00adOvETXXXGHZ31yqpHByR8QF3/view?usp=sharing" style="color: black;">To View Safety Data Sheet</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- PRODUCT 5 - Healthy -->
-      <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-          <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <h5 class="modal-title" id="productModalLabel5">Product Details</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <!-- Modal Body -->
-            <div class="modal-body">
-              <div class="modal-container">
-                <!-- Splide Carousel -->
-                <div class="splide">
-                  <div class="splide__track">
-                    <ul class="splide__list">
-                      <li class="splide__slide">
-                        <img src="/images/products/Healthy/medium/M-1.png" alt="Product Image 1">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="/images/products/Healthy/medium/M-2.png" alt="Product Image 2">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="/images/products/Healthy/medium/M-3.png" alt="Product Image 3">
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- Right Side: Product Details -->
-                <div class="details-container">
-                  <div class="size-buttons">
-                    <button class="size-button active" data-size="medium">Large</button>
-                  </div>
-                  <div class="product-details">
-                    <ul>
-                      <li>Detail 1</li>
-                      <li>Detail 2</li>
-                      <li>Detail 3</li>
-                    </ul>
-                  </div>
-                  <a href="https://drive.google.com/file/d/14YjPq00adOvETXXXGHZ31yqpHByR8QF3/view?usp=sharing" style="color: black;">To View Safety Data Sheet</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- PRODUCT 6 - Fo-MAX -->
-      <div class="modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-          <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <h5 class="modal-title" id="productModalLabel5">Product Details</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <!-- Modal Body -->
-            <div class="modal-body">
-              <div class="modal-container">
-                <!-- Splide Carousel -->
-                <div class="splide">
-                  <div class="splide__track">
-                    <ul class="splide__list">
-                      <li class="splide__slide">
-                        <img src="/images/products/Fo-Max/medium/M-1.png" alt="Product Image 1">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="/images/products/Fo-Max/medium/M-2.png" alt="Product Image 2">
-                      </li>
-                      <li class="splide__slide">
-                        <img src="/images/products/Fo-Max/medium/M-3.png" alt="Product Image 3">
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- Right Side: Product Details -->
-                <div class="details-container">
-                  <div class="size-buttons">
-                    <button class="size-button active" data-size="medium">Large</button>
-                  </div>
-                  <div class="product-details">
-                    <ul>
-                      <li>Detail 1</li>
-                      <li>Detail 2</li>
-                      <li>Detail 3</li>
-                    </ul>
-                  </div>
-                  <a href="https://drive.google.com/file/d/14YjPq00adOvETXXXGHZ31yqpHByR8QF3/view?usp=sharing" style="color: black;">To View Safety Data Sheet</a>
                 </div>
               </div>
             </div>
@@ -701,8 +445,8 @@
       <!-- FREQUENTLY ASKED QUESTIONS -->
       <section class="faq-section">
         <div class="faq-header" data-aos="zoom-out" data-aos-duration="600" data-aos-delay="200" data-aos-easing="ease-in-out">
-          <h1>Frequently Asked Questions</h1>
-          <p>Quick answers to questions you may have. Can't find what you're looking for? Don't hesitate to contact us</p>
+          <h1 data-i18n="faq">Frequently Asked Questions</h1>
+          <p data-i18n="faq_subtitle">Quick answers to questions you may have. Can't find what you're looking for? Don't hesitate to contact us</p>
         </div>
       
         <div class="faq-grid">
@@ -712,11 +456,11 @@
               <div class="icon">
                 <img src="/images/icons/location.png" alt="Location Icon" class="img-icon">
               </div>
-              <h3>Where are your manufacturing facilities located?</h3>
+              <h3 data-i18n="faq_1">Where are your manufacturing facilities located?</h3>
             </div>
             
             <div class="faq-answer">
-              <p>Our manufacturing facilities are located in the Fayoum and Qalyoub industrial areas, with warehouses in both locations to ensure efficient storage and distribution.</p>
+              <p data-i18n="answer_1">Our manufacturing facilities are located in the Fayoum and Qalyoub industrial areas, with warehouses in both locations to ensure efficient storage and distribution.</p>
             </div>
           </div>
           <!-- FAQ 2 -->
@@ -725,10 +469,10 @@
               <div class="icon">
                 <img src="/images/icons/export.png" alt="Export Icon" class="img-icon">
               </div>
-              <h3>Are your products available for export?</h3>
+              <h3 data-i18n="faq_2">Are your products available for export?</h3>
             </div>
             <div class="faq-answer">
-              <p>Yes, we export our adhesive products to the Middle East and Africa, with plans to expand into other international markets.</p>
+              <p data-i18n="answer_2">Yes, we export our adhesive products to the Middle East and Africa, with plans to expand into other international markets.</p>
             </div>
           </div>
           <!-- FAQ 3 -->
@@ -737,10 +481,10 @@
               <div class="icon">
                 <img src="/images/icons/customer-service.png" alt="Quality Icon" class="img-icon">
               </div>
-              <h3>Do you provide after-sales services?</h3>
+              <h3 data-i18n="faq_3">Do you provide after-sales services?</h3>
             </div>
             <div class="faq-answer">
-              <p>Yes, we offer comprehensive after-sales services to ensure customer satisfaction, including technical support and assistance tailored to your needs.</p>
+              <p data-i18n="answer_3">Yes, we offer comprehensive after-sales services to ensure customer satisfaction, including technical support and assistance tailored to your needs.</p>
             </div>
           </div>
           <!-- FAQ 4 -->
@@ -749,10 +493,10 @@
               <div class="icon">
                 <img src="/images/icons/payment-method.png" alt="Payment Icon" class="img-icon">
               </div>
-              <h3>Do you offer flexible payment plans</h3>
+              <h3 data-i18n="faq_4">Do you offer flexible payment plans</h3>
             </div>
             <div class="faq-answer">
-              <p>Yes, we provide all payment plan options to accommodate the diverse needs of our customers and ensure a smooth purchasing experience.</p>
+              <p data-i18n="answer_4">Yes, we provide all payment plan options to accommodate the diverse needs of our customers and ensure a smooth purchasing experience.</p>
             </div>
           </div>
           <!-- FAQ 5 -->
@@ -765,10 +509,10 @@
                   <path d="M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
-              <h3>How can I place an order or inquire about your products?</h3>
+              <h3 data-i18n="faq_5">How can I place an order or inquire about your products?</h3>
             </div>
             <div class="faq-answer">
-              <p>You can contact us through our website, email, or phone. Our sales team is ready to assist you with your requirements and provide detailed product information.</p>
+              <p data-i18n="answer_5">You can contact us through our website, email, or phone. Our sales team is ready to assist you with your requirements and provide detailed product information.</p>
             </div>
           </div>
           <!-- FAQ 6 -->
@@ -781,10 +525,10 @@
                   <path d="M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
-              <h3>What regions do you export to? </h3>
+              <h3 data-i18n="faq_6">What regions do you export to? </h3>
             </div>
             <div class="faq-answer">
-              <p>We currently export to the Middle East and Africa and are actively exploring opportunities to expand into other global markets.</p>
+              <p data-i18n="answer_6">We currently export to the Middle East and Africa and are actively exploring opportunities to expand into other global markets.</p>
             </div>
         </div>
       </section>
@@ -793,16 +537,16 @@
       <div class="contact-section" id="contact" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
         data-aos-delay="200">
         <div class="contact-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out" data-aos-delay="400">
-          <span class="connect-text">CONNECT WITH PYRMAIDS</span>
-          <h1>Your Partner in Adhesive Solutions</h1>
-          <p class="contact-subtitle">For tailored adhesive products that elevate your production capabilities, reach out
+          <span class="connect-text" data-i18n="connect_with_pyrmaids">CONNECT WITH PYRMAIDS</span>
+          <h1 data-i18n="connect_with_pyrmaids">Your Partner in Adhesive Solutions</h1>
+          <p class="contact-subtitle" data-i18n="contact_subtitle">For tailored adhesive products that elevate your production capabilities, reach out
             to our dedicated team. We're here to provide solutions that meet your specific industrial needs.</p>
         </div>
 
         <div class="contact-container">
           <div class="contact-info">
-            <h2>CONTACT INFORMATION</h2>
-            <h3>Get in Touch with Us</h3>
+            <h2 data-i18n="contact_information">CONTACT INFORMATION</h2>
+            <h3 data-i18n="get_in_touch_with_us">Get in Touch with Us</h3>
 
             <div class="info-items">
               <div class="info-item">
@@ -840,22 +584,22 @@
 
           <form class="contact-form" action="https://formsubmit.co/info@pyramidsadhesives.com" method="POST" id="contact-form">
             <div class="form-group">
-              <label>Full Name</label>
+              <label data-i18n="full_name">Full Name</label>
               <input type="text" name="Full Name" placeholder="Ex. John Doe" required>
             </div>
             <div class="form-group">
-              <label>Your Email</label>
+              <label data-i18n="your_email">Your Email</label>
               <input type="email" name="Email" placeholder="example@email.com" required>
             </div>
             <div class="form-group">
-              <label>Contact Number</label>
+              <label data-i18n="contact_number">Contact Number</label>
               <input type="tel" name="Phone Number" placeholder="(123) 456-7890" required>
             </div>
             <div class="form-group">
-              <label>Your Message</label>
+              <label data-i18n="your_message">Your Message</label>
               <textarea rows="4" name="Message" placeholder="Leave a message" required></textarea>
             </div>
-            <button type="submit">SUBMIT INQUIRY</button>
+            <button type="submit" data-i18n="submit_inquiry">SUBMIT INQUIRY</button>
           </form>
         </div>
       </div>
@@ -891,21 +635,8 @@
                   </g>
                 </svg>
               </a>
-              <!-- TWITTER - X -->
-              <a>
-                <svg class="socialSvg" viewBox="0 0 16 16">
-                  <path
-                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-                  ></path>
-                </svg>
-                <svg class="socialSvg" viewBox="0 0 16 16">
-                  <path
-                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-                  ></path>
-                </svg>
-              </a>
               <!-- LINKEDIN -->
-              <a>
+              <a href="https://www.linkedin.com/company/pyramids-adhesives/" target="_blank" rel="noopener noreferrer">
                 <svg class="socialSvg" viewBox="0 0 448 512">
                   <path
                     d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
@@ -934,55 +665,61 @@
           </div>
           <!-- USEFUL LINKS -->
           <div class="footer-section" id="useful-links">
-            <h2>Useful Links</h2>
+            <h2 data-i18n="useful_links">Useful Links</h2>
             <ul class="footer-links">
               <!-- HOME -->
               <li><a href="index.html"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16"
-                    height="16" fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    height="16" fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="home_menu">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                   </svg>Home</a></li>
               <!-- ABOUT US -->
               <li><a href="about.html#header-about"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="about_us">
                 <path fill-rule="evenodd"
                   d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
               </svg>About Us</a></li>
               <!-- OUR PRODUCTS -->
               <li><a href="index.html#products"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="products_menu">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                   </svg>Products</a></li>
+              <!-- OUR SERVICES -->
+              <li><a href="index.html#services"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="services_menu">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+              </svg>Services</a></li>
               <!-- FAQ -->
               <li><a href="index.html#faq"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="faq">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                   </svg>FAQ</a></li>
               <!-- PRIVACY POLICY -->
-              <li><a href="#"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              <!-- <li><a href="#"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                     fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                  </svg>Privacy Policy</a></li>
+                  </svg>Privacy Policy</a></li> -->
               <!-- CONTACT US -->
               <li><a href="index.html#contact-form"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="get_in_touch_with_us">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                   </svg>Contact Us</a></li>
               <!-- TERMS AND CONDITIONS -->
-              <li><a href="#"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              <!-- <li><a href="#"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                     fill="#88BF47 " class="bi bi-chevron-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                  </svg>Terms and Conditions</a></li>
+                  </svg>Terms and Conditions</a></li> -->
             </ul>
           </div>
           <!-- CONTACT US -->
           <div class="footer-section">
-            <h2 id="contact-us">Contact Us</h2>
+            <h2 id="contact-us" data-i18n="get_in_touch_with_us">Contact Us</h2>
             <div class="footer-contact-info">
               <p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
@@ -991,14 +728,14 @@
                 </svg> <a href="mailto:info@pyramidsadhesives.com" class="email-hyperlink" id="footer-email">info@pyramidsadhesives.com</a>
               </p>
               <a href="https://maps.app.goo.gl/vgEyWQmzgsb4d7vf6" class="location-link">
-                <p>
+                <p data-i18n="fayoum_,_egypt">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
                     <path
                       d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                   </svg> Plot No 68, Kom Oushim, Tamiya City</br> Fayoum Governorate, Egypt.
                 </p>
               </a>
-              <p>
+              <p data-i18n="working_hours">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
                   <path
                     d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
@@ -1018,6 +755,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
       </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script src="/JS/language.js"></script>
       <!-- ANIMATIONS JS -->
       <script>
         AOS.init({
@@ -1094,107 +832,313 @@
       <!-- MODAL JS -->
       <!-- Splide JS -->
       <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-      <script>
-        // Initialize Splide Carousel for each modal
-        document.addEventListener('DOMContentLoaded', function () {
-          // Select all "View Details" buttons
-          const detailButtons = document.querySelectorAll('.detail-button');
-
-          detailButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-              // Get the product ID from the button's data attribute
-              const productId = button.getAttribute('data-product-id');
-
-              // Find the corresponding modal
-              const modalId = button.getAttribute('data-bs-target');
-              const modal = document.querySelector(modalId);
-
-              if (modal) {
-                // Initialize Splide and handle size buttons for this modal
-                const splideElement = modal.querySelector('.splide');
-                const sizeButtons = modal.querySelectorAll('.size-button');
-                const productDetails = modal.querySelector('.product-details ul');
-
-                if (splideElement) {
-                  // Initialize Splide
-                  const splide = new Splide(splideElement, {
-                    type: 'loop', // Enable infinite looping
-                    perPage: 1, // Show one slide at a time
-                    pagination: false, // Disable default pagination
-                    arrows: true, // Enable navigation arrows
-                  });
-
-                  splide.mount();
-
-                  // Function to update the Splide carousel with new images
-                  const updateCarousel = (size) => {
-                    const imagePaths = {
-                      small: ['S-1', 'S-2', 'S-3'], // Replace with actual file paths
-                      medium: ['M-1', 'M-2', 'M-3'], // Replace with actual file paths
-                      large: ['L-1', 'L-2', 'L-3'], // Replace with actual file paths
-                    };
-
-                    // Construct the folder path using the product ID and size
-                    const images = imagePaths[size].map(
-                      (image) => `/images/products/${productId}/${size}/${image}.png`
-                    );
-
-                    // Update the Splide carousel with new images
-                    const splideList = splideElement.querySelector('.splide__list');
-                    splideList.innerHTML = images
-                      .map(
-                        (image, index) => `
-                          <li class="splide__slide">
-                            <img src="${image}" alt="Product Image ${index + 1}">
-                          </li>
-                        `
-                      )
-                      .join('');
-
-                    // Refresh the Splide instance to reflect the new images
-                    splide.refresh();
-                  };
-
-                  // Handle size buttons for this modal
-                  if (sizeButtons && productDetails) {
-                    sizeButtons.forEach((button) => {
-                      button.addEventListener('click', () => {
-                        // Remove active class from all buttons
-                        sizeButtons.forEach((btn) => btn.classList.remove('active'));
-                        // Add active class to the clicked button
-                        button.classList.add('active');
-                        // Get the selected size
-                        const size = button.getAttribute('data-size');
-                        // Update the Splide carousel with the new images
-                        updateCarousel(size);
-                        // Update product details based on size
-                        updateDetails(productDetails, size);
-                      });
-                    });
-
-                    // Initialize modal with medium details and images
-                    updateCarousel('medium');
-                    updateDetails(productDetails, 'medium');
-                  }
-                }
+      <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+      
+          // 1. Product weight/volume data
+          const products = {
+            'El-Borg': {
+              sizes: {
+                medium: { weightVolume: '1 Liter' },
+                large: { weightVolume: '14 kg / 3 liters' }
               }
+            },
+            'King': {
+              sizes: {
+                small: { weightVolume: '1 Liter' },
+                medium: { weightVolume: '3 Liters' },
+                large: { weightVolume: '13 kg' }
+              }
+            },
+            'Forsan': {
+              sizes: {
+                medium: { weightVolume: '14 kg' }
+              }
+            },
+            'Fox': {
+              sizes: {
+                medium: { weightVolume: '14 kg' }
+              }
+            },
+            'Healthy': {
+              sizes: {
+                medium: { weightVolume: '14 kg' }
+              }
+            },
+            'Fo-Max': {
+              sizes: {
+                medium: { weightVolume: '14 kg' }
+              }
+            }
+          };
+      
+          // 2. Standard details for all products
+          const standardDetails = [
+            'Application Area: sponge, sofa, mattress, swivel chair, bedding, pillow production',
+            'Use temperature: 15-30 °C',
+            'Delivery time: 10~15 days',
+            'Advantage: Environment friendly',
+            'Usage: Decorative Materials',
+            'Packing: Metal Bucket',
+            'Shelf life: 12 Months',
+            'Minimum order for customized logo, packaging or graphics is 2,000KG'
+          ];
+      
+          // 3. Initialize Splide slider
+          const splide = new Splide('.splide', {
+            type: 'loop',
+            perPage: 1,
+            pagination: false,
+            arrows: true,
+          }).mount();
+      
+          // 4. Handle "View Details" button clicks
+          document.querySelectorAll('.detail-button').forEach(button => {
+            button.addEventListener('click', function() {
+              const productId = this.getAttribute('data-product-id');
+              const product = products[productId];
+      
+              if (!product) return;
+      
+              // Update modal title
+              document.getElementById('productModalLabel').textContent = productId;
+      
+              // Clear previous content
+              document.getElementById('productImagesContainer').innerHTML = '';
+              document.getElementById('sizeButtonsContainer').innerHTML = '';
+              document.getElementById('productDetailsList').innerHTML = '';
+      
+              // Hide the Safety Data Sheet link (if it exists)
+              const safetyLink = document.getElementById('safetyDataSheetLink');
+              if (safetyLink) {
+                safetyLink.style.display = 'none';
+              }
+      
+              // Generate size buttons
+              Object.keys(product.sizes).forEach(size => {
+                const button = document.createElement('button');
+                button.className = 'size-button';
+                button.setAttribute('data-size', size);
+                button.textContent = size.charAt(0).toUpperCase() + size.slice(1);
+                button.addEventListener('click', () => updateProductDisplay(productId, size));
+                document.getElementById('sizeButtonsContainer').appendChild(button);
+              });
+      
+              // Automatically select the first size
+              const firstSize = Object.keys(product.sizes)[0];
+              document.querySelector('.size-button').classList.add('active');
+              updateProductDisplay(productId, firstSize);
             });
           });
+      
+          // 5. Function to update modal content (images + dynamic details)
+          function updateProductDisplay(productId, size) {
+            const product = products[productId];
+            if (!product) return;
+      
+            // Update active button highlight
+            document.querySelectorAll('.size-button').forEach(btn => {
+              btn.classList.remove('active');
+              if (btn.getAttribute('data-size') === size) {
+                btn.classList.add('active');
+              }
+            });
+      
+            // Update product images
+            const imagesContainer = document.getElementById('productImagesContainer');
+            imagesContainer.innerHTML = '';
+      
+            for (let i = 1; i <= 3; i++) {
+              const li = document.createElement('li');
+              li.className = 'splide__slide';
+              li.innerHTML = `<img src="/images/products/${productId}/${size}/${size.charAt(0).toUpperCase()}-${i}.png" alt="${productId} ${size} image ${i}">`;
+              imagesContainer.appendChild(li);
+            }
+      
+            splide.refresh();
+      
+            // Update product details (first Weight/Volume, then standard points)
+            const detailsList = document.getElementById('productDetailsList');
+            detailsList.innerHTML = '';
+      
+            const weightVolumeText = `Weight / Volume: ${product.sizes[size].weightVolume}`;
+            const allDetails = [weightVolumeText, ...standardDetails];
+      
+            allDetails.forEach(detail => {
+              const li = document.createElement('li');
+              li.textContent = detail;
+              detailsList.appendChild(li);
+            });
+          }
+      
         });
-
-        // Function to update product details
-        function updateDetails(productDetails, size) {
-          // Dummy data for details
-          const details = {
-            small: ['Small Detail 1', 'Small Detail 2', 'Small Detail 3'],
-            medium: ['Volume: 3 Litres', 'Application: Sponge, sofa, mattress, swivel chair, bedding, pillow production and bags', 'Use Temperature: 10-40°C', 'Delivery Time: 10-15 Days', 'Packages Materials: Metal Bucket'],
-            large: ['Large Detail 1', 'Large Detail 2', 'Large Detail 3'],
+      </script> -->
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+      
+          // 1. Product weight/volume data
+          const products = {
+            'El-Borg': {
+              sizes: {
+                medium: { weightVolume: '1 Liter' },
+                large: { weightVolume: '14 kg / 3 liters' }
+              }
+            },
+            'King': {
+              sizes: {
+                small: { weightVolume: '1 Liter' },
+                medium: { weightVolume: '3 Liters' },
+                large: { weightVolume: '13 kg' }
+              }
+            },
+            'Forsan': {
+              sizes: {
+                medium: { weightVolume: '14 kg' }
+              }
+            },
+            'Fox': {
+              sizes: {
+                medium: { weightVolume: '14 kg' }
+              }
+            },
+            'Healthy': {
+              sizes: {
+                medium: { weightVolume: '14 kg' }
+              }
+            },
+            'Fo-Max': {
+              sizes: {
+                medium: { weightVolume: '14 kg' }
+              }
+            }
           };
-
-          // Update the details list
-          productDetails.innerHTML = details[size].map((detail) => `<li>${detail}</li>`).join('');
-        }
-      </script>
+      
+          // 2. Standard detail keys for all products
+          const standardDetailKeys = [
+            'application_area',
+            'use_temperature',
+            'delivery_time',
+            'advantage',
+            'usage',
+            'packing',
+            'shelf_life',
+            'minimum_order'
+          ];
+      
+          // 3. Initialize Splide slider
+          const splide = new Splide('.splide', {
+            type: 'loop',
+            perPage: 1,
+            pagination: false,
+            arrows: true,
+          }).mount();
+      
+          let currentProductId = null;
+          let currentSize = null;
+      
+          // 4. Handle "View Details" button clicks
+          document.querySelectorAll('.detail-button').forEach(button => {
+            button.addEventListener('click', function() {
+              const productId = this.getAttribute('data-product-id');
+              const product = products[productId];
+      
+              if (!product) return;
+      
+              currentProductId = productId; // Save current product
+              currentSize = null;           // Reset current size
+      
+              // Update modal title
+              document.getElementById('productModalLabel').textContent = productId;
+      
+              // Clear previous content
+              document.getElementById('productImagesContainer').innerHTML = '';
+              document.getElementById('sizeButtonsContainer').innerHTML = '';
+              document.getElementById('productDetailsList').innerHTML = '';
+      
+              // Hide the Safety Data Sheet link (if it exists)
+              const safetyLink = document.getElementById('safetyDataSheetLink');
+              if (safetyLink) {
+                safetyLink.style.display = 'none';
+              }
+      
+              // Generate size buttons
+              Object.keys(product.sizes).forEach(size => {
+                const button = document.createElement('button');
+                button.className = 'size-button';
+                button.setAttribute('data-size', size);
+                button.textContent = translations[`size_${size}`] || size; // TRANSLATED
+                button.addEventListener('click', () => updateProductDisplay(productId, size));
+                document.getElementById('sizeButtonsContainer').appendChild(button);
+              });
+      
+              // Automatically select the first size
+              const firstSize = Object.keys(product.sizes)[0];
+              document.querySelector('.size-button').classList.add('active');
+              updateProductDisplay(productId, firstSize);
+            });
+          });
+      
+          // 5. Function to update modal content (images + dynamic details)
+          function updateProductDisplay(productId, size) {
+            const product = products[productId];
+            if (!product) return;
+      
+            currentSize = size; // Save active size
+      
+            // Update active button highlight
+            document.querySelectorAll('.size-button').forEach(btn => {
+              btn.classList.remove('active');
+              if (btn.getAttribute('data-size') === size) {
+                btn.classList.add('active');
+              }
+            });
+      
+            // Update product images
+            const imagesContainer = document.getElementById('productImagesContainer');
+            imagesContainer.innerHTML = '';
+      
+            for (let i = 1; i <= 3; i++) {
+              const li = document.createElement('li');
+              li.className = 'splide__slide';
+              li.innerHTML = `<img src="/images/products/${productId}/${size}/${size.charAt(0).toUpperCase()}-${i}.png" alt="${productId} ${size} image ${i}">`;
+              imagesContainer.appendChild(li);
+            }
+      
+            splide.refresh();
+      
+            // Update product details (first Weight/Volume, then standard translated points)
+            const detailsList = document.getElementById('productDetailsList');
+            detailsList.innerHTML = '';
+      
+            const weightVolumeText = `Weight / Volume: ${product.sizes[size].weightVolume}`;
+            const translatedDetails = standardDetailKeys.map(key => translations[key] || key);
+      
+            const allDetails = [weightVolumeText, ...translatedDetails];
+      
+            allDetails.forEach(detail => {
+              const li = document.createElement('li');
+              li.textContent = detail;
+              detailsList.appendChild(li);
+            });
+          }
+      
+          // 6. Refresh modal if language changes
+          window.refreshModalLanguage = function() {
+            if (currentProductId && currentSize) {
+              updateProductDisplay(currentProductId, currentSize);
+      
+              // Update size button texts
+              document.querySelectorAll('.size-button').forEach(btn => {
+                const size = btn.getAttribute('data-size');
+                btn.textContent = translations[`size_${size}`] || size;
+              });
+            }
+          };
+      
+        });
+      </script>      
+      
     </main>
   </body>
 
