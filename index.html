@@ -38,21 +38,13 @@
             </li>
             <li><a href="#services" class="nav-item" data-i18n="services">services</a></li>
             <li><a href="#products" class="nav-item" data-i18n="products">Products</a></li>
-            <!-- <li class="nav-item dropdown" id="productsDropdown">
-              <a href="" class="nav-link" id="productsDropdown" role="button">PRODUCTS</a>
-              <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                <li><a class="dropdown-item" href="#products">All Products</a></li>
-                <li><a class="dropdown-item" href="#">Hot Melt</a></li>
-                <li><a class="dropdown-item" href="#">Upholstery Adhesive</a></li>
-              </ul>
-            </li> -->
             <li><a href="#contact" class="nav-item" data-i18n="contact_us">Contact Us</a></li>
           </ul>
         </nav>
         <!-- LANGUAGE SWITCHER -->
         <div class="language-dropdown">
           <button>
-            <img src="/images/flags/Egypt-flag.png" width="20">Arabic 
+            <img src="/images/flags/Egypt-flag.png" width="20">عربي 
           </button>
           <ul class="dropdown-menu">
             <li><a href="#" id="english-btn"><img src="/images/flags/uk-logo.png" alt="England Flag">English</a></li>
@@ -75,7 +67,7 @@
             <source src="https://res.cloudinary.com/dsjk9cowq/video/upload/v1739561420/hero-4-c_rxucbs.mp4" type="video/mp4">
           </video>
           <div class="hero-text">
-            <h1>
+            <h1 data-i18n="slogan">
               <span>Innovative</span>
               <span>Adhesive</span>
               <span>Solutions</span>
@@ -88,12 +80,6 @@
               <span>Designed</span>
               <span>to</span>
               <span>Perform</span>
-              <!-- <span>you</span>
-              <span>place</span>
-              <span>on</span>
-              <span>your</span>
-              <span>own</span>
-              <span>thinking.</span> -->
             </h1>
           </div>
         </div>
@@ -409,29 +395,33 @@
       <!-- End Products Section -->
 
       <!-- PRODUCTS MODAL  -->
-      <!-- Replace all individual modals with this single one -->
       <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="productModalLabel" data-i18n="product_details">Product Details</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title w-100 text-center" id="productModalLabel" data-i18n="product_details">Product Details</h5>
+              <button type="button" class="btn-close  position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="modal-container">
-                <div class="splide">
-                  <div class="splide__track">
-                    <ul class="splide__list" id="productImagesContainer">
-                      <!-- Images will be inserted here by JS -->
-                    </ul>
+                
+                <div class="image-container">
+                  <div class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list" id="productImagesContainer">
+                        <!-- Images will be inserted here by JS -->
+                      </ul>
+                    </div>
                   </div>
                 </div>
-                <div class="details-container">
+
+                <div class="details-container" id="detailsContainer">
                   <div class="size-buttons" id="sizeButtonsContainer">
                     <!-- Size buttons will be inserted here by JS -->
                   </div>
                   <div class="product-details">
-                    <h3 data-i18n="product_details">Product Details</h3>
+                    <h3 data-i18n="product_details" style="text-align: center;">Product Details</h3>
+                  </br>
                     <ul id="productDetailsList">
                       <!-- Details will be inserted here by JS -->
                     </ul>
@@ -537,8 +527,8 @@
       <div class="contact-section" id="contact" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"
         data-aos-delay="200">
         <div class="contact-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out" data-aos-delay="400">
-          <span class="connect-text" data-i18n="connect_with_pyrmaids">CONNECT WITH PYRMAIDS</span>
-          <h1 data-i18n="connect_with_pyrmaids">Your Partner in Adhesive Solutions</h1>
+          <span class="connect-text" data-i18n="connect_with_pyrmaids">Connect With Pyrmaids</span>
+          <h1 data-i18n="your_partner_in_adhesive_solutions">Your Partner in Adhesive Solutions</h1>
           <p class="contact-subtitle" data-i18n="contact_subtitle">For tailored adhesive products that elevate your production capabilities, reach out
             to our dedicated team. We're here to provide solutions that meet your specific industrial needs.</p>
         </div>
@@ -668,32 +658,32 @@
             <h2 data-i18n="useful_links">Useful Links</h2>
             <ul class="footer-links">
               <!-- HOME -->
-              <li><a href="index.html"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16"
-                    height="16" fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="home_menu">
+              <li><a href="index.html" data-i18n="home_menu" ><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                   </svg>Home</a></li>
               <!-- ABOUT US -->
-              <li><a href="about.html#header-about"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="about_us">
+              <li><a href="about.html#header-about" data-i18n="about_us"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" >
                 <path fill-rule="evenodd"
                   d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
               </svg>About Us</a></li>
               <!-- OUR PRODUCTS -->
-              <li><a href="index.html#products"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="products_menu">
+              <li><a href="index.html#products" data-i18n="products_menu"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                  </svg>Products</a></li>
+                  </svg>Our Products</a></li>
               <!-- OUR SERVICES -->
-              <li><a href="index.html#services"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="services_menu">
+              <li><a href="index.html#services" data-i18n="services_menu"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" >
                 <path fill-rule="evenodd"
                   d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
               </svg>Services</a></li>
               <!-- FAQ -->
-              <li><a href="index.html#faq"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="faq">
+              <li><a href="index.html#faq" data-i18n="faq"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" >
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                   </svg>FAQ</a></li>
@@ -704,8 +694,8 @@
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                   </svg>Privacy Policy</a></li> -->
               <!-- CONTACT US -->
-              <li><a href="index.html#contact-form"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" data-i18n="get_in_touch_with_us">
+              <li><a href="index.html#contact-form"  data-i18n="get_in_touch_with_us"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                   </svg>Contact Us</a></li>
@@ -762,41 +752,7 @@
           once: true
         });
       </script>
-      <!-- LANGUAGE SWITCHER -->
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const languageSwitcher = document.getElementById("languageSwitcher");
       
-          // Function to load and apply language
-          function loadLanguage(lang) {
-              fetch(`/JS/${lang}.json`) // Load the selected language JSON
-                  .then(response => response.json())
-                  .then(translations => {
-                      document.querySelectorAll("[data-i18n]").forEach(el => {
-                          const key = el.getAttribute("data-i18n");
-                          if (translations[key]) {
-                              el.textContent = translations[key]; // Update text
-                          }
-                      });
-      
-                      // If Arabic, switch page direction to RTL
-                      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-                  })
-                  .catch(error => console.error("Error loading language:", error));
-          }
-      
-          // Detect language change
-          languageSwitcher.addEventListener("change", function () {
-              localStorage.setItem("selectedLang", this.value); // Save selection
-              loadLanguage(this.value);
-          });
-      
-          // Load saved language on page load
-          const savedLang = localStorage.getItem("selectedLang") || "en";
-          languageSwitcher.value = savedLang;
-          loadLanguage(savedLang);
-      });
-      </script> 
       <!-- END LANGUAGE SWITCHER -->
       <!-- TO THE TOP BUTTON -->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -832,147 +788,6 @@
       <!-- MODAL JS -->
       <!-- Splide JS -->
       <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-      <!-- <script>
-        document.addEventListener('DOMContentLoaded', function() {
-      
-          // 1. Product weight/volume data
-          const products = {
-            'El-Borg': {
-              sizes: {
-                medium: { weightVolume: '1 Liter' },
-                large: { weightVolume: '14 kg / 3 liters' }
-              }
-            },
-            'King': {
-              sizes: {
-                small: { weightVolume: '1 Liter' },
-                medium: { weightVolume: '3 Liters' },
-                large: { weightVolume: '13 kg' }
-              }
-            },
-            'Forsan': {
-              sizes: {
-                medium: { weightVolume: '14 kg' }
-              }
-            },
-            'Fox': {
-              sizes: {
-                medium: { weightVolume: '14 kg' }
-              }
-            },
-            'Healthy': {
-              sizes: {
-                medium: { weightVolume: '14 kg' }
-              }
-            },
-            'Fo-Max': {
-              sizes: {
-                medium: { weightVolume: '14 kg' }
-              }
-            }
-          };
-      
-          // 2. Standard details for all products
-          const standardDetails = [
-            'Application Area: sponge, sofa, mattress, swivel chair, bedding, pillow production',
-            'Use temperature: 15-30 °C',
-            'Delivery time: 10~15 days',
-            'Advantage: Environment friendly',
-            'Usage: Decorative Materials',
-            'Packing: Metal Bucket',
-            'Shelf life: 12 Months',
-            'Minimum order for customized logo, packaging or graphics is 2,000KG'
-          ];
-      
-          // 3. Initialize Splide slider
-          const splide = new Splide('.splide', {
-            type: 'loop',
-            perPage: 1,
-            pagination: false,
-            arrows: true,
-          }).mount();
-      
-          // 4. Handle "View Details" button clicks
-          document.querySelectorAll('.detail-button').forEach(button => {
-            button.addEventListener('click', function() {
-              const productId = this.getAttribute('data-product-id');
-              const product = products[productId];
-      
-              if (!product) return;
-      
-              // Update modal title
-              document.getElementById('productModalLabel').textContent = productId;
-      
-              // Clear previous content
-              document.getElementById('productImagesContainer').innerHTML = '';
-              document.getElementById('sizeButtonsContainer').innerHTML = '';
-              document.getElementById('productDetailsList').innerHTML = '';
-      
-              // Hide the Safety Data Sheet link (if it exists)
-              const safetyLink = document.getElementById('safetyDataSheetLink');
-              if (safetyLink) {
-                safetyLink.style.display = 'none';
-              }
-      
-              // Generate size buttons
-              Object.keys(product.sizes).forEach(size => {
-                const button = document.createElement('button');
-                button.className = 'size-button';
-                button.setAttribute('data-size', size);
-                button.textContent = size.charAt(0).toUpperCase() + size.slice(1);
-                button.addEventListener('click', () => updateProductDisplay(productId, size));
-                document.getElementById('sizeButtonsContainer').appendChild(button);
-              });
-      
-              // Automatically select the first size
-              const firstSize = Object.keys(product.sizes)[0];
-              document.querySelector('.size-button').classList.add('active');
-              updateProductDisplay(productId, firstSize);
-            });
-          });
-      
-          // 5. Function to update modal content (images + dynamic details)
-          function updateProductDisplay(productId, size) {
-            const product = products[productId];
-            if (!product) return;
-      
-            // Update active button highlight
-            document.querySelectorAll('.size-button').forEach(btn => {
-              btn.classList.remove('active');
-              if (btn.getAttribute('data-size') === size) {
-                btn.classList.add('active');
-              }
-            });
-      
-            // Update product images
-            const imagesContainer = document.getElementById('productImagesContainer');
-            imagesContainer.innerHTML = '';
-      
-            for (let i = 1; i <= 3; i++) {
-              const li = document.createElement('li');
-              li.className = 'splide__slide';
-              li.innerHTML = `<img src="/images/products/${productId}/${size}/${size.charAt(0).toUpperCase()}-${i}.png" alt="${productId} ${size} image ${i}">`;
-              imagesContainer.appendChild(li);
-            }
-      
-            splide.refresh();
-      
-            // Update product details (first Weight/Volume, then standard points)
-            const detailsList = document.getElementById('productDetailsList');
-            detailsList.innerHTML = '';
-      
-            const weightVolumeText = `Weight / Volume: ${product.sizes[size].weightVolume}`;
-            const allDetails = [weightVolumeText, ...standardDetails];
-      
-            allDetails.forEach(detail => {
-              const li = document.createElement('li');
-              li.textContent = detail;
-              detailsList.appendChild(li);
-            });
-          }
-      
-        });
-      </script> -->
       
       <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -1111,7 +926,7 @@
             const detailsList = document.getElementById('productDetailsList');
             detailsList.innerHTML = '';
       
-            const weightVolumeText = `Weight / Volume: ${product.sizes[size].weightVolume}`;
+            const weightVolumeText = `${translations["weight_volume"] || "Weight / Volume"}: ${product.sizes[size].weightVolume}`;
             const translatedDetails = standardDetailKeys.map(key => translations[key] || key);
       
             const allDetails = [weightVolumeText, ...translatedDetails];

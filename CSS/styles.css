@@ -959,12 +959,34 @@ body {
 .modal-content {
   max-width: 100%;
   margin: auto;
-  direction: ltr !important;
+  align-items: start;
+  
+}
+.modal-container{
+  display: flex;
+  flex-direction: row; /* Always row left to right */
+  gap: 30px;
+  align-items: start;
+  direction: ltr; /* IMPORTANT: force LTR here */
+}
+.image-container{
+  flex: 1;
 }
 
 .modal-container {
   display: flex;
   gap: 20px;
+}
+.modal-header{
+  display: block !important;
+  max-width: 100%;
+
+  margin: 0 auto;
+}
+.details-container{
+  flex: 1;
+  text-align: left;
+  direction: ltr;
 }
 
 /* Carousel Styles */

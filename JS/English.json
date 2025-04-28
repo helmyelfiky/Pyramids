@@ -4,6 +4,7 @@
   "mission": "Mission",
   "safety_measures": "Safety Measures",
   "quality_assurance": "Quality Assurance",
+  "packaging_solutions": "Packaging Solutions",
   "services": "services",
   "products": "Products",
   "contact_us": "Contact Us",
@@ -22,6 +23,8 @@
   "premium_adhesive_solutions_for_diverse_industries": "Premium Adhesive Solutions for Diverse Industries",
   "data-description": "Pyramids specializes in manufacturing superior adhesive products tailored to meet the demands of various\n                industries.\n                Our state-of-the-art production techniques ensure that every adhesive solution we offer enhances\n                operational\n                efficiency\n                and reliability, empowering your business to excel.",
   
+  "our_mission": "Our Mission",
+
   "our_commitment": "Our Commitment",
   "card_1": "Delivering high-performance adhesive solutions for optimal manufacturing processes.",
   
@@ -76,7 +79,7 @@
   "minimum_order_for_customized_logo,_packaging_or_graphics_is_2,000kg": "Minimum order for customized logo, packaging or graphics is 2,000KG",
   "to_view_safety_data_sheet": "To View Safety Data Sheet",
   
-  "faq": "Frequently Asked Questions",
+  "faq": "FAQ",
   "faq_subtitle": "Quick answers to questions you may have. Can't find what you're looking for? Don't hesitate to contact us",
   
   "faq_1": "Where are your manufacturing facilities located?",
@@ -92,7 +95,7 @@
   "faq_6": "What regions do you export to?",
   "answer_6": "We currently export to the Middle East and Africa and are actively exploring opportunities to expand into other global markets.",
   
-  "connect_with_pyrmaids": "CONNECT WITH PYRMAIDS",
+  "connect_with_pyrmaids": "Connect With Pyramids",
   "your_partner_in_adhesive_solutions": "Your Partner in Adhesive Solutions",
   "contact_subtitle": "For tailored adhesive products that elevate your production capabilities, reach out\n            to our dedicated team. We're here to provide solutions that meet your specific industrial needs.",
   "contact_information": "CONTACT INFORMATION",
@@ -112,6 +115,8 @@
   "home_menu": "Home",
   "about_menu": "About",
   "services_menu": "Services",
+  "products_menu": "Our Products",
+  "contact_menu": "Contact Us",
 
 
   
@@ -119,6 +124,8 @@
     "size_small": "Small",
     "size_medium": "Medium",
     "size_large": "Large",
+
+    "weight_volume": "Weight / Volume", 
     
     "application_area": "Application Area: sponge, sofa, mattress, swivel chair, bedding, pillow production",
     "use_temperature": "Use temperature: 15-30 °C",
@@ -127,9 +134,18 @@
     "usage": "Usage: Decorative Materials",
     "packing": "Packing: Metal Bucket",
     "shelf_life": "Shelf life: 12 Months",
-    "minimum_order": "Minimum order for customized logo, packaging or graphics is 2,000KG"
-  
-  
-  
-  
+    "minimum_order": "Minimum order for customized logo, packaging or graphics is 2,000KG",
+
+    "about_filter_1":"Pyramids Adhesives is a leading manufacturer of hot melt and Upholstery adhesives. We are dedicated to providing our customers with the highest quality products and services. Our team of experts is committed to helping you find the right adhesive solution for your specific needs. Whether you are looking for a standard adhesive or a custom formulation, we have the knowledge and experience to meet your requirements. Contact us today to learn more about our products and services.",
+    "filter_2": "Safety is our top priority. We implement rigorous safety protocols throughout our manufacturing process, ensuring the well-being of our employees, protecting the environment, and maintaining the highest standards of workplace safety and health.",
+    "filter_3": "Our quality assurance process is comprehensive and meticulous. We conduct extensive testing, maintain strict quality control measures, and continuously improve our manufacturing techniques to guarantee that every product meets or exceeds customer expectations.",
+    "filter_4": "We offer innovative packaging solutions that protect our adhesive products, ensure easy handling, and minimize environmental impact. Our packaging is designed to maintain product integrity, facilitate transportation, and support sustainable practices.",
+
+    "call_to_action_subtitle": "For tailored adhesive products that elevate your production capabilities, reach out to our dedicated team. We're here to provide solutions that meet your specific industrial needs.",
+
+    "clients_served": "Clients Served",
+    "projects_completed": "Projects Completed",
+    "revenue": "Revenue",
+
+    "about_pyramids": "About Pyramids Adhesives"
 }
