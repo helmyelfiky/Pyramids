@@ -42,16 +42,17 @@
           </ul>
         </nav>
         <!-- LANGUAGE SWITCHER -->
+        <!-- LANGUAGE DROPDOWN -->
         <div class="language-dropdown">
-          <button>
-            <img src="/images/flags/Egypt-flag.png" width="20">عربي 
+          <button id="current-language-btn">
+            <!-- Content will be set by JS -->
           </button>
           <ul class="dropdown-menu">
-            <li><a href="#" id="english-btn"><img src="/images/flags/uk-logo.png" alt="England Flag">English</a></li>
-            <li><a href="#" id="arabic-btn"><img src="/images/flags/Egypt-flag.png" alt="Egyptian Flag">العربية</a></li>
-            <li><a href="#" id="french-btn"><img src="/images/flags/france-logo.png" alt="France Flag">Français</a></li>
+            <li><a href="#" id="english-btn"><img src="/images/flags/uk-logo.png" alt="UK Flag"> English</a></li>
+            <li><a href="#" id="arabic-btn"><img src="/images/flags/Egypt-flag.png" alt="Egypt Flag"> العربية</a></li>
+            <li><a href="#" id="french-btn"><img src="/images/flags/france-logo.png" alt="France Flag"> Français</a></li>
           </ul>
-        </div>
+        </div>        
         <!-- MOBILE MENU TOGGLE -->
         <div class="mobile-menu-toggle" onclick="toggleMenu()">
           <span></span>
@@ -483,7 +484,7 @@
               <div class="icon">
                 <img src="/images/icons/payment-method.png" alt="Payment Icon" class="img-icon">
               </div>
-              <h3 data-i18n="faq_4">Do you offer flexible payment plans</h3>
+              <h3 data-i18n="faq_4">Do you offer flexible payment plans?</h3>
             </div>
             <div class="faq-answer">
               <p data-i18n="answer_4">Yes, we provide all payment plan options to accommodate the diverse needs of our customers and ensure a smooth purchasing experience.</p>
@@ -677,13 +678,13 @@
                   </svg>Our Products</a></li>
               <!-- OUR SERVICES -->
               <li><a href="index.html#services" data-i18n="services_menu"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" >
+                fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                   d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
               </svg>Services</a></li>
               <!-- FAQ -->
               <li><a href="index.html#faq" data-i18n="faq"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" >
+                    fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                   </svg>FAQ</a></li>
@@ -694,7 +695,7 @@
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                   </svg>Privacy Policy</a></li> -->
               <!-- CONTACT US -->
-              <li><a href="index.html#contact-form"  data-i18n="get_in_touch_with_us"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              <li><a href="index.html#contact-form" data-i18n="contact_us"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                     fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
