@@ -391,6 +391,18 @@
                </button>
              </div>
            </div>
+            <!-- CARD 7 -->
+            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+            data-aos-delay="400">
+            <div class="products-item">
+              <img src="/images/products/Glue/Medium/M-1.jpg" alt="Product 2" class="products-image">
+              <div class="products-content">
+                <h3>Glue Sticks</h3>
+              </div>
+              <!-- <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Fo-Max" data-i18n="view_details">
+                View Details
+              </button> -->
+            </div>
           </div>
       </section>
       <!-- End Products Section -->
@@ -914,7 +926,7 @@
             const imagesContainer = document.getElementById('productImagesContainer');
             imagesContainer.innerHTML = '';
       
-            for (let i = 1; i <= 3; i++) {
+            for (let i = 1; i <= 4; i++) {
               const li = document.createElement('li');
               li.className = 'splide__slide';
               li.innerHTML = `<img src="/images/products/${productId}/${size}/${size.charAt(0).toUpperCase()}-${i}.png" alt="${productId} ${size} image ${i}">`;

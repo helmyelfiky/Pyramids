@@ -1,38 +1,39 @@
-
 let translations = {};
 
-// Main language load function
+// Load and apply a language
 function loadLanguage(lang) {
   fetch(`/JS/${lang}.json`)
     .then(response => response.json())
     .then(data => {
       translations = data;
+
+      // Translate static page content
       translatePage();
+
+      // Optional dynamic sections
       refreshModalLanguage?.();
       refreshAboutSection?.();
-      updateLanguageDropdownFlag(lang); // ← Ensure it's always called here
 
-      // Update document direction
-      if (lang === 'Arabic') {
-        document.documentElement.lang = 'ar';
-        document.documentElement.dir = 'rtl';
+      // Set language and direction
+      document.documentElement.lang = (lang === 'Arabic') ? 'ar' : (lang === 'French') ? 'fr' : 'en';
+      document.documentElement.dir = (lang === 'Arabic') ? 'rtl' : 'ltr';
 
-        const detailsContainer = document.getElementById('detailsContainer');
-        if (detailsContainer) {
-          detailsContainer.style.textAlign = 'right';
-          detailsContainer.style.direction = 'rtl';
-        }
-
-      } else {
-        document.documentElement.lang = (lang === 'French') ? 'fr' : 'en';
-        document.documentElement.dir = 'ltr';
-
-        const detailsContainer = document.getElementById('detailsContainer');
-        if (detailsContainer) {
-          detailsContainer.style.textAlign = 'left';
-          detailsContainer.style.direction = 'ltr';
-        }
+      // Fix direction for modal detail container
+      const detailsContainer = document.getElementById('detailsContainer');
+      if (detailsContainer) {
+        detailsContainer.style.textAlign = (lang === 'Arabic') ? 'right' : 'left';
+        detailsContainer.style.direction = (lang === 'Arabic') ? 'rtl' : 'ltr';
       }
+
+      // Fix direction for About section text
+      const sectionText = document.querySelector('.section-text');
+      if (sectionText) {
+        sectionText.style.textAlign = (lang === 'Arabic') ? 'right' : 'left';
+        sectionText.style.direction = (lang === 'Arabic') ? 'rtl' : 'ltr';
+      }
+
+      // Update language flag button
+      updateLanguageDropdownFlag(lang);
 
       // Save language
       localStorage.setItem('selectedLanguage', lang);
@@ -50,28 +51,28 @@ function translatePage() {
   });
 }
 
-// Update flag + label inside main language button
+// Update the language flag + label in the dropdown button
 function updateLanguageDropdownFlag(lang) {
   const button = document.getElementById('current-language-btn');
   if (!button) return;
 
-  if (lang === 'Arabic') {
-    button.innerHTML = `<img src="/images/flags/Egypt-flag.png" width="20"> العربية`;
-  } else if (lang === 'French') {
-    button.innerHTML = `<img src="/images/flags/france-logo.png" width="20"> Français`;
-  } else {
-    button.innerHTML = `<img src="/images/flags/uk-logo.png" width="20"> English`;
-  }
+  const flagMap = {
+    Arabic: `<img src="/images/flags/Egypt-flag.png" width="20"> العربية`,
+    French: `<img src="/images/flags/france-logo.png" width="20"> Français`,
+    English: `<img src="/images/flags/uk-logo.png" width="20"> English`,
+  };
+
+  button.innerHTML = flagMap[lang] || flagMap.English;
 }
 
 // Load saved language on page load
 window.addEventListener('load', () => {
   const savedLang = localStorage.getItem('selectedLanguage') || 'English';
-  updateLanguageDropdownFlag(savedLang);  // ← Set button label
-  loadLanguage(savedLang);                // ← Load translations
+  updateLanguageDropdownFlag(savedLang); // Ensure flag button is updated
+  loadLanguage(savedLang);               // Load translations
 });
 
-// Language button clicks
+// Language selection buttons
 document.getElementById('english-btn')?.addEventListener('click', e => {
   e.preventDefault();
   loadLanguage('English');
