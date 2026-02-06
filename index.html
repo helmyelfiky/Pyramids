@@ -52,7 +52,7 @@
             <li><a href="#" id="arabic-btn"><img src="/images/flags/Egypt-flag.png" alt="Egypt Flag"> العربية</a></li>
             <li><a href="#" id="french-btn"><img src="/images/flags/france-logo.png" alt="France Flag"> Français</a></li>
           </ul>
-        </div>        
+        </div>
         <!-- MOBILE MENU TOGGLE -->
         <div class="mobile-menu-toggle" onclick="toggleMenu()">
           <span></span>
@@ -306,139 +306,272 @@
         <div class="products-container">
           <div class="products-header" data-aos="zoom-out" data-aos-duration="900" data-aos-easing="ease-in-out"
             data-aos-delay="400">
+            <div class="products-tag" data-i18n="explore_our_range">EXPLORE OUR RANGE</div>
             <h1 data-i18n="our_products">Our Products</h1>
             <p data-i18n="products_description">
               Explore our range of adhesive solutions designed to meet the diverse needs of various industries
             </p>
           </div>
           <div class="products-grid">
-            <!-- CARD 1 -->
-            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+            <!-- CARD 1 - El Borg -->
+            <div class="product-card" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
               data-aos-delay="200">
-              <div class="products-item">
-                <img src="/images/products/El-Borg/large/L-1.png" alt="App 1" class="products-image">
-                <div class="products-content">
-                  <h3>El Borg</h3>
+              <div class="product-card-inner">
+                <div class="product-image-wrapper">
+                  <img src="/images/products/El-Borg/large/L-1.png" alt="El Borg Adhesive" class="product-image">
+                  <div class="product-overlay">
+                    <button class="quick-view-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="El-Borg">
+                      <i class="fas fa-search-plus"></i>
+                      <span data-i18n="view_details">View Details</span>
+                    </button>
+                  </div>
                 </div>
-                <!-- Button to trigger modal -->
-                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="El-Borg" data-i18n="view_details">
-                  View Details
-                </button>
+                <div class="product-info">
+                  <h3 class="product-name">El Borg</h3>
+                  <div class="product-divider"></div>
+                </div>
               </div>
             </div>
-            <!-- CARD 2 -->
-            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-              data-aos-delay="200">
-              <div class="products-item">
-                <img src="/images/products/King/medium/M-1.png" alt="Product 1" class="products-image">
-                <div class="products-content">
-                  <h3>King</h3>
+
+            <!-- CARD 2 - King -->
+            <div class="product-card" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="250">
+              <div class="product-card-inner">
+                <div class="product-image-wrapper">
+                  <img src="/images/products/King/medium/M-1.png" alt="King Adhesive" class="product-image">
+                  <div class="product-overlay">
+                    <button class="quick-view-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="King">
+                      <i class="fas fa-search-plus"></i>
+                      <span data-i18n="view_details">View Details</span>
+                    </button>
+                  </div>
                 </div>
-                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="King" data-i18n="view_details">
-                  View Details
-                </button>
+                <div class="product-info">
+                  <h3 class="product-name">King</h3>
+                  <div class="product-divider"></div>
+                </div>
               </div>
             </div>
-            <!-- CARD 3 -->
-            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-              data-aos-delay="200">
-              <div class="products-item">
-                <img src="/images/products/Forsan/medium/M-1.png" alt="Branding 1" class="products-image">
-                <div class="products-content">
-                  <h3>Forsan</h3>
+
+            <!-- CARD 3 - Forsan -->
+            <div class="product-card" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="300">
+              <div class="product-card-inner">
+                <div class="product-image-wrapper">
+                  <img src="/images/products/Forsan/medium/M-1.png" alt="Forsan Adhesive" class="product-image">
+                  <div class="product-overlay">
+                    <button class="quick-view-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Forsan">
+                      <i class="fas fa-search-plus"></i>
+                      <span data-i18n="view_details">View Details</span>
+                    </button>
+                  </div>
                 </div>
-                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Forsan" data-i18n="view_details">
-                  View Details
-                </button>
+                <div class="product-info">
+                  <h3 class="product-name">Forsan</h3>
+                  <div class="product-divider"></div>
+                </div>
               </div>
             </div>
-            <!-- CARD 4 -->
-            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+
+            <!-- CARD 4 - Fox -->
+            <div class="product-card" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="350">
+              <div class="product-card-inner">
+                <div class="product-image-wrapper">
+                  <img src="/images/products/Fox/medium/M-1.png" alt="Fox Adhesive" class="product-image">
+                  <div class="product-overlay">
+                    <button class="quick-view-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Fox">
+                      <i class="fas fa-search-plus"></i>
+                      <span data-i18n="view_details">View Details</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h3 class="product-name">Fox</h3>
+                  <div class="product-divider"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 5 - Healthy -->
+            <div class="product-card" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
               data-aos-delay="400">
-              <div class="products-item">
-                <img src="/images/products/Fox/medium/M-1.png" alt="App 2" class="products-image">
-                <div class="products-content">
-                  <h3>Fox</h3>
+              <div class="product-card-inner">
+                <div class="product-image-wrapper">
+                  <img src="/images/products/Healthy/Medium/M-1.png" alt="Healthy Adhesive" class="product-image">
+                  <div class="product-overlay">
+                    <button class="quick-view-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Healthy">
+                      <i class="fas fa-search-plus"></i>
+                      <span data-i18n="view_details">View Details</span>
+                    </button>
+                  </div>
                 </div>
-                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Fox" data-i18n="view_details">
-                  View Details
-                </button>
+                <div class="product-info">
+                  <h3 class="product-name">Healthy</h3>
+                  <div class="product-divider"></div>
+                </div>
               </div>
             </div>
-            <!-- CARD 5 -->
-            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-              data-aos-delay="400">
-              <div class="products-item">
-                <img src="/images/products/Healthy/Medium/M-1.png" alt="Product 2" class="products-image">
-                <div class="products-content">
-                  <h3>Healthy</h3>
+
+            <!-- CARD 6 - Fo-Max -->
+            <div class="product-card" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="450">
+              <div class="product-card-inner">
+                <div class="product-image-wrapper">
+                  <img src="/images/products/Fo-Max/medium/M-1.png" alt="Fo-Max Adhesive" class="product-image">
+                  <div class="product-overlay">
+                    <button class="quick-view-btn" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Fo-Max">
+                      <i class="fas fa-search-plus"></i>
+                      <span data-i18n="view_details">View Details</span>
+                    </button>
+                  </div>
                 </div>
-                <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Healthy" data-i18n="view_details">
-                  View Details
-                </button>
+                <div class="product-info">
+                  <h3 class="product-name">Fo-Max</h3>
+                  <div class="product-divider"></div>
+                </div>
               </div>
             </div>
-            <!-- CARD 6 -->
-            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-             data-aos-delay="400">
-             <div class="products-item">
-               <img src="/images/products/Fo-Max/medium/M-1.png" alt="Product 2" class="products-image">
-               <div class="products-content">
-                 <h3>Fo-Max</h3>
-               </div>
-               <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Fo-Max" data-i18n="view_details">
-                 View Details
-               </button>
-             </div>
-           </div>
-            <!-- CARD 7 -->
-            <div class="p-card-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
-            data-aos-delay="400">
-            <div class="products-item">
-              <img src="/images/products/Glue/Medium/M-1.jpg" alt="Product 2" class="products-image">
-              <div class="products-content">
-                <h3>Glue Sticks</h3>
+
+            <!-- CARD 7 - Glue Sticks -->
+            <div class="product-card" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-delay="500">
+              <div class="product-card-inner">
+                <div class="product-image-wrapper">
+                  <img src="/images/products/Glue/Medium/M-1.jpg" alt="Glue Sticks" class="product-image">
+                  <div class="product-overlay">
+                    <div class="coming-soon-badge" data-i18n="coming_soon">Coming Soon</div>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h3 class="product-name">Glue Sticks</h3>
+                  <div class="product-divider"></div>
+                </div>
               </div>
-              <!-- <button class="detail-button" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="Fo-Max" data-i18n="view_details">
-                View Details
-              </button> -->
             </div>
           </div>
+        </div>
       </section>
       <!-- End Products Section -->
 
-      <!-- PRODUCTS MODAL  -->
+      <!-- PRODUCTS MODAL -->
       <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title w-100 text-center" id="productModalLabel" data-i18n="product_details">Product Details</h5>
-              <button type="button" class="btn-close  position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-content product-modal">
+            <div class="modal-header product-modal-header">
+              <h2 id="productModalLabel" class="modal-product-name">Product Details</h2>
+              <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times"></i>
+              </button>
             </div>
-            <div class="modal-body">
-              <div class="modal-container">
-                
-                <div class="image-container">
-                  <div class="splide">
-                    <div class="splide__track">
-                      <ul class="splide__list" id="productImagesContainer">
-                        <!-- Images will be inserted here by JS -->
-                      </ul>
+
+            <div class="modal-body product-modal-body">
+              <!-- Available Sizes Section -->
+              <div class="sizes-section">
+                <h3 class="sizes-title" data-i18n="available_sizes">Available Sizes</h3>
+                <div class="sizes-grid" id="sizesGridContainer">
+                  <!-- Size cards will be inserted here by JS -->
+                </div>
+              </div>
+
+              <!-- Product Details Accordion -->
+              <div class="product-details-section">
+                <h3 class="details-title" data-i18n="product_information">Product Information</h3>
+
+                <div class="accordion product-accordion" id="productAccordion">
+
+                  <!-- Overview Accordion Item -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#overviewCollapse" aria-expanded="true" aria-controls="overviewCollapse">
+                        <i class="fas fa-info-circle accordion-icon"></i>
+                        <span data-i18n="overview">Overview</span>
+                      </button>
+                    </h2>
+                    <div id="overviewCollapse" class="accordion-collapse collapse show" data-bs-parent="#productAccordion">
+                      <div class="accordion-body">
+                        <div class="detail-item">
+                          <span class="detail-label" data-i18n="application_area_label">Application Area:</span>
+                          <span class="detail-value" id="applicationAreaValue">-</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="details-container" id="detailsContainer">
-                  <div class="size-buttons" id="sizeButtonsContainer">
-                    <!-- Size buttons will be inserted here by JS -->
+                  <!-- Specifications Accordion Item -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#specificationsCollapse" aria-expanded="false" aria-controls="specificationsCollapse">
+                        <i class="fas fa-cogs accordion-icon"></i>
+                        <span data-i18n="specifications">Specifications</span>
+                      </button>
+                    </h2>
+                    <div id="specificationsCollapse" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                      <div class="accordion-body">
+                        <div class="detail-item">
+                          <span class="detail-label" data-i18n="use_temperature_label">Use Temperature:</span>
+                          <span class="detail-value" id="useTemperatureValue">-</span>
+                        </div>
+                        <div class="detail-item">
+                          <span class="detail-label" data-i18n="shelf_life_label">Shelf Life:</span>
+                          <span class="detail-value" id="shelfLifeValue">-</span>
+                        </div>
+                        <div class="detail-item">
+                          <span class="detail-label" data-i18n="packing_label">Packing:</span>
+                          <span class="detail-value" id="packingValue">-</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="product-details">
-                    <h3 data-i18n="product_details" style="text-align: center;">Product Details</h3>
-                  </br>
-                    <ul id="productDetailsList">
-                      <!-- Details will be inserted here by JS -->
-                    </ul>
+
+                  <!-- Features & Benefits Accordion Item -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#featuresCollapse" aria-expanded="false" aria-controls="featuresCollapse">
+                        <i class="fas fa-star accordion-icon"></i>
+                        <span data-i18n="features_benefits">Features & Benefits</span>
+                      </button>
+                    </h2>
+                    <div id="featuresCollapse" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                      <div class="accordion-body">
+                        <div class="detail-item">
+                          <span class="detail-label" data-i18n="advantage_label">Advantage:</span>
+                          <span class="detail-value" id="advantageValue">-</span>
+                        </div>
+                        <div class="detail-item">
+                          <span class="detail-label" data-i18n="usage_label">Usage:</span>
+                          <span class="detail-value" id="usageValue">-</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+
+                  <!-- Order Information Accordion Item -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#orderCollapse" aria-expanded="false" aria-controls="orderCollapse">
+                        <i class="fas fa-shopping-cart accordion-icon"></i>
+                        <span data-i18n="order_information">Order Information</span>
+                      </button>
+                    </h2>
+                    <div id="orderCollapse" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                      <div class="accordion-body">
+                        <div class="detail-item">
+                          <span class="detail-label" data-i18n="minimum_order_label">Minimum Order:</span>
+                          <span class="detail-value" id="minimumOrderValue">-</span>
+                        </div>
+                        <div class="detail-item">
+                          <span class="detail-label" data-i18n="delivery_time_label">Delivery Time:</span>
+                          <span class="detail-value" id="deliveryTimeValue">-</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -792,8 +925,6 @@
         function toggleMenu() {
           const navMenu = document.querySelector('.nav-menu');
           const toggleButton = document.querySelector('.mobile-menu-toggle');
-          const langMenu = document.querySelector('language-dropdown')
-          // langMenu.classList.toggle('active');
           navMenu.classList.toggle('active');
           toggleButton.classList.toggle('active');
         }
@@ -804,8 +935,8 @@
       
       <script>
         document.addEventListener('DOMContentLoaded', function() {
-      
-          // 1. Product weight/volume data
+
+          // Product data with sizes and weight/volume
           const products = {
             'El-Borg': {
               sizes: {
@@ -841,129 +972,96 @@
               }
             }
           };
-      
-          // 2. Standard detail keys for all products
-          const standardDetailKeys = [
-            'application_area',
-            'use_temperature',
-            'delivery_time',
-            'advantage',
-            'usage',
-            'packing',
-            'shelf_life',
-            'minimum_order'
-          ];
-      
-          // 3. Initialize Splide slider
-          const splide = new Splide('.splide', {
-            type: 'loop',
-            perPage: 1,
-            pagination: false,
-            arrows: true,
-          }).mount();
-      
+
           let currentProductId = null;
-          let currentSize = null;
-      
-          // 4. Handle "View Details" button clicks
-          document.querySelectorAll('.detail-button').forEach(button => {
+
+          // Handle product card clicks
+          document.querySelectorAll('.quick-view-btn').forEach(button => {
             button.addEventListener('click', function() {
               const productId = this.getAttribute('data-product-id');
               const product = products[productId];
-      
+
               if (!product) return;
-      
-              currentProductId = productId; // Save current product
-              currentSize = null;           // Reset current size
-      
+
+              currentProductId = productId;
+
               // Update modal title
               document.getElementById('productModalLabel').textContent = productId;
-      
-              // Clear previous content
-              document.getElementById('productImagesContainer').innerHTML = '';
-              document.getElementById('sizeButtonsContainer').innerHTML = '';
-              document.getElementById('productDetailsList').innerHTML = '';
-      
-              // Hide the Safety Data Sheet link (if it exists)
-              const safetyLink = document.getElementById('safetyDataSheetLink');
-              if (safetyLink) {
-                safetyLink.style.display = 'none';
-              }
-      
-              // Generate size buttons
-              Object.keys(product.sizes).forEach(size => {
-                const button = document.createElement('button');
-                button.className = 'size-button';
-                button.setAttribute('data-size', size);
-                button.textContent = translations[`size_${size}`] || size; // TRANSLATED
-                button.addEventListener('click', () => updateProductDisplay(productId, size));
-                document.getElementById('sizeButtonsContainer').appendChild(button);
-              });
-      
-              // Automatically select the first size
-              const firstSize = Object.keys(product.sizes)[0];
-              document.querySelector('.size-button').classList.add('active');
-              updateProductDisplay(productId, firstSize);
+
+              // Generate size cards
+              generateSizeCards(productId, product);
+
+              // Update accordion details
+              updateAccordionDetails();
             });
           });
-      
-          // 5. Function to update modal content (images + dynamic details)
-          function updateProductDisplay(productId, size) {
-            const product = products[productId];
-            if (!product) return;
-      
-            currentSize = size; // Save active size
-      
-            // Update active button highlight
-            document.querySelectorAll('.size-button').forEach(btn => {
-              btn.classList.remove('active');
-              if (btn.getAttribute('data-size') === size) {
-                btn.classList.add('active');
-              }
-            });
-      
-            // Update product images
-            const imagesContainer = document.getElementById('productImagesContainer');
-            imagesContainer.innerHTML = '';
-      
-            for (let i = 1; i <= 4; i++) {
-              const li = document.createElement('li');
-              li.className = 'splide__slide';
-              li.innerHTML = `<img src="/images/products/${productId}/${size}/${size.charAt(0).toUpperCase()}-${i}.png" alt="${productId} ${size} image ${i}">`;
-              imagesContainer.appendChild(li);
-            }
-      
-            splide.refresh();
-      
-            // Update product details (first Weight/Volume, then standard translated points)
-            const detailsList = document.getElementById('productDetailsList');
-            detailsList.innerHTML = '';
-      
-            const weightVolumeText = `${translations["weight_volume"] || "Weight / Volume"}: ${product.sizes[size].weightVolume}`;
-            const translatedDetails = standardDetailKeys.map(key => translations[key] || key);
-      
-            const allDetails = [weightVolumeText, ...translatedDetails];
-      
-            allDetails.forEach(detail => {
-              const li = document.createElement('li');
-              li.textContent = detail;
-              detailsList.appendChild(li);
+
+          // Function to generate size cards
+          function generateSizeCards(productId, product) {
+            const sizesContainer = document.getElementById('sizesGridContainer');
+            sizesContainer.innerHTML = '';
+
+            Object.keys(product.sizes).forEach(size => {
+              const sizeData = product.sizes[size];
+              const sizeLabel = translations[`size_${size}`] || size.charAt(0).toUpperCase() + size.slice(1);
+
+              const sizeCard = document.createElement('div');
+              sizeCard.className = 'size-card';
+
+              sizeCard.innerHTML = `
+                <div class="size-card-image">
+                  <img src="/images/products/${productId}/${size}/${size.charAt(0).toUpperCase()}-1.png"
+                       alt="${productId} ${size}" />
+                  <span class="size-badge">${sizeLabel}</span>
+                </div>
+                <div class="size-card-content">
+                  <h4 class="size-card-title">${productId}</h4>
+                  <div class="size-info-table">
+                    <div class="size-info-row">
+                      <span class="size-info-label" data-i18n="size_label">Size:</span>
+                      <span class="size-info-value">${sizeLabel}</span>
+                    </div>
+                    <div class="size-info-row">
+                      <span class="size-info-label" data-i18n="weight_volume">Weight/Volume:</span>
+                      <span class="size-info-value">${sizeData.weightVolume}</span>
+                    </div>
+                  </div>
+                </div>
+              `;
+
+              sizesContainer.appendChild(sizeCard);
             });
           }
-      
-          // 6. Refresh modal if language changes
+
+          // Function to update accordion details
+          function updateAccordionDetails() {
+            // Update all detail fields with translated values
+            document.getElementById('applicationAreaValue').textContent = translations['application_area'] || 'Upholstery, furniture, mattresses, and industrial applications';
+            document.getElementById('useTemperatureValue').textContent = translations['use_temperature'] || '15-30°C';
+            document.getElementById('shelfLifeValue').textContent = translations['shelf_life'] || '12 months from production date';
+            document.getElementById('packingValue').textContent = translations['packing'] || 'Metal buckets';
+            document.getElementById('advantageValue').textContent = translations['advantage'] || 'Strong bonding, fast setting, environmentally friendly';
+            document.getElementById('usageValue').textContent = translations['usage'] || 'Apply at recommended temperature for optimal results';
+            document.getElementById('minimumOrderValue').textContent = translations['minimum_order'] || 'Contact for details';
+            document.getElementById('deliveryTimeValue').textContent = translations['delivery_time'] || '10-15 days';
+          }
+
+          // Refresh modal when language changes
           window.refreshModalLanguage = function() {
-            if (currentProductId && currentSize) {
-              updateProductDisplay(currentProductId, currentSize);
-      
-              // Update size button texts
-              document.querySelectorAll('.size-button').forEach(btn => {
-                const size = btn.getAttribute('data-size');
-                btn.textContent = translations[`size_${size}`] || size;
-              });
+            if (currentProductId) {
+              const product = products[currentProductId];
+
+              // Update product title
+              document.getElementById('productModalLabel').textContent = currentProductId;
+
+              // Regenerate size cards with new language
+              generateSizeCards(currentProductId, product);
+
+              // Update accordion details
+              updateAccordionDetails();
             }
           };
-      
+
         });
       </script>      
       

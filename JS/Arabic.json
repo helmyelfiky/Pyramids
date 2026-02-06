@@ -151,6 +151,25 @@
       "projects_completed": "المشاريع المكتملة",
       "revenue": "الإيرادات",
 
-      "about_pyramids":"حول لاصقات بيراميدز"
-  
+      "about_pyramids":"حول لاصقات بيراميدز",
+
+      "explore_our_range": "استكشف مجموعتنا",
+      "coming_soon": "قريباً",
+      "overview": "نظرة عامة",
+      "specifications": "المواصفات",
+      "features_benefits": "الميزات والفوائد",
+      "order_information": "معلومات الطلب",
+      "request_quote": "طلب عرض أسعار",
+      "available_sizes": "الأحجام المتوفرة",
+      "product_information": "معلومات المنتج",
+      "size_label": "الحجم",
+      "application_area_label": "مجال التطبيق",
+      "use_temperature_label": "درجة حرارة الاستخدام",
+      "shelf_life_label": "مدة الصلاحية",
+      "packing_label": "التعبئة",
+      "advantage_label": "الميزة",
+      "usage_label": "الاستخدام",
+      "minimum_order_label": "الحد الأدنى للطلب",
+      "delivery_time_label": "وقت التسليم"
+
 }

@@ -116,6 +116,25 @@
   "filter_3": "Notre processus d'assurance qualité est complet et rigoureux. Nous effectuons des tests approfondis, appliquons des mesures de contrôle qualité strictes et améliorons continuellement nos techniques de fabrication pour garantir que chaque produit réponde, voire dépasse, les attentes de nos clients.",
   "filter_4": "fNous proposons des solutions d'emballage innovantes qui protègent nos produits adhésifs, facilitent leur manipulation et minimisent leur impact environnemental. Nos emballages sont conçus pour préserver l'intégrité du produit, faciliter son transport et soutenir des pratiques durables.",
   "call_to_action_subtitle": "Pour des produits adhésifs sur mesure qui optimisent vos capacités de production, contactez notre équipe dédiée. Nous sommes là pour vous proposer des solutions adaptées à vos besoins industriels spécifiques.",
-  
-  "about_pyramids": "à propos des pyramides"
+
+  "about_pyramids": "à propos des pyramides",
+
+  "explore_our_range": "DÉCOUVREZ NOTRE GAMME",
+  "coming_soon": "Prochainement",
+  "overview": "Aperçu",
+  "specifications": "Spécifications",
+  "features_benefits": "Caractéristiques et avantages",
+  "order_information": "Informations de commande",
+  "request_quote": "Demander un devis",
+  "available_sizes": "Tailles disponibles",
+  "product_information": "Informations sur le produit",
+  "size_label": "Taille",
+  "application_area_label": "Domaine d'application",
+  "use_temperature_label": "Température d'utilisation",
+  "shelf_life_label": "Durée de conservation",
+  "packing_label": "Emballage",
+  "advantage_label": "Avantage",
+  "usage_label": "Utilisation",
+  "minimum_order_label": "Commande minimum",
+  "delivery_time_label": "Délai de livraison"
 }

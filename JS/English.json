@@ -150,5 +150,24 @@
     "projects_completed": "Projects Completed",
     "revenue": "Revenue",
 
-    "about_pyramids": "About Pyramids Adhesives"
+    "about_pyramids": "About Pyramids Adhesives",
+
+    "explore_our_range": "EXPLORE OUR RANGE",
+    "coming_soon": "Coming Soon",
+    "overview": "Overview",
+    "specifications": "Specifications",
+    "features_benefits": "Features & Benefits",
+    "order_information": "Order Information",
+    "request_quote": "Request a Quote",
+    "available_sizes": "Available Sizes",
+    "product_information": "Product Information",
+    "size_label": "Size",
+    "application_area_label": "Application Area",
+    "use_temperature_label": "Use Temperature",
+    "shelf_life_label": "Shelf Life",
+    "packing_label": "Packing",
+    "advantage_label": "Advantage",
+    "usage_label": "Usage",
+    "minimum_order_label": "Minimum Order",
+    "delivery_time_label": "Delivery Time"
 }
