@@ -20,11 +20,11 @@
   --accent-blue-dark:  #2f4054;
   --accent-blue-light: rgba(62, 83, 104, 0.09);
 
-  /* Icon orange — icon boxes ONLY */
-  --accent-amber:      #E8920A;
+  /* Orange — kept in code as fallback, currently not used in UI */
+  --accent-amber:      #E8920A;  /* restore by replacing icon colors with var(--accent-amber) if needed */
   --accent-amber-dark: #C97D08;
 
-  /* Secondary green — export, eco, footer links */
+  /* Green — icons + secondary accents */
   --accent-green:      #6AA832;
   --accent-green-dark: #568A28;
   --whatsapp-green:    #25D366;
@@ -299,20 +299,41 @@ p  { font-size: 1rem; color: var(--text-secondary); }
   align-items: center;
   justify-content: space-between;
   gap: var(--space-lg);
+  overflow: visible; /* allow scaled logo to visually overflow */
+}
+
+/* Logo: visual scale trick — header stays compact */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .logo-image {
-  height: 140px;
+  height: 52px;          /* layout height: keeps header thin */
   width: auto;
-  max-width: 280px;
-  min-width: 130px;
+  max-width: 200px;
+  min-width: 80px;
   object-fit: contain;
   object-position: left center;
+  transform: scale(1.9); /* visual size: ~100px without affecting layout */
+  transform-origin: left center;
   transition: opacity var(--transition-fast);
 }
 .logo-image:hover { opacity: 0.85; }
 
-/* Nav */
+/* ── Hero: outline btn override for dark background ────────── */
+.hero .btn-outline {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.65);
+}
+.hero .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -685,13 +706,14 @@ p  { font-size: 1rem; color: var(--text-secondary); }
   width: 44px;
   height: 44px;
   border-radius: var(--radius-md);
-  background: rgba(232, 146, 10, 0.1);
-  border: 1px solid rgba(232, 146, 10, 0.2);
+  /* Icon bg = green */
+  background: rgba(106, 168, 50, 0.12);
+  border: 1px solid rgba(106, 168, 50, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--accent-amber);
+  color: var(--accent-green);
   font-size: 1.1rem;
 }
 
@@ -742,7 +764,7 @@ p  { font-size: 1rem; color: var(--text-secondary); }
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
-  background: var(--accent-amber);
+  background: var(--accent-green);
   border-radius: var(--radius-md);
   padding: 1.2rem 1.5rem;
   text-align: center;
@@ -872,7 +894,7 @@ p  { font-size: 1rem; color: var(--text-secondary); }
 
 .export-pillar-icon {
   font-size: 1.5rem;
-  color: var(--accent-amber);
+  color: var(--accent-green); /* green icon */
   margin-bottom: 0.75rem;
 }
 
@@ -1036,7 +1058,7 @@ p  { font-size: 1rem; color: var(--text-secondary); }
 }
 
 .product-use-case i {
-  color: var(--accent-amber);
+  color: var(--accent-green); /* green dot icon */
   font-size: 0.7rem;
 }
 
@@ -1277,7 +1299,7 @@ p  { font-size: 1rem; color: var(--text-secondary); }
 }
 
 .accordion-btn i:first-child {
-  color: var(--accent-amber);
+  color: var(--accent-green); /* green icon in accordion */
   margin-right: 0.75rem;
   width: 16px;
 }
@@ -1393,13 +1415,13 @@ p  { font-size: 1rem; color: var(--text-secondary); }
   width: 52px;
   height: 52px;
   border-radius: var(--radius-md);
-  background: rgba(232, 146, 10, 0.1);
-  border: 1px solid rgba(232, 146, 10, 0.2);
+  background: rgba(106, 168, 50, 0.1); /* green */
+  border: 1px solid rgba(106, 168, 50, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
-  color: var(--accent-amber);
+  color: var(--accent-green);
   font-size: 1.3rem;
 }
 
@@ -1499,12 +1521,12 @@ p  { font-size: 1rem; color: var(--text-secondary); }
   width: 36px;
   height: 36px;
   border-radius: var(--radius-sm);
-  background: rgba(232, 146, 10, 0.1);
+  background: rgba(106, 168, 50, 0.1); /* green */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--accent-amber);
+  color: var(--accent-green);
   font-size: 0.9rem;
 }
 
@@ -1826,8 +1848,16 @@ p  { font-size: 1rem; color: var(--text-secondary); }
 }
 
 .footer-brand .footer-logo {
-  height: 42px;
-  margin-bottom: var(--space-md);
+  height: 52px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  object-position: left center;
+  /* Scale up slightly for better visibility on dark footer */
+  transform: scale(1.4);
+  transform-origin: left center;
+  margin-bottom: var(--space-lg);
+  margin-left: 10px; /* compensate for transform origin */
 }
 
 .footer-brand p {

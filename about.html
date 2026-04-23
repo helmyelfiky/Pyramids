@@ -1,508 +1,804 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <!-- MADE BY HELMY ELFIKY -->
-    <title>Pyramids Adhesives</title>
-    <link rel="icon" type="image/x-icon" href="/images/logos/logo-2.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link href="/CSS/styles.css" rel="stylesheet">
-    <link href="/CSS/about.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Splide CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
-    
+  <!-- MADE BY HELMY ELFIKY -->
+  <title>About Us — Pyramids Adhesives</title>
+  <meta name="description" content="Learn about Pyramids Adhesives — Egypt's leading manufacturer of hot melt and upholstery adhesives. Our mission, safety measures, quality assurance, and packaging solutions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/images/logos/logo-2.ico">
 
+  <!-- Design System -->
+  <link href="/CSS/styles.css" rel="stylesheet">
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons & Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <style>
+    /* ── About Page Specific Styles ──────────────────────────── */
+
+    /* Page Hero */
+    .about-page-hero {
+      position: relative;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background-image: url('/images/image-13.jpg');
+      background-size: cover;
+      background-position: center 30%;
+    }
+    .about-page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,14,20,0.88) 0%, rgba(10,14,20,0.65) 100%);
+    }
+    .about-page-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .about-page-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    .about-page-hero h1 .highlight { color: var(--accent-green); }
+    .breadcrumb-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+    }
+    .breadcrumb-nav a { color: rgba(255,255,255,0.65); transition: color var(--transition-fast); }
+    .breadcrumb-nav a:hover { color: var(--accent-green); }
+    .breadcrumb-nav span { color: rgba(255,255,255,0.4); }
+    .breadcrumb-nav .current { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+    /* Tab Nav */
+    .about-tabs {
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 72px;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    .about-tabs-inner {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .about-tabs-inner::-webkit-scrollbar { display: none; }
+    .about-tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1.1rem 1.6rem;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all var(--transition-fast);
+      margin-bottom: -1px;
+    }
+    .about-tab-btn:hover { color: var(--text-primary); }
+    .about-tab-btn.active {
+      color: var(--accent-blue);
+      border-bottom-color: var(--accent-blue);
+    }
+    .about-tab-btn i {
+      font-size: 0.85rem;
+      color: var(--accent-green);
+    }
+
+    /* Tab Panels */
+    .about-panel { display: none; }
+    .about-panel.active { display: block; }
+
+    /* Content Layout */
+    .about-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      align-items: center;
+    }
+    .about-content-grid.reversed { direction: rtl; }
+    .about-content-grid.reversed > * { direction: ltr; }
+
+    .about-panel-image {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      transition: transform var(--transition-slow);
+    }
+    .about-panel-image:hover { transform: scale(1.02); }
+
+    .about-panel-text { display: flex; flex-direction: column; gap: var(--space-md); }
+    .about-panel-text h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; }
+
+    /* Checklist */
+    .about-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: var(--space-xs);
+    }
+    .about-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .about-check-item .check-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(106, 168, 50, 0.12);
+      border: 1px solid rgba(106, 168, 50, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--accent-green);
+      font-size: 0.6rem;
+      margin-top: 2px;
+    }
+
+    /* Stat Chips */
+    .about-stat-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: var(--space-xs);
+    }
+    .about-stat-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+    .about-stat-chip .chip-number {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent-blue);
+      line-height: 1;
+    }
+    .about-stat-chip .chip-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Info Cards Grid inside panel */
+    .about-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-sm);
+      margin-top: var(--space-xs);
+    }
+    .about-info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-base);
+    }
+    .about-info-card:hover {
+      border-color: rgba(62, 83, 104, 0.25);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .about-info-card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: rgba(106, 168, 50, 0.1);
+      border: 1px solid rgba(106, 168, 50, 0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-green);
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+    }
+    .about-info-card h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+    .about-info-card p {
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    /* CTA Strip */
+    .about-cta-strip {
+      background: linear-gradient(135deg, #0F1A2E 0%, #1B2F12 100%);
+      padding: var(--space-2xl) 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-cta-strip::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px; height: 300px;
+      background: radial-gradient(ellipse, rgba(106,168,50,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .about-cta-content { position: relative; z-index: 1; }
+    .about-cta-strip h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 0.75rem;
+    }
+    .about-cta-strip p { color: rgba(255,255,255,0.70); margin-bottom: var(--space-lg); }
+    .about-cta-strip .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-content-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+      }
+      .about-content-grid.reversed { direction: ltr; }
+      .about-panel-image { height: 320px; }
+      .about-info-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .about-tabs { top: 60px; }
+      .about-tab-btn { padding: 0.85rem 1rem; font-size: 0.8rem; }
+      .about-stat-chips { gap: 0.5rem; }
+    }
+  </style>
 </head>
 <body>
-    <main>
-        <!-- Back to top button -->
-        <a id="top-button"></a>
-        <!-- HEADER SECTION -->
-        <header class="header" id="header-about">
-            <a href="index.html#hero" class="logo">
-            <img src="/images/logos/logo-5-mid.png" alt="Pyrmaids Logo" class="logo-image" id="pyramids-logo">
-            </a>
-            <!-- HEADER NAV MENU -->
-            <nav>
-            <ul class="nav-menu">
-                <li class="nav-item dropdown" id="aboutDropdown">
-                    <a href="#about" class="nav-link" id="aboutDropdown" role="button" data-i18n="about_us">ABOUT US</a>
-                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                      <li><a class="dropdown-item" href="index.html#about" data-i18n="discover_pyramids">Discover Pyrmaids</a></li>
-                      <li><a class="dropdown-item" href="/about.html#mission" data-i18n="mission">Mission</a></li>
-                      <li><a class="dropdown-item" href="/about.html#safety-measures" data-i18n="safety_measures">Safety Measures</a></li>
-                      <li><a class="dropdown-item" href="/about.html#quality-assurance" data-i18n="quality_assurance">Quality Assurance</a></li>
-                    </ul>
-                  </li>
-                <li><a href="index.html#services" data-i18n="services">Services</a></li>
-                <li><a href="index.html#products" data-i18n="products">Products</a></li>
-                <li><a href="#contact" data-i18n="contact_us">Contact Us</a></li>
+
+  <!-- Back to top -->
+  <a id="top-button" aria-label="Back to top"></a>
+
+  <!-- ── HEADER ─────────────────────────────────────────────── -->
+  <header class="header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+
+        <!-- Logo -->
+        <a href="/index.html#hero" class="logo" aria-label="Pyramids Adhesives Home">
+          <img src="/images/logos/logo-2-No-background.png" alt="Pyramids Adhesives Logo" class="logo-image" id="pyramids-logo">
+        </a>
+
+        <!-- Nav -->
+        <nav aria-label="Main navigation">
+          <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item has-dropdown">
+              <a href="/about.html" class="nav-item active" id="nav-about" data-i18n="about_us">About Us</a>
+              <ul class="nav-dropdown">
+                <li><a href="/about.html#mission" data-i18n="mission">Mission</a></li>
+                <li><a href="/about.html#safety" data-i18n="safety_measures">Safety</a></li>
+                <li><a href="/about.html#quality" data-i18n="quality_assurance">Quality</a></li>
+                <li><a href="/about.html#packaging" data-i18n="packaging_solutions">Packaging</a></li>
+              </ul>
+            </li>
+            <li><a href="/index.html#services" class="nav-item" data-i18n="services">Services</a></li>
+            <li><a href="/index.html#products" class="nav-item" data-i18n="products">Products</a></li>
+            <li><a href="/index.html#contact" class="nav-item" data-i18n="contact_us">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Right -->
+        <div class="header-right">
+          <!-- Language -->
+          <div class="language-dropdown" id="language-dropdown">
+            <button class="lang-btn" id="lang-toggle" aria-label="Language selector">
+              <img src="/images/flags/uk-logo.png" alt="English flag" id="current-flag">
+              <span id="current-lang-name">English</span>
+              <i class="fas fa-chevron-down" style="font-size:0.65rem; margin-left:2px;"></i>
+            </button>
+            <ul class="lang-menu" id="lang-menu">
+              <li><a href="#" id="english-btn" data-lang="English">
+                <img src="/images/flags/uk-logo.png" alt="UK Flag"> English
+              </a></li>
+              <li><a href="#" id="arabic-btn" data-lang="Arabic">
+                <img src="/images/flags/Egypt-flag.png" alt="Egypt Flag"> العربية
+              </a></li>
+              <li><a href="#" id="french-btn" data-lang="French">
+                <img src="/images/flags/france-logo.png" alt="France Flag"> Français
+              </a></li>
             </ul>
-            </nav>
-            <!-- LANGUAGE SWITCHER -->
-            <div class="language-dropdown">
-                <button>
-                  <img src="/images/flags/Egypt-flag.png" width="20">عربي
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a href="#" id="english-btn"><img src="/images/flags/uk-logo.png" alt="England Flag">English</a></li>
-                  <li><a href="#" id="arabic-btn"><img src="/images/flags/Egypt-flag.png" alt="Egyptian Flag">العربية</a></li>
-                  <li><a href="#" id="french-btn"><img src="/images/flags/france-logo.png" alt="France Flag">Français</a></li>
-                </ul>
-              </div>
-            <!-- MOBILE MENU TOGGLE -->
-            <div class="mobile-menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-            </div>
-        </header>
-        <!-- END HEADER SECTION -->
-        <!-- HERO SECTION -->
-        <div class="hero-section-about" id="hero-about">
-            <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-i18n="about_pyramids">About Pyramids Adhesives</h1>
-            <div class="breadcrumb" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-              <a href="/index.html" data-i18n="home_menu">Home</a>
-              <span style="color: white;">›</span>
-              <span style="color: white;" data-i18n="about_menu">About</span>
-            </div>
-        </div>
-        <!-- END HERO SECTION -->
-        <!-- ABOUT SECTION -->
-         
-        <div class="nav-buttons" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
-            <div class="nav-button active" data-section="mission" id="mission" data-i18n="mission">Mission</div>
-            <div class="nav-button" data-section="safety" id="safety-measures" data-i18n="safety_measures">Safety Measures</div>
-            <div class="nav-button" data-section="quality" id="quality-assurance" data-i18n="quality_assurance">Quality Assurance</div>
-            <div class="nav-button" data-section="packaging" id="packaging" data-i18n="packaging_solutions">Packaging</div>
-        </div>
-    
-        <div id="section-container" class="section-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
-            <div class="section-text">
-                <h2 id="section-title" class="discover-title" style="text-align: center;" data-i18n="our_mission">Our Mission</h2>
-                <p id="section-description" class="discover-description" data-i18n="about_filter_1">Pyramids Adhesives is a leading manufacturer of hot melt and Upholstery adhesives. We are dedicated to providing our customers with the highest quality products and services. Our team of experts is committed to helping you find the right adhesive solution for your specific needs. Whether you are looking for a standard adhesive or a custom formulation, we have the knowledge and experience to meet your requirements. Contact us today to learn more about our products and services.</p>
-            </div>
-            <div class="section-image" >
-                <img id="section-image" src="/images/image-12.jpg" alt="People standing in a circle with hands together">
-            </div>
+          </div>
+          <!-- Mobile toggle -->
+          <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
         </div>
 
-        <!-- END ABOUT SECTION -->
-        
-        <!-- CALL TO ACTION SECTION -->
-        <section class="call-to-action" id="cta" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <div class="call-to-action-content">
-                <div class="call-to-action-text" style="color: white;">
-                    <h2 data-i18n="get_in_touch_with_us">Contact Us</h2>
-                    <p data-i18n="call_to_action_subtitle"> 
-                        Contact us today to learn more about our products and services.</br>
-                    </p>
-                </div>
-                <!-- Contact Us Button -->
-                <div class="contact-us-button">
-                    <a type="button" class="contact-btn" id="get-in-touch" href="/index.html#contact" data-i18n="get_in_touch_with_us">
-                        Get in Touch
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- END CALL TO ACTION SECTION -->
-        <!-- CAROUSEL SECTION -->
-        <!-- <section class="certificates-carousel">
-            <!-- SECTION TITLE -->
-            <!-- <h2 class="section-title discover-title" id="carousel-title">Our Certificates</h2> -->
-            <!-- CAROUSEL CONTAINER 
-            <div class="splide" id="carousel">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 1"></li>
-                        <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 2"></li>
-                        <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 3"></li>
-                        <li class="splide__slide"><img src="/images/certificate.png" alt="Slide 4"></li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->
-        <!-- END CAROUSEL SECTION -->
-        <!-- FOOTER SECTION -->
-        <div class="footer">
-            <div class="footer-content">
-              <div class="footer-section" id="footer-logo-section">
-                <img src="/images/logos/logo-2-No-background.png" alt="Pyrmaids Logo" class="footer-logo">
-                <div class="social-card">
-                    <!-- ALIBABA -->
-                    <a>
-                      <svg class="socialSvg" version="1.1" id="logo" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="138.678 262.426 372.4 189.923" enable-background="new 138.678 262.426 372.4 189.923" xml:space="preserve">
-                        <g id="g4739" transform="translate(112.6077,398.8102)">
-                        <path id="path4741" d="M66.732,28.252c-1.488-0.148-3.87-1.488-5.507-2.828 C45.302,9.798,65.69-8.209,89.501-18.627v-29.764c5.507,3.572,8.632,3.721,8.781,4.167l18.155-18.007l-6.102-15.477 c53.129-18.305,74.41-25.299,117.568-32.592l-7.739-7.292l12.649-7.143c29.021,9.524,56.403,12.054,51.641,36.46 c1.191-16.519-19.346-22.769-50.599-31.55l-6.102,3.721l11.608,9.524c-51.641,8.929-83.488,19.049-121.288,32.145l5.208,13.394 l-19.049,18.9c3.125,0.893,36.313,11.906,70.689-12.054c0,0,0.744-0.447,0.744-0.744c-1.041-1.637-3.423-3.572-6.25-6.102 c10.119,0.744,16.667,9.524,15.478,18.751h-4.763c0.298-2.976-0.298-6.25-1.339-8.333C152.154-31.128,121.2-28.3,94.859-37.527 v23.067C82.061-9.995,59.291,4.143,59.439,17.834C60.333,24.234,63.606,26.615,66.732,28.252"/></g>
-                        <g id="g4743" transform="translate(147.6202,401.2868)">
-                          <path id="path4745" fill="#FFFFFF" d="M140.674,18.151 c-28.573,14.435-55.956,26.042-98.072,27.681C-12.312,44.64-20.796,8.18,5.099-29.919c24.556-38.396,63.547-73.219,125.456-94.947 c18.007-6.399,44.348-13.543,69.796-13.989c36.61-0.298,72.178,11.013,69.797,46.134c-1.34,26.937-40.182,64.737-60.57,91.971 c-8.78,11.906-10.269,19.644,4.763,18.9c54.319-3.572,103.43-22.323,149.118-41.819C332.503-2.684,172.82,76.34,172.224,22.467 c0.149-6.846,3.274-14.138,8.482-21.877c5.061-7.739,12.055-15.775,19.347-23.96c10.864-12.352,37.949-42.116,47.027-59.975 c15.329-33.335-18.9-34.973-48.515-45.39l-12.65,7.144l7.739,7.292c-43.158,7.144-64.439,14.287-117.568,32.592l6.102,15.477 L64.181-48.372c-0.446-0.446-3.125-0.595-8.78-4.167v29.764C31.738-12.358,11.201,5.65,27.124,21.275 c1.638,1.34,4.019,2.68,5.507,2.828C61.8,40.474,140.823,18.151,140.674,18.151"/></g>
-                          <g id="g4747" transform="translate(202.4596,395.08025)">
-                            <path id="path4749" fill="#FFFFFF" d="M256.589,43.695h3.721c0.744,0,1.34-0.15,1.786-0.299 s0.744-0.445,1.042-0.744c0.297-0.445,0.297-0.744,0.297-1.189c0-0.596-0.297-1.191-0.744-1.488 c-0.446-0.447-1.19-0.596-2.083-0.596h-4.019V43.695z M254.953,51.134V37.89h5.953c1.19,0,2.083,0.148,2.679,0.297 c0.595,0.299,1.042,0.596,1.488,1.34c0.446,0.596,0.595,1.191,0.595,1.936c0,0.893-0.297,1.785-0.893,2.381 s-1.488,1.041-2.827,1.189c0.446,0.15,0.893,0.447,1.041,0.596c0.446,0.447,1.042,1.041,1.488,1.785l2.382,3.572h-2.232 l-1.786-2.678c-0.446-0.895-0.893-1.488-1.34-1.936c-0.297-0.445-0.595-0.744-0.893-0.893s-0.446-0.297-0.744-0.297 c-0.148,0-0.446,0-1.042,0h-2.232v5.951H254.953L254.953,51.134z"/></g>
-                        <g id="g4751" transform="translate(203.6136,390.7014)">
-                          <path id="path4753" fill="#FFFFFF" d="M259.088,61.648c6.995,0,12.649-5.656,12.649-12.65 s-5.654-12.65-12.649-12.65c-6.994,0-12.649,5.656-12.649,12.65S252.094,61.648,259.088,61.648 M248.373,48.997 c0-5.953,4.762-10.715,10.715-10.715c5.953,0,10.715,4.762,10.715,10.715c0,5.805-4.762,10.715-10.715,10.715 C253.135,59.712,248.373,54.95,248.373,48.997"/>
-                        </g>
-                      </svg>
-                      <svg class="socialSvg" version="1.1" id="logo" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="138.678 262.426 372.4 189.923" enable-background="new 138.678 262.426 372.4 189.923" xml:space="preserve">
-                        <g id="g4739" transform="translate(112.6077,398.8102)">
-                        <path id="path4741" d="M66.732,28.252c-1.488-0.148-3.87-1.488-5.507-2.828 C45.302,9.798,65.69-8.209,89.501-18.627v-29.764c5.507,3.572,8.632,3.721,8.781,4.167l18.155-18.007l-6.102-15.477 c53.129-18.305,74.41-25.299,117.568-32.592l-7.739-7.292l12.649-7.143c29.021,9.524,56.403,12.054,51.641,36.46 c1.191-16.519-19.346-22.769-50.599-31.55l-6.102,3.721l11.608,9.524c-51.641,8.929-83.488,19.049-121.288,32.145l5.208,13.394 l-19.049,18.9c3.125,0.893,36.313,11.906,70.689-12.054c0,0,0.744-0.447,0.744-0.744c-1.041-1.637-3.423-3.572-6.25-6.102 c10.119,0.744,16.667,9.524,15.478,18.751h-4.763c0.298-2.976-0.298-6.25-1.339-8.333C152.154-31.128,121.2-28.3,94.859-37.527 v23.067C82.061-9.995,59.291,4.143,59.439,17.834C60.333,24.234,63.606,26.615,66.732,28.252"/></g>
-                        <g id="g4743" transform="translate(147.6202,401.2868)">
-                          <path id="path4745" fill="#FFFFFF" d="M140.674,18.151 c-28.573,14.435-55.956,26.042-98.072,27.681C-12.312,44.64-20.796,8.18,5.099-29.919c24.556-38.396,63.547-73.219,125.456-94.947 c18.007-6.399,44.348-13.543,69.796-13.989c36.61-0.298,72.178,11.013,69.797,46.134c-1.34,26.937-40.182,64.737-60.57,91.971 c-8.78,11.906-10.269,19.644,4.763,18.9c54.319-3.572,103.43-22.323,149.118-41.819C332.503-2.684,172.82,76.34,172.224,22.467 c0.149-6.846,3.274-14.138,8.482-21.877c5.061-7.739,12.055-15.775,19.347-23.96c10.864-12.352,37.949-42.116,47.027-59.975 c15.329-33.335-18.9-34.973-48.515-45.39l-12.65,7.144l7.739,7.292c-43.158,7.144-64.439,14.287-117.568,32.592l6.102,15.477 L64.181-48.372c-0.446-0.446-3.125-0.595-8.78-4.167v29.764C31.738-12.358,11.201,5.65,27.124,21.275 c1.638,1.34,4.019,2.68,5.507,2.828C61.8,40.474,140.823,18.151,140.674,18.151"/></g>
-                          <g id="g4747" transform="translate(202.4596,395.08025)">
-                            <path id="path4749" fill="#FFFFFF" d="M256.589,43.695h3.721c0.744,0,1.34-0.15,1.786-0.299 s0.744-0.445,1.042-0.744c0.297-0.445,0.297-0.744,0.297-1.189c0-0.596-0.297-1.191-0.744-1.488 c-0.446-0.447-1.19-0.596-2.083-0.596h-4.019V43.695z M254.953,51.134V37.89h5.953c1.19,0,2.083,0.148,2.679,0.297 c0.595,0.299,1.042,0.596,1.488,1.34c0.446,0.596,0.595,1.191,0.595,1.936c0,0.893-0.297,1.785-0.893,2.381 s-1.488,1.041-2.827,1.189c0.446,0.15,0.893,0.447,1.041,0.596c0.446,0.447,1.042,1.041,1.488,1.785l2.382,3.572h-2.232 l-1.786-2.678c-0.446-0.895-0.893-1.488-1.34-1.936c-0.297-0.445-0.595-0.744-0.893-0.893s-0.446-0.297-0.744-0.297 c-0.148,0-0.446,0-1.042,0h-2.232v5.951H254.953L254.953,51.134z"/></g>
-                        <g id="g4751" transform="translate(203.6136,390.7014)">
-                          <path id="path4753" fill="#FFFFFF" d="M259.088,61.648c6.995,0,12.649-5.656,12.649-12.65 s-5.654-12.65-12.649-12.65c-6.994,0-12.649,5.656-12.649,12.65S252.094,61.648,259.088,61.648 M248.373,48.997 c0-5.953,4.762-10.715,10.715-10.715c5.953,0,10.715,4.762,10.715,10.715c0,5.805-4.762,10.715-10.715,10.715 C253.135,59.712,248.373,54.95,248.373,48.997"/>
-                        </g>
-                      </svg>
-                    </a>                  
-                    <!-- LINKEDIN -->
-                    <a href="https://www.linkedin.com/company/pyramids-adhesives/" target="_blank">
-                      <svg class="socialSvg" viewBox="0 0 448 512">
-                        <path
-                          d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                        ></path>
-                      </svg>
-                      <svg class="socialSvg" viewBox="0 0 448 512">
-                        <path
-                          d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                        ></path>
-                      </svg>
-                    </a>
-                    <!-- WHATSAPP -->
-                    <a>
-                      <svg class="socialSvg" viewBox="0 0 16 16">
-                        <path
-                          d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
-                        ></path>
-                      </svg>
-                      <svg class="socialSvg" viewBox="0 0 16 16">
-                        <path
-                          d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
-                        ></path>
-                      </svg>
-                    </a>
-                  </div>
+      </div>
+    </div>
+  </header>
+  <!-- ── END HEADER ─────────────────────────────────────────── -->
+
+
+  <!-- ── PAGE HERO ──────────────────────────────────────────── -->
+  <section class="about-page-hero">
+    <div class="container">
+      <div class="about-page-hero-content" data-aos="fade-right" data-aos-duration="800">
+        <span class="section-tag" style="margin-bottom:1rem;">Our Story</span>
+        <h1>About <span class="highlight">Pyramids</span><br>Adhesives</h1>
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="/index.html" data-i18n="home_menu">Home</a>
+          <span>›</span>
+          <span class="current" data-i18n="about_menu">About Us</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <!-- ── END PAGE HERO ──────────────────────────────────────── -->
+
+
+  <!-- ── ABOUT TABS ─────────────────────────────────────────── -->
+  <div class="about-tabs" id="about-tabs">
+    <div class="container">
+      <div class="about-tabs-inner" role="tablist">
+        <button class="about-tab-btn active" data-panel="mission" id="tab-mission" role="tab" aria-selected="true" aria-controls="panel-mission">
+          <i class="fas fa-bullseye"></i>
+          <span data-i18n="mission">Mission</span>
+        </button>
+        <button class="about-tab-btn" data-panel="safety" id="tab-safety" role="tab" aria-selected="false" aria-controls="panel-safety">
+          <i class="fas fa-shield-halved"></i>
+          <span data-i18n="safety_measures">Safety Measures</span>
+        </button>
+        <button class="about-tab-btn" data-panel="quality" id="tab-quality" role="tab" aria-selected="false" aria-controls="panel-quality">
+          <i class="fas fa-medal"></i>
+          <span data-i18n="quality_assurance">Quality Assurance</span>
+        </button>
+        <button class="about-tab-btn" data-panel="packaging" id="tab-packaging" role="tab" aria-selected="false" aria-controls="panel-packaging">
+          <i class="fas fa-box-open"></i>
+          <span data-i18n="packaging_solutions">Packaging</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- ── END TABS ───────────────────────────────────────────── -->
+
+
+  <main>
+
+    <!-- ▸▸ MISSION PANEL ──────────────────────────────────────── -->
+    <div class="about-panel active section" id="panel-mission" role="tabpanel" aria-labelledby="tab-mission">
+      <div class="container">
+        <div class="about-content-grid" data-aos="fade-up" data-aos-duration="800">
+
+          <!-- Image -->
+          <div>
+            <img src="/images/image-12.jpg" alt="Pyramids Adhesives factory team" class="about-panel-image">
+          </div>
+
+          <!-- Text -->
+          <div class="about-panel-text">
+            <span class="section-tag" data-i18n="mission">Mission</span>
+            <h2 data-i18n="our_mission">Our Mission</h2>
+            <p data-i18n="about_filter_1">
+              Pyramids Adhesives is a leading manufacturer of hot melt and upholstery adhesives. We are dedicated to providing our customers with the highest quality products and services. Our team of experts is committed to helping you find the right adhesive solution for your specific needs.
+            </p>
+
+            <div class="about-checklist">
+              <div class="about-check-item">
+                <span class="check-icon"><i class="fas fa-check"></i></span>
+                Customer-first approach in every product decision
               </div>
-              <!-- USEFUL LINKS -->
-              <div class="footer-section" id="useful-links">
-                <h2>Useful Links</h2>
-                <ul class="footer-links">
-                    <!-- HOME -->
-                    <li><a href="index.html" class="footer-link-about" data-i18n="home_menu">
-                            <svg class="chevron-right margin-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                            </svg>Home
-                        </a>
-                    </li>
-                    <!-- ABOUT US -->
-                    <li><a href="about.html#mission" class="footer-link-about" data-i18n="about_menu">
-                            <svg class="chevron-right margin-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                            </svg>About Us
-                         </a>
-                    </li>
-                    <!-- OUR PRODUCTS -->
-                    <li><a href="index.html#products" class="footer-link-about" data-i18n="products_menu">
-                            <svg class="chevron-right margin-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                            </svg>Our Products
-                        </a>
-                    </li>
-                    <!-- OUR SERVICES -->
-                    <li><a href="index.html#services" data-i18n="services_menu"><svg class="chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                      fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16" >
-                      <path fill-rule="evenodd"
-                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                    </svg>Services</a></li>
-                    <!-- FAQ -->
-                    <li><a href="index.html#faq" class="footer-link-about" data-i18n="faq">
-                            <svg class="chevron-right margin-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                            </svg>FAQ
-                        </a>
-                    </li>
-                    <!-- PRIVACY POLICY -->
-                    <!-- <li><a href="#" class="footer-link-about">
-                            <svg class="chevron-right margin-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                            </svg>Privacy Policy
-                        </a>
-                    </li> -->
-                    <!-- CONTACT US -->
-                    <li><a href="index.html#contact-form" class="footer-link-about" data-i18n="contact_us">
-                        <svg class="chevron-right margin-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="#88BF47" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                      </svg>Contact Us</a>
-                    </li>
-                    <!-- TERMS AND CONDITIONS -->
-                    <!-- <li><a href="#" class="footer-link-about">
-                            <svg class="chevron-right margin-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#88BF47 " class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                            </svg>Terms and Conditions
-                        </a>
-                    </li> -->
-                </ul>
+              <div class="about-check-item">
+                <span class="check-icon"><i class="fas fa-check"></i></span>
+                State-of-the-art manufacturing facility in Fayoum, Egypt
               </div>
-              <!-- CONTACT US -->
-              <div class="footer-section">
-                <h2 id="contact-us" data-i18n="get_in_touch_with_us">Contact Us</h2>
-                <div class="footer-contact-info">
-                  <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
-                      <path
-                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                    </svg> <a href="mailto:info@pyramidsadhesives.com" class="email-hyperlink" id="footer-email">info@pyramidsadhesives.com</a>
-                  </p>
-                  <a href="https://maps.app.goo.gl/vgEyWQmzgsb4d7vf6" class="location-link">
-                    <p>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
-                        <path
-                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                      </svg> Plot No 68, Kom Oushim, Tamiya City</br> Fayoum Governorate, Egypt.
-                    </p>
-                  </a>
-                  <p data-i18n="working_hours">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
-                      <path
-                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
-                    </svg> Saturday - Thursday: 8 AM - 5 PM
-                  </p>
-                </div>
+              <div class="about-check-item">
+                <span class="check-icon"><i class="fas fa-check"></i></span>
+                Serving diverse industries across the Middle East & Africa
+              </div>
+              <div class="about-check-item">
+                <span class="check-icon"><i class="fas fa-check"></i></span>
+                Over 30 years of combined adhesives expertise
               </div>
             </div>
-            <!-- FOOTER BOTTOM -->
-            <div class="footer-bottom">
-              <p>© 2025 Pyrmaids, all rights reserved.</p>
+
+            <div class="about-stat-chips">
+              <div class="about-stat-chip">
+                <span class="chip-number">20+</span>
+                <span class="chip-label">Years of<br>Service</span>
+              </div>
+              <div class="about-stat-chip">
+                <span class="chip-number">7</span>
+                <span class="chip-label">Product<br>Lines</span>
+              </div>
+              <div class="about-stat-chip">
+                <span class="chip-number">42+</span>
+                <span class="chip-label">Export<br>Markets</span>
+              </div>
             </div>
+
+            <div>
+              <a href="/index.html#contact" class="btn btn-primary">
+                <i class="fas fa-envelope"></i> Get in Touch
+              </a>
+            </div>
+          </div>
+
         </div>
-        <!-- END FOOTER SECTION -->
-    </main>
+      </div>
+    </div>
+    <!-- ▸▸ END MISSION ──────────────────────────────────────────── -->
 
 
-    <script src="/JS/language.js"></script>
-    <!-- PURECOUNTER JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
-    <script>
-        new PureCounter();
-    </script>
-    <!-- TO THE TOP BUTTON -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      var btn = $('#top-button');
+    <!-- ▸▸ SAFETY PANEL ────────────────────────────────────────── -->
+    <div class="about-panel section section-alt" id="panel-safety" role="tabpanel" aria-labelledby="tab-safety">
+      <div class="container">
+        <div class="about-content-grid reversed" data-aos="fade-up" data-aos-duration="800">
 
-      $(window).scroll(function() {
-        if ($(window).scrollTop() > 100) {
-          btn.addClass('show');
-        } else {
-          btn.removeClass('show');
+          <!-- Image -->
+          <div>
+            <img src="/images/image-11.jpg" alt="Safety measures at Pyramids factory" class="about-panel-image">
+          </div>
+
+          <!-- Text -->
+          <div class="about-panel-text">
+            <span class="section-tag" data-i18n="safety_measures">Safety Measures</span>
+            <h2 data-i18n="safety_measures">Safety Measures</h2>
+            <p data-i18n="filter_2">
+              Safety is at the core of everything we do at Pyramids Adhesives. From raw material handling to finished product dispatch, every process follows rigorous safety protocols that protect our workers, our clients, and the environment.
+            </p>
+
+            <div class="about-info-grid">
+              <div class="about-info-card">
+                <div class="about-info-card-icon"><i class="fas fa-fire-extinguisher"></i></div>
+                <h4>Fire Safety</h4>
+                <p>Full fire suppression systems and regular drills across all production areas.</p>
+              </div>
+              <div class="about-info-card">
+                <div class="about-info-card-icon"><i class="fas fa-hard-hat"></i></div>
+                <h4>PPE Standards</h4>
+                <p>Mandatory protective equipment enforced for all on-floor personnel at all times.</p>
+              </div>
+              <div class="about-info-card">
+                <div class="about-info-card-icon"><i class="fas fa-flask"></i></div>
+                <h4>Chemical Handling</h4>
+                <p>Certified storage and handling procedures for all adhesive raw materials.</p>
+              </div>
+              <div class="about-info-card">
+                <div class="about-info-card-icon"><i class="fas fa-leaf"></i></div>
+                <h4>Eco Compliance</h4>
+                <p>All processes comply with international environmental regulations and standards.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- ▸▸ END SAFETY ───────────────────────────────────────────── -->
+
+
+    <!-- ▸▸ QUALITY PANEL ───────────────────────────────────────── -->
+    <div class="about-panel section" id="panel-quality" role="tabpanel" aria-labelledby="tab-quality">
+      <div class="container">
+        <div class="about-content-grid" data-aos="fade-up" data-aos-duration="800">
+
+          <!-- Image -->
+          <div>
+            <img src="/images/image-9.jpg" alt="Quality assurance lab at Pyramids" class="about-panel-image">
+          </div>
+
+          <!-- Text -->
+          <div class="about-panel-text">
+            <span class="section-tag" data-i18n="quality_assurance">Quality Assurance</span>
+            <h2 data-i18n="quality_assurance">Quality Assurance</h2>
+            <p data-i18n="filter_3">
+              Every batch of Pyramids adhesive undergoes a multi-stage quality control process — from raw material inspection to final product testing — to ensure consistent performance and reliability that our global clients depend on.
+            </p>
+
+            <div class="about-checklist">
+              <div class="about-check-item">
+                <span class="check-icon"><i class="fas fa-check"></i></span>
+                In-house testing laboratory with advanced rheology equipment
+              </div>
+              <div class="about-check-item">
+                <span class="check-icon"><i class="fas fa-check"></i></span>
+                ISO-aligned batch traceability from raw material to dispatch
+              </div>
+              <div class="about-check-item">
+                <span class="check-icon"><i class="fas fa-check"></i></span>
+                Third-party audits conducted annually by international bodies
+              </div>
+              <div class="about-check-item">
+                <span class="check-icon"><i class="fas fa-check"></i></span>
+                100% factory-direct supply — no middlemen, no quality dilution
+              </div>
+            </div>
+
+            <div class="about-stat-chips">
+              <div class="about-stat-chip">
+                <span class="chip-number">100%</span>
+                <span class="chip-label">Factory<br>Direct</span>
+              </div>
+              <div class="about-stat-chip">
+                <span class="chip-number">ISO</span>
+                <span class="chip-label">Aligned<br>Processes</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- ▸▸ END QUALITY ──────────────────────────────────────────── -->
+
+
+    <!-- ▸▸ PACKAGING PANEL ─────────────────────────────────────── -->
+    <div class="about-panel section section-alt" id="panel-packaging" role="tabpanel" aria-labelledby="tab-packaging">
+      <div class="container">
+        <div class="about-content-grid reversed" data-aos="fade-up" data-aos-duration="800">
+
+          <!-- Image -->
+          <div>
+            <img src="/images/image-10.jpg" alt="Pyramids packaging solutions" class="about-panel-image">
+          </div>
+
+          <!-- Text -->
+          <div class="about-panel-text">
+            <span class="section-tag" data-i18n="packaging_solutions">Packaging</span>
+            <h2 data-i18n="packaging_solutions">Packaging Solutions</h2>
+            <p data-i18n="filter_4">
+              Pyramids Adhesives offers flexible packaging configurations designed to meet the demands of industrial buyers — from single-plant orders to large-scale international export containers. Our packaging protects product integrity from factory to final destination.
+            </p>
+
+            <div class="about-info-grid">
+              <div class="about-info-card">
+                <div class="about-info-card-icon"><i class="fas fa-weight-hanging"></i></div>
+                <h4>Small Packs</h4>
+                <p>1 kg, 5 kg, and 10 kg options. Ideal for workshops and trial orders.</p>
+              </div>
+              <div class="about-info-card">
+                <div class="about-info-card-icon"><i class="fas fa-box"></i></div>
+                <h4>Industrial Drums</h4>
+                <p>25 kg and 200 kg drums for continuous production environments.</p>
+              </div>
+              <div class="about-info-card">
+                <div class="about-info-card-icon"><i class="fas fa-ship"></i></div>
+                <h4>Export Containers</h4>
+                <p>Full and half FCL configurations for international shipping.</p>
+              </div>
+              <div class="about-info-card">
+                <div class="about-info-card-icon"><i class="fas fa-tag"></i></div>
+                <h4>Custom Branding</h4>
+                <p>Private label packaging available for distributors and resellers.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- ▸▸ END PACKAGING ────────────────────────────────────────── -->
+
+
+    <!-- ── CTA STRIP ────────────────────────────────────────────── -->
+    <section class="about-cta-strip">
+      <div class="container">
+        <div class="about-cta-content" data-aos="fade-up" data-aos-duration="700">
+          <h2 data-i18n="get_in_touch_with_us">Ready to Partner With Us?</h2>
+          <p data-i18n="call_to_action_subtitle">Contact us today to learn more about our products and export capabilities.</p>
+          <div class="btn-group">
+            <a href="/index.html#contact" class="btn btn-primary">
+              <i class="fas fa-envelope"></i>
+              <span data-i18n="get_in_touch_with_us">Get in Touch</span>
+            </a>
+            <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> WhatsApp Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ── END CTA ─────────────────────────────────────────────── -->
+
+
+    <!-- ── FOOTER ─────────────────────────────────────────────── -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-grid">
+
+          <!-- Brand -->
+          <div class="footer-brand">
+            <img src="/images/logos/logo-2-No-background.png" alt="Pyramids Adhesives" class="footer-logo">
+            <p data-i18n="footer_brand_desc">
+              Egypt's leading manufacturer of hot melt and upholstery adhesives. Trusted by factories. Exported worldwide.
+            </p>
+            <div class="footer-social-links">
+              <a href="https://www.linkedin.com/company/pyramids-adhesives/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Alibaba">
+                <i class="fas fa-globe"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h4 data-i18n="useful_links">Useful Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.html" data-i18n="home_menu">Home</a></li>
+              <li><a href="/about.html" data-i18n="about_menu">About Us</a></li>
+              <li><a href="/index.html#products" data-i18n="products_menu">Our Products</a></li>
+              <li><a href="/index.html#services" data-i18n="services_menu">Services</a></li>
+              <li><a href="/index.html#faq" data-i18n="faq">FAQ</a></li>
+              <li><a href="/index.html#contact" data-i18n="contact_us">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-col">
+            <h4 data-i18n="get_in_touch_with_us">Contact Us</h4>
+            <div class="footer-contact-items">
+              <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@pyramidsadhesives.com" id="footer-email">info@pyramidsadhesives.com</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-location-dot"></i>
+                <a href="https://maps.app.goo.gl/vgEyWQmzgsb4d7vf6" target="_blank" rel="noopener">
+                  Plot No 68, Kom Oushim, Fayoum, Egypt
+                </a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-clock"></i>
+                <span data-i18n="working_hours">Sat–Thu: 8 AM – 5 PM</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© 2025 Pyramids Adhesives. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ── END FOOTER ─────────────────────────────────────────── -->
+
+  </main>
+
+
+  <!-- ── SCRIPTS ────────────────────────────────────────────── -->
+  <!-- i18n -->
+  <script src="/JS/language.js"></script>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 700 });</script>
+
+  <!-- Header scroll -->
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+
+  <!-- Back to top -->
+  <script>
+    const topBtn = document.getElementById('top-button');
+    window.addEventListener('scroll', () => {
+      topBtn.classList.toggle('show', window.scrollY > 300);
+    });
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+
+  <!-- Mobile nav toggle -->
+  <script>
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    mobileToggle.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', !expanded);
+      mobileToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+  <!-- Tab switching -->
+  <script>
+    const tabBtns = document.querySelectorAll('.about-tab-btn');
+    const panels  = document.querySelectorAll('.about-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.panel;
+
+        // Update buttons
+        tabBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+
+        // Fade: out → swap → in
+        const activePanel = document.querySelector('.about-panel.active');
+        if (activePanel) {
+          activePanel.style.opacity = '0';
+          activePanel.style.transition = 'opacity 0.25s ease';
+          setTimeout(() => {
+            panels.forEach(p => p.classList.remove('active'));
+            const next = document.getElementById('panel-' + target);
+            if (next) {
+              next.classList.add('active');
+              next.style.opacity = '0';
+              requestAnimationFrame(() => {
+                next.style.transition = 'opacity 0.3s ease';
+                next.style.opacity = '1';
+              });
+            }
+          }, 220);
+        }
+
+        // Scroll to tabs on mobile
+        if (window.innerWidth < 768) {
+          document.getElementById('about-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
+    });
 
-      btn.on('click', function(e) {
-        e.preventDefault();
-        $('html, body').animate({scrollTop:0}, '100');
-      });
-    </script>
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true
-        });
-    </script>
-    <!-- ABOUT SECTION FILTER BUTTONS -->
-    <script>
-        const sections = {
-          mission: {
-            titleKey: 'our_mission',
-            descriptionKey: 'about_filter_1',
-            image: '/images/image-12.jpg'
-          },
-          safety: {
-            titleKey: 'safety_measures',
-            descriptionKey: 'filter_2',
-            image: '/images/image-11.jpg'
-          },
-          quality: {
-            titleKey: 'quality_assurance',
-            descriptionKey: 'filter_3',
-            image: '/images/image-9.jpg'
-          },
-          packaging: {
-            titleKey: 'packaging_solutions',
-            descriptionKey: 'filter_4',
-            image: '/images/image-10.jpg'
-          }
-        };
+    // Handle URL hash on load (e.g. /about.html#safety)
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && document.getElementById('panel-' + hash)) {
+        const targetBtn = document.querySelector(`[data-panel="${hash}"]`);
+        if (targetBtn) targetBtn.click();
+      }
+    });
+  </script>
 
-        document.querySelectorAll('.nav-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const textSection = document.querySelector('.section-text');
-                const imageSection = document.querySelector('.section-image');
-                
-                // Prevent multiple clicks during transition
-                if (textSection.classList.contains('text-fade-out')) return;
-                
-                // Remove active class from all buttons
-                document.querySelectorAll('.nav-button').forEach(btn => 
-                    btn.classList.remove('active')
-                );
-                
-                // Add active class to clicked button
-                button.classList.add('active');
-
-                // Add fade out animations
-                textSection.classList.add('text-fade-out');
-                imageSection.classList.add('image-fade-out');
-
-                // Wait for fade out animation to complete
-                setTimeout(() => {
-                    // Get section data
-                    const sectionKey = button.dataset.section;
-                    const sectionData = sections[sectionKey];
-
-                    // Update content
-                    document.getElementById('section-title').textContent = translations[sectionData.titleKey] || sectionData.titleKey;
-                    document.getElementById('section-description').textContent = translations[sectionData.descriptionKey] || sectionData.descriptionKey;
-                    document.getElementById('section-image').src = sectionData.image;
-
-                    document.getElementById('section-image').src = sectionData.image;
-
-                    // Remove fade out classes
-                    textSection.classList.remove('text-fade-out');
-                    imageSection.classList.remove('image-fade-out');
-                    
-                    // Add fade in animations
-                    textSection.classList.add('text-fade-in');
-                    imageSection.classList.add('image-fade-in');
-
-                    // Remove fade in classes after animation completes
-                    setTimeout(() => {
-                        textSection.classList.remove('text-fade-in');
-                        imageSection.classList.remove('image-fade-in');
-                    }, 300);
-
-                }, 300);
-            });
-        });
-    </script>
-    <!-- CAROUSEL JS -->
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const carousel = document.getElementById('carousel');
-            const slides = carousel.getElementsByClassName('slide');
-            const indicators = document.getElementById('indicators').getElementsByClassName('indicator');
-            const prevBtn = document.getElementById('prev');
-            const nextBtn = document.getElementById('next');
-            
-            let currentIndex = 0;
-            
-            // Clone first slide and append to the end for smooth infinite scrolling
-            const firstSlideClone = slides[0].cloneNode(true);
-            carousel.appendChild(firstSlideClone);
-            
-            function updateIndicators(index) {
-                for (let i = 0; i < indicators.length; i++) {
-                    indicators[i].classList.remove('active');
-                }
-                
-                // Handle edge case when we're showing the cloned first slide
-                if (index >= slides.length - 1) {
-                    indicators[0].classList.add('active');
-                } else {
-                    indicators[index].classList.add('active');
-                }
-            }
-            
-            function scrollToSlide(index) {
-                // Reset animation if we're at the clone
-                if (index >= slides.length) {
-                    carousel.style.transition = 'none';
-                    currentIndex = 0;
-                    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-                    setTimeout(() => {
-                        carousel.style.transition = 'transform 0.5s ease-in-out';
-                    }, 10);
-                } else if (index < 0) {
-                    currentIndex = slides.length - 1;
-                    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-                } else {
-                    currentIndex = index;
-                    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-                }
-                
-                updateIndicators(currentIndex);
-            }
-            
-            nextBtn.addEventListener('click', () => {
-                if (currentIndex >= slides.length - 1) return;
-                scrollToSlide(currentIndex + 1);
-            });
-            
-            prevBtn.addEventListener('click', () => {
-                if (currentIndex <= 0) return;
-                scrollToSlide(currentIndex - 1);
-            });
-            
-            // Make indicators clickable
-            for (let i = 0; i < indicators.length; i++) {
-                indicators[i].addEventListener('click', () => {
-                    scrollToSlide(i);
-                });
-            }
-            
-            // Auto-scroll function handled by CSS animation
-            // This JavaScript mainly handles manual controls and indicators
-            
-            // Pause animation on hover
-            carousel.addEventListener('mouseenter', () => {
-                carousel.style.animationPlayState = 'paused';
-            });
-            
-            carousel.addEventListener('mouseleave', () => {
-                carousel.style.animationPlayState = 'running';
-            });
-        });
-    </script>    -->
-    <!-- Splide JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.2/dist/js/splide-extension-auto-scroll.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('#carousel', {
-                type    : 'loop',      // Infinite loop mode
-                perPage : 3,          // Number of slides visible at a time
-                perMove : 1,          // Move one slide at a time
-                arrows  : false,      // Hide arrows for a cleaner look
-                pagination: false,    // Hide pagination
-                drag    : false,      // Disable manual dragging for a smooth effect
-                speed   : 5000,       // Adjust speed (higher value = smoother scrolling)
-                autoScroll: {
-                    speed: 0.5,         // Adjust speed (smaller values = smoother movement)
-                },
-            }).mount(window.splide.Extensions);
-        });
-    </script>
-    <!-- Bootstrap JS (only required for dropdown functionality on mobile) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- MOBILE TOGGLE BUTTON FUNCTIONALITY -->
-    <script>
-        function toggleMenu() {
-          const navMenu = document.querySelector('.nav-menu');
-          const toggleButton = document.querySelector('.mobile-menu-toggle');
-          const langMenu = document.querySelector('language-dropdown')
-          // langMenu.classList.toggle('active');
-          navMenu.classList.toggle('active');
-          toggleButton.classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
