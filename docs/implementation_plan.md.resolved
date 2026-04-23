@@ -1,0 +1,271 @@
+# Pyramids Adhesives — Website Rebuild Implementation Plan
+
+> **Branch:** `remake` | **Goal:** From-scratch rebuild into a premium, conversion-focused, internationally-positioned industrial adhesives website.
+
+---
+
+## Executive Summary
+
+The rebuild transforms Pyramids from a generic product-listing site into a **world-class industrial B2B landing page** — benchmarked against Henkel, Sika, 3M, Bostik, and H.B. Fuller. The new site will lead with **export positioning** and **conversion triggers** (WhatsApp, quote requests) while keeping the same clean, scalable vanilla HTML/CSS/JS stack.
+
+---
+
+## Part 1: Asset Audit — Keep vs. Discard
+
+### ✅ KEEP (Core Brand Assets)
+| Asset | Path | Reason |
+|---|---|---|
+| Logo (no-bg) | `images/logos/logo-2-No-background.png` | Primary logo for header/footer |
+| Favicon | `images/logos/logo-2.ico` | Browser tab icon |
+| Logo mid | `images/logos/logo-5-mid.png` | Useful for dark backgrounds |
+| All product images | `images/products/*/` | El-Borg, King, Forsan, Fox, Healthy, Fo-Max, Glue — all needed |
+| Factory image | `images/image-13.jpg` | High-res manufacturing shot, great for hero/about |
+| Flag images | `images/flags/` | Still needed for language switcher |
+| i18n JSON files | `JS/English.json`, `JS/Arabic.json`, `JS/french.json` | Multilingual content preserved |
+| `language.js` | `JS/language.js` | Core i18n logic, reused with minor updates |
+
+### ❌ DISCARD / REPLACE
+| Asset | Reason |
+|---|---|
+| `CSS/styles.css` | Full rewrite with new design system |
+| `CSS/about.css` | Merging into single stylesheet |
+| `index.html` | Full rewrite |
+| `about.html` | Full rewrite |
+| `images/400x300.jpg` | Placeholder, remove |
+| `images/image-1.webp` through `image-12.jpg` | Replace with curated selections from existing set |
+| Cloudinary video hero | Replacing with static dark hero image + overlay for faster load |
+| jQuery dependency | Remove — replace scroll-to-top with 5 lines of vanilla JS |
+| Bootstrap 5 CSS | **Remove!** — new site uses a bespoke CSS design system. Keep Bootstrap JS only for modal if needed, or replace entirely |
+
+---
+
+## Part 2: Design System
+
+The new design language is **Dark Industrial Premium** — inspired by Henkel and Sika, adapted for a company with roots in Egypt and a global reach message.
+
+### Color Palette
+```css
+/* Design Tokens */
+--color-bg-primary:    #0A0E14;   /* Deep dark — main background */
+--color-bg-secondary:  #111827;   /* Card & section backgrounds */
+--color-bg-elevated:   #1C2333;   /* Elevated cards, modals */
+--color-accent:        #F5A623;   /* Amber/Gold — primary CTA, highlights */
+--color-accent-green:  #88BF47;   /* Brand green — retained from original */
+--color-text-primary:  #F0F4F8;   /* Off-white body text */
+--color-text-muted:    #8899AA;   /* Subtle labels and meta */
+--color-border:        #2D3748;   /* Subtle card borders */
+```
+
+### Typography
+```css
+/* Google Fonts: Outfit (headings) + Inter (body) */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+--font-heading: 'Outfit', sans-serif;
+--font-body:    'Inter', sans-serif;
+```
+
+### Spacing Scale
+```css
+--space-xs:   0.5rem;
+--space-sm:   1rem;
+--space-md:   2rem;
+--space-lg:   4rem;
+--space-xl:   6rem;
+--space-2xl:  8rem;
+```
+
+---
+
+## Part 3: New Page Architecture
+
+### Single-Page Structure (`index.html`)
+
+```
+ ┌──────────────────────────────────┐
+ │  1. HEADER / NAV                 │  Sticky, glassmorphism on scroll
+ ├──────────────────────────────────┤
+ │  2. HERO                         │  Dark overlay on factory image, bold H1, 2 CTAs
+ ├──────────────────────────────────┤
+ │  3. TRUST BAR                    │  NEW: Scrolling logo ticker / stats stripe
+ ├──────────────────────────────────┤
+ │  4. ABOUT (Discover Pyramids)    │  Redesigned split-layout with badge
+ ├──────────────────────────────────┤
+ │  5. GLOBAL EXPORT  (NEW)         │  World map accent + 4 export pillars
+ ├──────────────────────────────────┤
+ │  6. PRODUCTS                     │  Redesigned product cards + enhanced modal
+ ├──────────────────────────────────┤
+ │  7. SERVICES                     │  Cleaner grid, fewer but stronger cards
+ ├──────────────────────────────────┤
+ │  8. TRUST / SOCIAL PROOF         │  NEW: Stats counter + "Used in factories..."
+ ├──────────────────────────────────┤
+ │  9. FAQ                          │  Accordion-style, simplified
+ ├──────────────────────────────────┤
+ │ 10. CTA BANNER                   │  Full-width, WhatsApp + Quote buttons
+ ├──────────────────────────────────┤
+ │ 11. CONTACT                      │  Two-column: info panel + form
+ ├──────────────────────────────────┤
+ │ 12. FOOTER                       │  Three-column, dark, brand-consistent
+ └──────────────────────────────────┘
+```
+
+---
+
+## Part 4: Section-by-Section Implementation Plan
+
+### Section 1 — Header
+- **Sticky** with `position: sticky; top: 0; z-index: 100`
+- **Glassmorphism** on scroll: `backdrop-filter: blur(12px); background: rgba(10,14,20,0.85)` via JS scroll listener
+- Same nav links (About, Services, Products, Contact)
+- Language switcher retained, restyled
+- Mobile: hamburger icon → full-screen slide-in menu
+
+### Section 2 — Hero
+- **Background**: `images/image-13.jpg` (factory) with a dark gradient overlay
+- **Headline**: *"Strong Adhesives Built for Real Industry"* — `font-size: clamp(2.5rem, 6vw, 5rem)` in Outfit Black 900
+- **Subheadline**: *"Hot Melt & Upholstery Adhesives Designed for Performance..."*
+- **Export badge**: 🌍 We export to all countries worldwide — amber pill badge
+- **CTAs**: Primary `Get a Quote` (amber fill) + Secondary `View Products` (outline)
+- **Animation**: Hero text animates in word-by-word using CSS `@keyframes` reveal on load
+
+### Section 3 — Trust Bar *(NEW)*
+- Narrow stripe between hero and about
+- Counter stats: `20+ Years Experience`, `7 Product Lines`, `Middle East & Africa Markets`
+- Subtle separator line design
+
+### Section 4 — Discover Pyramids (About Summary)
+- Split 60/40 layout: image left, text right
+- Keep `20+ Years of Service` badge overlay on the image
+- Content: Company intro, Our Commitment, Our Vision cards
+- Link to `about.html`
+
+### Section 5 — Global Export Capabilities *(NEW SECTION)*
+- Dark section background for contrast
+- Large world outline graphic (SVG or CSS)
+- 4 feature pillars: *Worldwide Export / Quick Logistics / Int'l Standards / ME & Africa Expertise*
+- Trust line: *"Trusted partner for international adhesive supply"*
+
+### Section 6 — Products
+- **Product Cards** redesigned: dark card with image, product name, **use case tag** (e.g., "For Furniture & Foam"), and CTA button
+- Hover effect: subtle glow + scale up
+- **Enhanced Modal**:
+  - `Best Value` badge on the large size
+  - Highlighted size selection (click to select logic)
+  - New CTA buttons: `Get Best Price Now` + `WhatsApp Us`
+  - "Available for export worldwide" note at bottom
+  - Use Case chips: Furniture Factories / Foam & Sponge / Upholstery
+  - Feature badges: Strong Bond / Fast Drying / Heat Resistant / Egyptian Climate Ready
+
+### Section 7 — Services
+- Reduced from 9 cards to 6 strongest services
+- Cleaner card layout, icons updated
+- Preserve i18n keys
+
+### Section 8 — Trust / Social Proof *(NEW)*
+- `PureCounter` JS for animated counters
+- 3 stats: `Trusted by Factories Across Egypt`, `Exporting to Multiple Markets`, `Used in Daily Production Lines`
+- Dark background with amber accent numbers
+
+### Section 9 — FAQ
+- Keep all 6 Q&As, rebuild as CSS accordion (remove Bootstrap dependency)
+- Smoother animation on expand/collapse
+
+### Section 10 — CTA Banner
+- Full-width section with dark-to-amber gradient
+- *"Need the Right Adhesive for Your Application?"*
+- Two buttons: `Request a Quote` + `Contact via WhatsApp` (green WhatsApp color)
+- Sub-line: *"We handle local and international orders | Worldwide Export Available"*
+
+### Section 11 — Contact
+- Keep two-column layout (info + form)
+- FormSubmit integration retained
+- Updated contact info styling
+- Form validation: HTML5 `required` + custom JS feedback
+
+### Section 12 — Footer
+- Three columns: Brand + Social | Useful Links | Contact Info
+- Keep LinkedIn link
+- Copyright updated to 2025
+
+---
+
+## Part 5: File & Folder Structure (Remake)
+
+```
+Pyramids/
+├── index.html              # Full single-page rebuild
+├── about.html              # Rebuilt about page
+├── CSS/
+│   └── styles.css          # Single stylesheet — full design system
+├── JS/
+│   ├── language.js         # Retained + updated
+│   ├── English.json        # Updated with new copy
+│   ├── Arabic.json         # Updated with new copy
+│   └── french.json         # Updated with new copy
+├── images/
+│   ├── logos/              # Keep as-is
+│   ├── flags/              # Keep as-is
+│   ├── products/           # Keep all sub-folders
+│   └── image-13.jpg        # Hero background
+└── docs/
+    ├── changes.md
+    ├── website_sections.md
+    └── implementation_plan.md
+```
+
+---
+
+## Part 6: CDN Dependencies (Slim Stack)
+
+| Library | Purpose | Keep? |
+|---|---|---|
+| AOS 2.3.4 | Scroll animations | ✅ Keep |
+| FontAwesome 6 | Icons | ✅ Keep |
+| Bootstrap CSS | Grid/modals | ❌ Remove — custom CSS |
+| Bootstrap JS | Modal JS | ⚠️ Keep only for modal (or replace custom) |
+| Splide.js | Carousels | ❌ Remove — not needed in new design |
+| Google Fonts | Outfit + Inter | ✅ Add |
+| jQuery | Scroll-to-top | ❌ Remove — 5 lines of vanilla JS |
+| PureCounter | Stat counters | ✅ Keep |
+| FormSubmit | Contact form | ✅ Keep |
+
+---
+
+## Part 7: Phased Execution Roadmap
+
+### Phase 1 — Foundation (CSS Design System)
+Write `CSS/styles.css` from scratch: all tokens, typography, layout utilities, button variants, card styles.
+
+### Phase 2 — Header, Hero, Trust Bar
+Sticky header with glassmorphism, new Hero with factory background, Trust Bar stats stripe.
+
+### Phase 3 — About + Export Section
+Rebuild Discover Pyramids split-layout. Build the brand-new Global Export section.
+
+### Phase 4 — Products + Modal
+Rebuild product cards with use-case tags. Enhance modal with size selection, Best Value badge, WhatsApp CTA.
+
+### Phase 5 — Services + Trust Counters + FAQ
+Rebuild services grid (6 cards). Add animated stat counters section. Rebuild FAQ as pure CSS accordion.
+
+### Phase 6 — CTA Banner + Contact + Footer
+Full-width CTA with WhatsApp button. Rebuild contact form section. Three-column footer.
+
+### Phase 7 — i18n + Mobile + Polish
+Update JSON translation files with all new copy. Full mobile responsiveness QA. Micro-animations, hover effects, scroll performance tuning.
+
+---
+
+## Open Questions for Your Review
+
+> [!IMPORTANT]
+> **Hero Background:** The plan uses `image-13.jpg` (factory photo) as the hero background with a dark gradient overlay. Do you have any additional real adhesive-usage photos you'd like to use instead?
+
+> [!IMPORTANT]
+> **About Page:** Should `about.html` be a priority in this remake, or do we rebuild only `index.html` first and tackle the about page separately?
+
+> [!WARNING]
+> **Bootstrap Removal:** Removing Bootstrap CSS is the cleanest approach for a bespoke design, but means writing our own modal, grid, and accordion from scratch. This is absolutely doable and results in a smaller, faster site. Confirm you're comfortable with this direction.
+
+> [!NOTE]
+> **Language Switcher:** The existing i18n JSON files and `language.js` are solid. I plan to carry them forward with new keys added for the new sections. No redesign of the i18n logic is needed.
