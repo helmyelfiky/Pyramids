@@ -9,7 +9,7 @@ Welcome to the Pyramids Adhesives landing page project! This is a high-conversio
 This project is built using modern, lightweight, and fast technologies, relying on CDNs for zero-config fast deployment.
 
 - **Core Languages:** HTML5, CSS3, Vanilla JavaScript
-- **CSS Framework:** Bootstrap 5.3.3
+- **CSS Architecture:** Bespoke, zero-dependency design system
 - **Animations:** AOS (Animate on Scroll) Library
 - **Carousels & Sliders:** Splide.js
 - **Icons:** FontAwesome 6
@@ -20,8 +20,7 @@ This project is built using modern, lightweight, and fast technologies, relying 
 
 ```text
 ├── CSS/                  # Stylesheets
-│   ├── about.css         # Styles specific to the About page
-│   └── styles.css        # Main landing page stylesheet
+│   └── styles.css        # Main stylesheet hosting design tokens and UI components
 ├── JS/                   # JavaScript & i18n
 │   ├── language.js       # Logic for handling language switching
 │   ├── English.json      # English translations
@@ -39,7 +38,7 @@ This project is built using modern, lightweight, and fast technologies, relying 
 
 ## ✨ Key Features
 
-- **Responsive Design:** Fluid layout adapting perfectly from mobile screens to desktop monitors (Mobile-First approach with Bootstrap).
+- **Responsive Design:** Fluid layout adapting perfectly from mobile screens to desktop monitors (Custom CSS Grid & Flexbox).
 - **SEO Optimization:** Semantic HTML structure, descriptive meta tags, and optimized asset delivery.
 - **Multilingual Support:** Dynamic language switching between English, Arabic, and French without page reloads.
 - **Engaging Visuals:** Embedded hero background videos and smooth scrolling animations powered by AOS.

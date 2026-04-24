@@ -744,6 +744,19 @@
       mobileToggle.setAttribute('aria-expanded', !expanded);
       mobileToggle.classList.toggle('active');
       navMenu.classList.toggle('active');
+      document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close mobile menu when nav link clicked
+    document.querySelectorAll('.nav-item, .nav-dropdown a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) {
+          navMenu.classList.remove('active');
+          mobileToggle.classList.remove('active');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        }
+      });
     });
   </script>
 
